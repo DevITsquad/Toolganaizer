@@ -8,19 +8,35 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "Fast And Easy Installation"
+          }
+        },
+        "d4b78335-d32c-4e98-aaaa-f77fef56c6f4": {
+          "type": "announcement",
+          "settings": {
+            "text": "Value For Money"
+          }
+        },
+        "95397276-5bc2-4830-9cff-bed9a9b829df": {
+          "type": "announcement",
+          "settings": {
+            "text": "24\/7 Customer Support"
+          }
+        },
+        "dd353414-803a-4b6b-9086-388ce8d056b1": {
+          "type": "announcement",
+          "settings": {
+            "text": "100% Secure Checkout"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "d4b78335-d32c-4e98-aaaa-f77fef56c6f4",
+        "95397276-5bc2-4830-9cff-bed9a9b829df",
+        "dd353414-803a-4b6b-9086-388ce8d056b1"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "show_line_separator": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5
       }
     },
     "header": {

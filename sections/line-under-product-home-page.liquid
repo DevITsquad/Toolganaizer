@@ -1,0 +1,121 @@
+<style>
+  .announcement-wrapper-under-product {
+    background-color: var(--custom-background-secondary);
+    overflow: hidden;
+  }
+  .announcement-wrapper-under-product .inner_item {
+    display: flex;
+    justify-content: space-between;
+    height: 111px;
+    background-color: var(--custom-background-secondary);
+    overflow: hidden;
+  }
+
+  div.announcement-element-under-product {
+    box-sizing: border-box;
+    max-width: 33%;
+    border-right: 1px solid var(--custom-font-color-secondary);
+    flex-basis: 33%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 24px;
+    font-size: 25px;
+    color: var(--custom-font-color-secondary);
+    line-height: 31.13px;
+    font-weight:500;
+  }
+
+  @media screen and (max-width: 1300px) {
+    div.announcement-element-under-product {
+      font-size: 21px;
+      gap: 12;
+    }
+    .announcement-element-under-product img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .announcement-wrapper-under-product .inner_item {
+      min-width: 1000px;
+    }
+    .announcement-element-under-product {
+      animation: text 10s linear infinite;
+      gap: 5px;
+    }
+    .announcement-element-under-product img {
+      width: 40px;
+      height: 40px;
+    }
+    .announcement-element-under-product span {
+      font-size: 17px;
+    }
+    .announcement-wrapper-under-product .inner_item {
+      height: 64px;
+    }
+  }
+
+  @keyframes text {
+    0% {
+      transform: translate(100%, 0);
+    }
+
+    100% {
+      transform: translate(-300%, 0);
+    }
+  }
+</style>
+
+{%- if section.blocks.size > 0 -%}
+  <div class="announcement-wrapper-under-product">
+    <div class="inner_item">
+      {% for block in section.blocks %}
+        <script>
+          console.log({{forloop.last|json}})
+        </script>
+        <div style="{% if forloop.last %}border:none;{% endif -%}" class="announcement-element-under-product">
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 71 | image_tag: height: 71 }}
+          {%- endif -%}
+          <span>
+            {{ block.settings.text }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "line-under-product",
+  "max_blocks": 3,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label",
+          "default": "some info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "line-under-product"
+    }
+  ]
+}
+{% endschema %}

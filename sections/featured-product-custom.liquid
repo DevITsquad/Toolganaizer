@@ -10,12 +10,84 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  .own_width{
+    background: linear-gradient(180deg, rgba(219, 201, 114, 0.3) 0%, rgba(219, 201, 114, 0) 55.56%),
+            linear-gradient(0deg, #FFFFFF, #FFFFFF);
+            padding:0 !important;
+            min-height:815px
+  }
+  .featured-product.product.product--{{ section.settings.media_size }}{
+    flex-direction:row-reverse;
+            max-width:1270px;
+            margin:auto;
+            background:inherit;
+            padding-top:97px;
 
+  }
+
+  .product__info-wrapper.grid__item{
+    padding:0 !important;
+
+  }
+
+  .product__media-item{
+    height:675px;
+    width:530px !important;
+    display:block;
+    float:right;
+  }
+  .product__media-item img{
+  height:100%;
+   width:100%;
+  
+
+  }
+
+  .hidden-image{
+    display:none;
+    height:333px;
+    width:262px; 
+    margin:auto;
+  }
+  .hidden-image img{
+    height:100%;
+   width:100%;
+  
+   
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+
+  @media screen and (max-width: 750px) {
+    .featured-product.product.product--{{ section.settings.media_size }}{
+      flex-direction: column-reverse;
+  
+
+  }
+
+
+  .hidden-image{
+    display:block;
+  
+  }
+
+  .grid__item.product__media-wrapper{
+    display:none;
+  }
+}
+
+  @media screen and (max-width: 1000px) {
+  
+    .product__media-item{
+      height:100%;
+      width:100% !important;
+    display:block;
+    float:right;
+  }
   }
 {%- endstyle -%}
 
@@ -55,7 +127,7 @@
 {%- endif -%}
 
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
-  <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
+  <div class="own_width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
     <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         <media-gallery
@@ -72,7 +144,7 @@
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                 <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {% render 'product-thumbnail',
+                  {% render 'product-thumbnail-custom',
                     media: media,
                     position: 'featured',
                     loop: section.settings.enable_video_looping,
@@ -95,7 +167,7 @@
                   and media.id != product.selected_or_first_available_variant.featured_media.id
                 -%}
                   <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
+                    {% render 'product-thumbnail-custom',
                       media: media,
                       position: forloop.index,
                       loop: section.settings.enable_video_looping,
@@ -112,7 +184,7 @@
               <div class="product__media-item">
                 <div
                   class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
-                  style="--ratio: 1.0; --preview-ratio: 1.0;"
+                  style="--ratio: 1.0; --preview-ratio: 1.0; background:inherit;border:none !impotant;"
                 >
                   {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 </div>
@@ -156,13 +228,42 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
-                <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                  {%- if product.title != blank -%}
-                    {{ product.title | escape }}
-                  {%- else -%}
-                    {{ 'onboarding.product_title' | t }}
+              
+                  <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                    {% if section.settings.custom_text == blank %}
+                      {%- if product.title != blank -%}
+                        {{ product.title | escape }}
+                      {%- else -%}
+                        {{ 'onboarding.product_title' | t }}
+                      {%- endif -%}
+
+                    {%- else -%}
+                      {{ section.settings.custom_text }}
+                    {%- endif -%}
+                  </h2>
+
+
+                  <div class="hidden-image">
+                    {% render 'product-thumbnail-custom',
+                      media: product.images.first,
+                      position: 'featured',
+                      loop: section.settings.enable_video_looping,
+                      modal_id: section.id,
+                      xr_button: false,
+                      media_width: media_width,
+                      media_fit: section.settings.media_fit,
+                      constrain_to_viewport: section.settings.constrain_to_viewport
+                    %}
+                  </div>
+
+                  {%- if product.description != blank -%}
+                    <p class="product_desc">
+                      {{ product.description }}
+                    </p>
                   {%- endif -%}
-                </h2>
+
+              
+
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -380,7 +481,7 @@
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                   {%- assign media = product.selected_or_first_available_variant.featured_media -%}
                   <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail',
+                    {% render 'product-thumbnail-custom',
                       media: media,
                       position: 'featured',
                       loop: section.settings.enable_video_looping,
@@ -397,7 +498,7 @@
                     and media.id != product.selected_or_first_available_variant.featured_media.id
                   -%}
                     <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                      {% render 'product-thumbnail',
+                      {% render 'product-thumbnail-custom',
                         media: media,
                         position: forloop.index,
                         loop: section.settings.enable_video_looping,
@@ -430,7 +531,7 @@
             <div class="product__media-item">
               <div
                 class="product-media-container global-media-settings gradient{% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
-                style="--ratio: 1.0; --preview-ratio: 1.0;"
+                style="--ratio: 1.0; --preview-ratio: 1.0;background:inherit;border:none;"
               >
                 {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
               </div>
@@ -1348,6 +1449,7 @@
     }
   ],
   "settings": [
+    { "type": "text", "label": "Your own text", "id": "custom_text" },
     {
       "type": "product",
       "id": "product",

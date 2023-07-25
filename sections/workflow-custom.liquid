@@ -1,0 +1,154 @@
+
+<style>
+
+   
+    .workflow-custom-wrapper{
+    max-width:1270px;
+    margin:auto;
+    text-align:center;
+}
+
+.workflow-custom-tittle{
+max-width:696px;
+margin:auto;
+color:var(--custom-font-color-primary)
+
+}
+.workflow-custom-tittle_1{
+    max-width:578px;
+    margin:auto;
+    color:var(--custom-font-color-primary)
+}
+.workflow-custom-grid{
+    display:grid;
+    grid-template-columns:1fr 1px 1fr 1px 1fr;
+    align-items:center;
+}
+
+.text_wrapper{
+font-size: 25px;
+font-weight: 700;
+line-height: 31px;
+letter-spacing: 0px;
+text-align: center;
+color:var(--custom-font-color-primary)
+}
+.workflow-custom-item{
+padding:0 34px 0 34px;
+}
+
+
+.border_elem{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:241px;
+    background: linear-gradient(180deg, rgba(245, 240, 215, 0.22) 0%, rgba(71, 100, 95, 0.22) 50.14%, rgba(71, 100, 95, 0) 100%);
+
+}
+.border_elem svg{
+    min-width:33px;
+    min-height:33px;
+}
+
+
+
+@media screen and (max-width:767px){
+    .workflow-custom-grid {
+        grid-template-columns:1fr;
+    }
+    .border_elem{
+        display:none;
+    }
+
+
+}
+
+</style>
+
+
+<div class='workflow-custom-wrapper'>
+ <h2 class="workflow-custom-tittle product__title h1">
+ {{section.settings.text}}
+</h2>  
+<h5 class="workflow-custom-tittle_1"> {{section.settings.text_1}}</h5>
+<div class="workflow-custom-grid">
+    {% for block in section.blocks %}
+        
+        <div class="workflow-custom-item">
+            
+                <div class="img_wrapper">
+                    {{ block.settings.image | image_url: width: 180 | image_tag: height: 180 }}
+                </div>
+            
+ <h4 class="text_wrapper"> 
+ {{ block.settings.text}}
+ </h4>
+
+ <p>
+    {{ block.settings.textarea}}
+</p>
+        </div>
+        {% if forloop.last != true %}
+        <div class='border_elem'><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16.5" cy="16.5" r="16" fill="#F6F6F6" stroke="#E7E8E9"/>
+<path d="M12.5898 20.9481L16.8087 16.7293C17.3069 16.2311 17.3069 15.4158 16.8087 14.9176L12.5898 10.6987" stroke="#1E4B51" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.7656 20.9481L21.9844 16.7293C22.4827 16.2311 22.4827 15.4158 21.9844 14.9176L17.7656 10.6987" stroke="#1E4B51" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+  {% endif %}
+    {% endfor %}
+
+ 
+            </div>
+
+
+{% schema %}
+{
+  "name": "workflow-custom",
+  "max_blocks": 3,
+  "settings": [
+    {
+        "type": "text",
+        "id": "text",
+        "label": "heading",
+        "default": "some info"
+      },
+    {
+        "type": "text",
+        "id": "text_1",
+        "label": "heading 1",
+        "default": "some info"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "heading",
+          "default": "some info"
+        },
+        {
+          "type": "textarea",
+          "id": "textarea",
+          "label": "text",
+          "default": "some info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "workflow-custom"
+    }
+  ]
+}
+{% endschema %}

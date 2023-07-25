@@ -8,25 +8,29 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Fast And Easy Installation"
+            "text": "Fast And Easy Installation",
+            "image": "shopify:\/\/shop_images\/truck-tick_d8bb97b0-f087-42cf-a434-d9ee00f05b73.svg"
           }
         },
         "d4b78335-d32c-4e98-aaaa-f77fef56c6f4": {
           "type": "announcement",
           "settings": {
-            "text": "Value For Money"
+            "text": "Value For Money",
+            "image": "shopify:\/\/shop_images\/money_1_75f462c3-540d-4f24-b34f-58a31710fc17.svg"
           }
         },
         "95397276-5bc2-4830-9cff-bed9a9b829df": {
           "type": "announcement",
           "settings": {
-            "text": "24\/7 Customer Support"
+            "text": "24\/7 Customer Support",
+            "image": "shopify:\/\/shop_images\/Group_1.svg"
           }
         },
         "dd353414-803a-4b6b-9086-388ce8d056b1": {
           "type": "announcement",
           "settings": {
-            "text": "100% Secure Checkout"
+            "text": "100% Secure Checkout",
+            "image": "shopify:\/\/shop_images\/Group_2_2df44c86-4978-456e-bd39-37987978ee85.svg"
           }
         }
       },

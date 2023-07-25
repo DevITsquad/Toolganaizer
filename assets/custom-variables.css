@@ -1,0 +1,33 @@
+:root {
+    --custom-background-secondary: rgba(30, 75, 81, 1);
+    --custom-background-primary: rgba(248, 233, 165, 1);
+    --custom-font-color-primary: rgba(30, 75, 81, 1);
+    --custom-font-color-secondary: rgba(223, 211, 153, 1);
+    --custom-font-style-primary: 'Athletics';
+    --custom-font-style-secondary: 'Roboto';
+    --custom-font-weight-bold: 700;
+    --custom-font-color-bolder: 600;
+    --custom-font-color-normal: 500;
+    --custom-font-color-normaler: 400;
+    --custom-font-color-thin: 300;
+}
+
+p {
+    font-style: var(--custom-font-color-secondary);
+}
+
+@media screen and(max-width:767px) {
+
+    h2 {
+        font-size: 50px;
+        line-height: 55px;
+        font-weight: var(--custom-font-weight-bold);
+    }
+
+    h6 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: var(--custom-font-weight-bold);
+    }
+
+}

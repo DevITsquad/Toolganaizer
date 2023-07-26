@@ -136,11 +136,19 @@
         "text": "get your power tool org anizer in just 3 simple steps",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
+    },
+    "edda56f1-f6de-4672-b655-e689a88db0dd": {
+      "type": "explore-the-toolganize-range",
+      "settings": {
+        "text": "explore the toolganize range",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
+      }
     }
   },
   "order": [
     "c0a2e54a-82c2-4694-beb5-d32077f73e46",
     "adb9c12c-b0d1-42b4-9620-9ce0de7ff53e",
-    "9ed89966-99d3-427a-a1ae-2b9d800bb8e4"
+    "9ed89966-99d3-427a-a1ae-2b9d800bb8e4",
+    "edda56f1-f6de-4672-b655-e689a88db0dd"
   ]
 }

@@ -178,12 +178,50 @@
         "text": "explore the toolganize range",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
+    },
+    "dc340a76-1b5c-48ec-9690-71ca8d116aa8": {
+      "type": "before-after",
+      "blocks": {
+        "f5fce519-2e68-446f-b484-009a4197168e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_22.png",
+            "heading": "Neat and efficient power tool storage system"
+          }
+        },
+        "1ea0c201-093e-469d-98c4-587de0e78679": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_11.png",
+            "heading": "Never lose your tools ever again"
+          }
+        },
+        "c94447f8-6648-4870-9f61-dc4f43c2c39d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_23.png",
+            "heading": "Get your projects completed quickly"
+          }
+        }
+      },
+      "block_order": [
+        "f5fce519-2e68-446f-b484-009a4197168e",
+        "1ea0c201-093e-469d-98c4-587de0e78679",
+        "c94447f8-6648-4870-9f61-dc4f43c2c39d"
+      ],
+      "settings": {
+        "heading": "some info",
+        "text": "some info",
+        "before_text": "some info",
+        "after_text": "some info"
+      }
     }
   },
   "order": [
     "c0a2e54a-82c2-4694-beb5-d32077f73e46",
     "adb9c12c-b0d1-42b4-9620-9ce0de7ff53e",
     "9ed89966-99d3-427a-a1ae-2b9d800bb8e4",
-    "edda56f1-f6de-4672-b655-e689a88db0dd"
+    "edda56f1-f6de-4672-b655-e689a88db0dd",
+    "dc340a76-1b5c-48ec-9690-71ca8d116aa8"
   ]
 }

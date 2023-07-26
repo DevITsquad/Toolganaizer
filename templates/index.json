@@ -95,10 +95,47 @@
       ],
       "settings": {
       }
+    },
+    "9ed89966-99d3-427a-a1ae-2b9d800bb8e4": {
+      "type": "workflow-custom",
+      "blocks": {
+        "d5788d68-f58c-4e3c-bd72-c51c8e3c1060": {
+          "type": "announcement",
+          "settings": {
+            "text": "select your product",
+            "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "image": "shopify:\/\/shop_images\/Group_1000004524.png"
+          }
+        },
+        "a62379c9-5fac-4028-853e-6e239a5598fc": {
+          "type": "announcement",
+          "settings": {
+            "text": "some info",
+            "textarea": "some info"
+          }
+        },
+        "45b955a4-5b15-4629-ada5-4e74c03968ad": {
+          "type": "announcement",
+          "settings": {
+            "text": "some info",
+            "textarea": "some info"
+          }
+        }
+      },
+      "block_order": [
+        "d5788d68-f58c-4e3c-bd72-c51c8e3c1060",
+        "a62379c9-5fac-4028-853e-6e239a5598fc",
+        "45b955a4-5b15-4629-ada5-4e74c03968ad"
+      ],
+      "settings": {
+        "text": "some info",
+        "text_1": "some info"
+      }
     }
   },
   "order": [
     "c0a2e54a-82c2-4694-beb5-d32077f73e46",
-    "adb9c12c-b0d1-42b4-9620-9ce0de7ff53e"
+    "adb9c12c-b0d1-42b4-9620-9ce0de7ff53e",
+    "9ed89966-99d3-427a-a1ae-2b9d800bb8e4"
   ]
 }

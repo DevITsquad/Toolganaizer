@@ -161,10 +161,11 @@
         "6a813fa1-7594-46db-afc5-6b5f230ced3a": {
           "type": "product",
           "settings": {
-            "heading": "",
-            "desc": "",
-            "text_in_button": "SHOP NOW",
-            "product": ""
+            "heading": "coming soon",
+            "desc": "Join the waitlist and be first to know about new releases!",
+            "text_in_button": "",
+            "product": "",
+            "image": "shopify:\/\/shop_images\/image_11_1.png"
           }
         }
       },

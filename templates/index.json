@@ -72,19 +72,22 @@
         "119ef9d1-8155-442a-9b89-76b30b88f311": {
           "type": "announcement",
           "settings": {
-            "text": "some info"
+            "text": "built to last",
+            "image": "shopify:\/\/shop_images\/image_10.png"
           }
         },
         "7ea2ac4b-88d0-4b73-b4f6-ece486216063": {
           "type": "announcement",
           "settings": {
-            "text": "some info"
+            "text": "designed by tradesmen",
+            "image": "shopify:\/\/shop_images\/image_10_1.png"
           }
         },
         "15e423e3-b79e-498c-acb2-fc7ee1d03b7f": {
           "type": "announcement",
           "settings": {
-            "text": "some info"
+            "text": "easy to assemble",
+            "image": "shopify:\/\/shop_images\/image_10_2.png"
           }
         }
       },

@@ -110,8 +110,9 @@
         "a62379c9-5fac-4028-853e-6e239a5598fc": {
           "type": "announcement",
           "settings": {
-            "text": "some info",
-            "textarea": "some info"
+            "text": "get it delivered",
+            "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "image": "shopify:\/\/shop_images\/Group_1000004524_2.png"
           }
         },
         "45b955a4-5b15-4629-ada5-4e74c03968ad": {

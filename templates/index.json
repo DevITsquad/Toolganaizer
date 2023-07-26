@@ -210,10 +210,12 @@
         "c94447f8-6648-4870-9f61-dc4f43c2c39d"
       ],
       "settings": {
-        "heading": "some info",
-        "text": "some info",
-        "before_text": "some info",
-        "after_text": "some info"
+        "heading": "say goodbye to wasting time looking for your tools by neatly organizing",
+        "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod.",
+        "before_image": "shopify:\/\/shop_images\/Image-176_1_149329fb-a87a-49a1-a7ac-a87e28c5b052.png",
+        "before_text": "before",
+        "after_image": "shopify:\/\/shop_images\/Rectangle_348.png",
+        "after_text": "after"
       }
     }
   },

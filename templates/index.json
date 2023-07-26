@@ -139,6 +139,40 @@
     },
     "edda56f1-f6de-4672-b655-e689a88db0dd": {
       "type": "explore-the-toolganize-range",
+      "blocks": {
+        "952d74d6-6758-4778-82d6-91a7cceb939b": {
+          "type": "product",
+          "settings": {
+            "heading": "5 slot power tool organizer",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor sed do",
+            "text_in_button": "SHOP NOW",
+            "product": "toolganize-tool-organizer"
+          }
+        },
+        "55a09eaa-e774-426a-85b4-966ef51a6dcb": {
+          "type": "product",
+          "settings": {
+            "heading": "",
+            "desc": "",
+            "text_in_button": "SHOP NOW",
+            "product": ""
+          }
+        },
+        "6a813fa1-7594-46db-afc5-6b5f230ced3a": {
+          "type": "product",
+          "settings": {
+            "heading": "",
+            "desc": "",
+            "text_in_button": "SHOP NOW",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "952d74d6-6758-4778-82d6-91a7cceb939b",
+        "55a09eaa-e774-426a-85b4-966ef51a6dcb",
+        "6a813fa1-7594-46db-afc5-6b5f230ced3a"
+      ],
       "settings": {
         "text": "explore the toolganize range",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."

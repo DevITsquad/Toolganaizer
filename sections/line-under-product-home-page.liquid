@@ -73,9 +73,6 @@
   <div class="announcement-wrapper-under-product">
     <div class="inner_item">
       {% for block in section.blocks %}
-        <script>
-          console.log({{forloop.last|json}})
-        </script>
         <div style="{% if forloop.last %}border:none;{% endif -%}" class="announcement-element-under-product">
           {%- if block.settings.image != blank -%}
             {{ block.settings.image | image_url: width: 71 | image_tag: height: 71 }}
@@ -101,7 +98,7 @@
         {
           "type": "text",
           "id": "text",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label",
+          "label": "text",
           "default": "some info"
         },
         {

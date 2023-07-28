@@ -1,0 +1,233 @@
+<style>
+  .why-do-we-love-we-do_wrapper {
+    height: 1360px;
+    background: var(--custom-background-secondary);
+    padding: 0 12px;
+    box-sizing: border-box;
+    margin-top: 90px;
+  }
+  .why-do-we-love-we-do_wrapper h2 p strong {
+    position: relative;
+  }
+  .why-do-we-love-we-do_wrapper h2 p strong::after {
+    content: '';
+    width: calc(100% - 2px);
+    height: 19%;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    border-radius: 30px;
+  }
+
+  .CTA_botton {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    max-width: 420px;
+    height: 60px;
+    border-radius: 4px;
+    background: rgba(25, 191, 111, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .CTA_botton a {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  .CTA_botton a span {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+  }
+
+  .payment_wrapper_custom {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  .why-do-we-love-we-do_text_block {
+    max-width: 940px;
+    margin: 54px auto;
+  }
+  .why-do-we-love-we-do_text_block p {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+  }
+  .why-do-we-love-we-do_text_block p strong {
+    font-weight: 700;
+  }
+
+  .why-do-we-love-we-do_wrapper p {
+    margin: 0;
+    padding: 0;
+  }
+  .why-do-we-love-we-do_wrapper h2 {
+    margin: 0;
+    padding-top: 81px;
+  }
+  .why-do-we-love-we-do_wrapper h2 p {
+    font-family: var(--custom-font-style-primary);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+  }
+  .why-do-we-love-we-do_wrapper h2 p b {
+    font-weight: 700;
+  }
+
+  p.why-do-we-love-we-do_under_header {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    max-width: 516px;
+    margin: 9px auto 52px auto;
+  }
+
+  .why-do-we-love-we-do_text_block p:first-of-type {
+    margin-bottom: 22px;
+  }
+
+  .why-do-we-love-we-do_video_block {
+    max-width: 1080px;
+    max-height: 667px;
+    margin: auto;
+  }
+  .why-do-we-love-we-do_video_block img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .why-do-we-love-we-do_wrapper {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .why-do-we-love-we-do_wrapper h2 {
+      padding-top: 40px;
+    }
+
+    .why-do-we-love-we-do_wrapper h2 p {
+      font-size: 26px;
+      line-height: 29px;
+    }
+    p.why-do-we-love-we-do_under_header {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 22px auto 26px auto;
+    }
+
+    .why-do-we-love-we-do_text_block p:first-of-type {
+      margin-bottom: 19px;
+    }
+    .why-do-we-love-we-do_text_block p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .CTA_botton a span {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .why-do-we-love-we-do_text_block{
+      margin: 30px auto 21px auto;
+    }
+    .payment_wrapper_custom .list-payment{
+      padding:0px;
+    }
+  }
+</style>
+
+<div class="why-do-we-love-we-do_wrapper">
+  <h2>{{ section.settings.heading }}</h2>
+  <p class="why-do-we-love-we-do_under_header">{{ section.settings.text_1 }}</p>
+
+  <div class="why-do-we-love-we-do_video_block">
+    <img src="{{"Tool-Organiser-Promo.png" | asset_url}}" alt="dummy_photo">
+  </div>
+  {% comment %} <video></video> {% endcomment %}
+
+  <div></div>
+  <div class="why-do-we-love-we-do_text_block">
+    {{ section.settings.text_p_1 }}
+    {{ section.settings.text_p_2 }}
+  </div>
+  <div class="CTA_botton">
+    <a href="{{ section.settings.link }}"
+      ><span>SHOP NOW</span>
+      <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.0165 2.01546L21.9998 7L17.0165 11.9845" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 6.99998H20.514" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+  <div class="payment_wrapper_custom">
+    <ul class="list list-payment" role="list">
+      {%- for type in shop.enabled_payment_types -%}
+        <li class="list-payment__item">
+          {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "why-do-we-love-we-do",
+  "settings": [
+    { "label": "heading", "type": "richtext", "id": "heading", "default": "<p>why do <b>we love</b> what we do?</p>" },
+    {
+      "label": "text1",
+      "type": "text",
+      "id": "text_1",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+    },
+    { "label": "video", "type": "video", "id": "video" },
+    {
+      "label": "text_p_1",
+      "type": "text",
+      "id": "text_p_1",
+      "default": "<p>Say goodbye to the stress and frustration that comes with a cluttered workspace. Our products are designed to eliminate chaos, providing you with a serene and organized environment where you can focus on your projects with ease.</p>"
+    },
+    {
+      "label": "text_p_2",
+      "type": "richtext",
+      "id": "text_p_2",
+      "default": "<p>Reclaim Your Space, <strong>Reclaim Your Time</strong> Bid farewell to clutter and welcome efficiency. Our solutions are specifically engineered to remove clutter, giving you back valuable space and allowing you to work more effectively. With a clean and organized setup, you'll find yourself completing projects in record time.</p>"
+    },
+    {
+      "label": "link",
+      "type": "text",
+      "id": "link_shop_now",
+      "default": "https://toolganize.myshopify.com/collections/all"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "why-do-we-love-we-do"
+    }
+  ]
+}
+{% endschema %}

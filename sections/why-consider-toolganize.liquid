@@ -1,0 +1,377 @@
+<style>
+  .why-consider-toolganize_wrapper h2 p {
+    margin: 0;
+  }
+  .why-consider-toolganize_wrapper h2 {
+    font-family: var(--custom-font-style-primary);
+    max-width: 541px;
+    margin: auto;
+    color: var(--custom-font-color-primary);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 11px;
+  }
+  .why-consider-toolganize_wrapper .under_tittle {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    max-width: 557px;
+    margin: auto;
+    margin-bottom: 61px;
+  }
+  .blocks_flex_section {
+    display: flex;
+    max-width: 1266px;
+    margin: auto;
+    gap: 61px;
+  }
+  .blocks_flex_section img {
+    max-width: 494px;
+    max-height: 557px;
+  }
+  .headings_logo {
+    font-family: var(--custom-font-style-primary);
+    color: var(--custom-font-color-primary);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0px;
+    min-height: 98px;
+    display: flex;
+    justify-content: center;
+  }
+  .headings_logo img {
+    width: 100%;
+    max-width: 296px;
+  }
+  .reasons_block {
+    height: 515;
+    width: 325px;
+    margin-top: 55px;
+  }
+
+  .reasons_block.toolnize {
+    margin-top: 36px;
+  }
+
+  .reasons_block p {
+    display: flex;
+    font-family: var(--custom-font-style-secondary);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    gap: 15px;
+    padding: 27px 0;
+    align-items: center;
+    margin: 0;
+    border-bottom: 1.5px solid rgba(248, 233, 165, 1);
+  }
+  .reasons_block p svg {
+    min-width: 28px;
+    min-height: 20px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .blocks_flex_section {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .why-consider-toolganize_img_wrapper {
+      width: 100%;
+      order: -1;
+      display: flex;
+      justify-content: center;
+    }
+    .why-consider-toolganize_wrapper {
+      padding: 0 11px;
+    }
+
+    .blocks_flex_section img {
+      max-width: 345px;
+    }
+
+    .reasons_block p {
+      padding: 15px 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .why-consider-toolganize_wrapper h2 {
+      font-size: 26px;
+      line-height: 29px;
+      margin-top: 45px;
+      margin-bottom: 22px;
+    }
+    .why-consider-toolganize_wrapper .under_tittle {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 42px;
+    }
+
+    .reasons_block p {
+      font-size: 13px;
+      line-height: 15px;
+      gap: 8px;
+    }
+
+    .reasons_block p {
+      padding: 14.2px 0;
+    }
+
+    .reasons_block,
+    .reasons_block.toolnize {
+      margin-top: 0;
+    }
+    .reasons_block {
+      width: 145px;
+      height: 254px;
+    }
+
+    .headings_logo {
+      font-size: 22px;
+      line-height: 24px;
+      min-height: 50px;
+    }
+    .headings_logo img {
+      max-width: 102px;
+      height: 40px;
+    }
+
+    .reasons_block p svg {
+      min-width: 9px;
+      min-height: 14px;
+      width: 9px;
+      height: 14px;
+    }
+    .blocks_flex_section {
+      display: flex;
+      max-width: 1266px;
+      margin: auto;
+      grid-gap: 30px;
+      grid-row-gap: 50px;
+    }
+    .why-consider-toolganize_img_wrapper img {
+      max-width: 304px;
+    }
+  }
+</style>
+<div class="why-consider-toolganize_wrapper">
+  <h2>{{ section.settings.heading }}</h2>
+  <p class="under_tittle">{{ section.settings.text_0 }}</p>
+
+  <div class="blocks_flex_section">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        <div class="why-consider-toolganize_img_wrapper">
+          <img src="{{ block.settings.image | image_url }}" alt="Before Image">
+        </div>
+      {% else %}
+        <script>
+          console.log("sss",{{block.type | json}})
+        </script>
+        {% if block.type == 'text_1' %}
+          <div class="reasons_block toolnize">
+            <div class="headings_logo">
+              <img src="{{ block.settings.logo | image_url }}" alt="Before Image">
+            </div>
+            <p>
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6641 0.960938C27.4258 1.66406 27.4258 2.89453 26.6641 3.59766L11.6641 18.5977C10.9609 19.3594 9.73047 19.3594 9.02734 18.5977L1.52734 11.0977C0.765625 10.3945 0.765625 9.16406 1.52734 8.46094C2.23047 7.69922 3.46094 7.69922 4.16406 8.46094L10.3164 14.6133L24.0273 0.960938C24.7305 0.199219 25.9609 0.199219 26.6641 0.960938Z" fill="#2ADC87"/>
+              </svg>
+
+              <span> {{ block.settings.text_1 }}</span>
+            </p>
+            <p>
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6641 0.960938C27.4258 1.66406 27.4258 2.89453 26.6641 3.59766L11.6641 18.5977C10.9609 19.3594 9.73047 19.3594 9.02734 18.5977L1.52734 11.0977C0.765625 10.3945 0.765625 9.16406 1.52734 8.46094C2.23047 7.69922 3.46094 7.69922 4.16406 8.46094L10.3164 14.6133L24.0273 0.960938C24.7305 0.199219 25.9609 0.199219 26.6641 0.960938Z" fill="#2ADC87"/>
+              </svg>
+
+              <span> {{ block.settings.text_2 }}</span>
+            </p>
+            <p>
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6641 0.960938C27.4258 1.66406 27.4258 2.89453 26.6641 3.59766L11.6641 18.5977C10.9609 19.3594 9.73047 19.3594 9.02734 18.5977L1.52734 11.0977C0.765625 10.3945 0.765625 9.16406 1.52734 8.46094C2.23047 7.69922 3.46094 7.69922 4.16406 8.46094L10.3164 14.6133L24.0273 0.960938C24.7305 0.199219 25.9609 0.199219 26.6641 0.960938Z" fill="#2ADC87"/>
+              </svg>
+
+              <span> {{ block.settings.text_3 }}</span>
+            </p>
+            <p>
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6641 0.960938C27.4258 1.66406 27.4258 2.89453 26.6641 3.59766L11.6641 18.5977C10.9609 19.3594 9.73047 19.3594 9.02734 18.5977L1.52734 11.0977C0.765625 10.3945 0.765625 9.16406 1.52734 8.46094C2.23047 7.69922 3.46094 7.69922 4.16406 8.46094L10.3164 14.6133L24.0273 0.960938C24.7305 0.199219 25.9609 0.199219 26.6641 0.960938Z" fill="#2ADC87"/>
+              </svg>
+
+              <span> {{ block.settings.text_4 }}</span>
+            </p>
+            <p style="border:none;">
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.6641 0.960938C27.4258 1.66406 27.4258 2.89453 26.6641 3.59766L11.6641 18.5977C10.9609 19.3594 9.73047 19.3594 9.02734 18.5977L1.52734 11.0977C0.765625 10.3945 0.765625 9.16406 1.52734 8.46094C2.23047 7.69922 3.46094 7.69922 4.16406 8.46094L10.3164 14.6133L24.0273 0.960938C24.7305 0.199219 25.9609 0.199219 26.6641 0.960938Z" fill="#2ADC87"/>
+              </svg>
+
+              <span> {{ block.settings.text_5 }}</span>
+            </p>
+          </div>
+        {% else %}
+          <div class="reasons_block">
+            <div class="headings_logo">{{ block.settings.text0 }}</div>
+            <p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1641 15.9609C19.9258 16.6641 19.9258 17.8945 19.1641 18.5977C18.8125 18.9492 18.3438 19.125 17.875 19.125C17.3477 19.125 16.8789 18.9492 16.5273 18.5977L10.375 12.4453L4.16406 18.5977C3.8125 18.9492 3.34375 19.125 2.875 19.125C2.34766 19.125 1.87891 18.9492 1.52734 18.5977C0.765625 17.8945 0.765625 16.6641 1.52734 15.9609L7.67969 9.75L1.52734 3.59766C0.765625 2.89453 0.765625 1.66406 1.52734 0.960938C2.23047 0.199219 3.46094 0.199219 4.16406 0.960938L10.375 7.11328L16.5273 0.960938C17.2305 0.199219 18.4609 0.199219 19.1641 0.960938C19.9258 1.66406 19.9258 2.89453 19.1641 3.59766L13.0117 9.80859L19.1641 15.9609Z" fill="#E75151"/>
+              </svg>
+              <span> {{ block.settings.text_1 }}</span>
+            </p>
+            <p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1641 15.9609C19.9258 16.6641 19.9258 17.8945 19.1641 18.5977C18.8125 18.9492 18.3438 19.125 17.875 19.125C17.3477 19.125 16.8789 18.9492 16.5273 18.5977L10.375 12.4453L4.16406 18.5977C3.8125 18.9492 3.34375 19.125 2.875 19.125C2.34766 19.125 1.87891 18.9492 1.52734 18.5977C0.765625 17.8945 0.765625 16.6641 1.52734 15.9609L7.67969 9.75L1.52734 3.59766C0.765625 2.89453 0.765625 1.66406 1.52734 0.960938C2.23047 0.199219 3.46094 0.199219 4.16406 0.960938L10.375 7.11328L16.5273 0.960938C17.2305 0.199219 18.4609 0.199219 19.1641 0.960938C19.9258 1.66406 19.9258 2.89453 19.1641 3.59766L13.0117 9.80859L19.1641 15.9609Z" fill="#E75151"/>
+              </svg>
+              <span> {{ block.settings.text_2 }}</span>
+            </p>
+            <p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1641 15.9609C19.9258 16.6641 19.9258 17.8945 19.1641 18.5977C18.8125 18.9492 18.3438 19.125 17.875 19.125C17.3477 19.125 16.8789 18.9492 16.5273 18.5977L10.375 12.4453L4.16406 18.5977C3.8125 18.9492 3.34375 19.125 2.875 19.125C2.34766 19.125 1.87891 18.9492 1.52734 18.5977C0.765625 17.8945 0.765625 16.6641 1.52734 15.9609L7.67969 9.75L1.52734 3.59766C0.765625 2.89453 0.765625 1.66406 1.52734 0.960938C2.23047 0.199219 3.46094 0.199219 4.16406 0.960938L10.375 7.11328L16.5273 0.960938C17.2305 0.199219 18.4609 0.199219 19.1641 0.960938C19.9258 1.66406 19.9258 2.89453 19.1641 3.59766L13.0117 9.80859L19.1641 15.9609Z" fill="#E75151"/>
+              </svg>
+              <span> {{ block.settings.text_3 }}</span>
+            </p>
+            <p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1641 15.9609C19.9258 16.6641 19.9258 17.8945 19.1641 18.5977C18.8125 18.9492 18.3438 19.125 17.875 19.125C17.3477 19.125 16.8789 18.9492 16.5273 18.5977L10.375 12.4453L4.16406 18.5977C3.8125 18.9492 3.34375 19.125 2.875 19.125C2.34766 19.125 1.87891 18.9492 1.52734 18.5977C0.765625 17.8945 0.765625 16.6641 1.52734 15.9609L7.67969 9.75L1.52734 3.59766C0.765625 2.89453 0.765625 1.66406 1.52734 0.960938C2.23047 0.199219 3.46094 0.199219 4.16406 0.960938L10.375 7.11328L16.5273 0.960938C17.2305 0.199219 18.4609 0.199219 19.1641 0.960938C19.9258 1.66406 19.9258 2.89453 19.1641 3.59766L13.0117 9.80859L19.1641 15.9609Z" fill="#E75151"/>
+              </svg>
+              <span> {{ block.settings.text_4 }}</span>
+            </p>
+            <p style="border:none;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1641 15.9609C19.9258 16.6641 19.9258 17.8945 19.1641 18.5977C18.8125 18.9492 18.3438 19.125 17.875 19.125C17.3477 19.125 16.8789 18.9492 16.5273 18.5977L10.375 12.4453L4.16406 18.5977C3.8125 18.9492 3.34375 19.125 2.875 19.125C2.34766 19.125 1.87891 18.9492 1.52734 18.5977C0.765625 17.8945 0.765625 16.6641 1.52734 15.9609L7.67969 9.75L1.52734 3.59766C0.765625 2.89453 0.765625 1.66406 1.52734 0.960938C2.23047 0.199219 3.46094 0.199219 4.16406 0.960938L10.375 7.11328L16.5273 0.960938C17.2305 0.199219 18.4609 0.199219 19.1641 0.960938C19.9258 1.66406 19.9258 2.89453 19.1641 3.59766L13.0117 9.80859L19.1641 15.9609Z" fill="#E75151"/>
+              </svg>
+              <span> {{ block.settings.text_5 }}</span>
+            </p>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "why-consider-toolganize",
+  "max_blocks": 3,
+  "settings": [
+    { "label": "heading", "type": "richtext", "id": "heading", "default": "<p>why consider <b>toolganize</b></p>" },
+    {
+      "label": "text1",
+      "type": "text",
+      "id": "text_0",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_1",
+      "name": "tolganize",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Img"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "heading",
+          "default": "eliminates your stress"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "heading",
+          "default": "remove clutter"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "heading",
+          "default": "easy assembly"
+        },
+        {
+          "type": "text",
+          "id": "text_4",
+          "label": "heading",
+          "default": "variation of colors"
+        },
+        {
+          "type": "text",
+          "id": "text_5",
+          "label": "heading",
+          "default": "trusted brand"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "others",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text0",
+          "label": "heading",
+          "default": "others"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "heading",
+          "default": "cheap materials"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "heading",
+          "default": "small clutter"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "heading",
+          "default": "easy oxidation"
+        },
+        {
+          "type": "text",
+          "id": "text_4",
+          "label": "heading",
+          "default": "basic color"
+        },
+        {
+          "type": "text",
+          "id": "text_5",
+          "label": "heading",
+          "default": "shady brand"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "why-consider-toolganize"
+    }
+  ]
+}
+{% endschema %}

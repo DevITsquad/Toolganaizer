@@ -227,6 +227,48 @@
         "text_p_2": "<p>Reclaim Your Space, <strong>Reclaim Your Time<\/strong> Bid farewell to clutter and welcome efficiency. Our solutions are specifically engineered to remove clutter, giving you back valuable space and allowing you to work more effectively. With a clean and organized setup, you'll find yourself completing projects in record time.<\/p>",
         "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all"
       }
+    },
+    "60f31de0-0e2a-46ce-8a2b-913344f91554": {
+      "type": "why-consider-toolganize",
+      "blocks": {
+        "60e4a285-7269-424f-b653-2653d2e916c2": {
+          "type": "text_1",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Logo_Final_Yellow-01_1.png",
+            "text_1": "eliminates your stress",
+            "text_2": "remove clutter",
+            "text_3": "easy assembly",
+            "text_4": "variation of colors",
+            "text_5": "trusted brand"
+          }
+        },
+        "dc91b047-2090-4695-8962-ad86c696111e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1000004572.png"
+          }
+        },
+        "8d1fc518-ad4e-4e4d-a9b9-53a1b4eeffd6": {
+          "type": "text",
+          "settings": {
+            "text0": "others",
+            "text_1": "cheap materials",
+            "text_2": "small clutter",
+            "text_3": "easy oxidation",
+            "text_4": "basic color",
+            "text_5": "shady brand"
+          }
+        }
+      },
+      "block_order": [
+        "60e4a285-7269-424f-b653-2653d2e916c2",
+        "dc91b047-2090-4695-8962-ad86c696111e",
+        "8d1fc518-ad4e-4e4d-a9b9-53a1b4eeffd6"
+      ],
+      "settings": {
+        "heading": "<p>why consider <strong>toolganize<\/strong><\/p>",
+        "text_0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+      }
     }
   },
   "order": [
@@ -235,6 +277,7 @@
     "9ed89966-99d3-427a-a1ae-2b9d800bb8e4",
     "edda56f1-f6de-4672-b655-e689a88db0dd",
     "dc340a76-1b5c-48ec-9690-71ca8d116aa8",
-    "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c"
+    "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c",
+    "60f31de0-0e2a-46ce-8a2b-913344f91554"
   ]
 }

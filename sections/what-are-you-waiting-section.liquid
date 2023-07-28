@@ -1,235 +1,240 @@
 <style>
-  .what-are-you-waiting-section_wrapper {
-    background-image: url({{section.settings.image_desk | image_url}});
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 689px;
-    padding: 0 11px;
-    box-sizing: border-box;
-    margin-top: 90px;
-  }
-  .what-are-you-waiting-section_wrapper h2 p strong {
-    position: relative;
-  }
-  .what-are-you-waiting-section_wrapper h2 p strong::after {
-    content: '';
-    width: calc(100% - 2px);
-    height: 19%;
-    background: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    border-radius: 30px;
-  }
-
-  .CTA_botton {
-    margin: 0;
-    padding: 0;
-    margin: auto;
-    max-width: 420px;
-    height: 60px;
-    border-radius: 4px;
-    background: rgba(25, 191, 111, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .CTA_botton a {
-    display: flex;
-    gap: 15px;
-    text-decoration: none;
-    align-items: center;
-  }
-
-  .CTA_botton a span {
-    font-family: var(--custom-font-style-primary);
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-  }
-
-  .payment_wrapper_custom {
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
-  }
-  .what-are-you-waiting-text_block {
-    max-width: 940px;
-    margin: 54px auto;
-  }
-  .what-are-you-waiting-text_block {
-    font-family: var(--custom-font-style-secondary);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    max-width: 866px;
-    color: white;
-  }
-  .what-are-you-waiting-section_wrapper p {
-    margin: 0;
-    padding: 0;
-  }
-  .what-are-you-waiting-section_wrapper h2 p {
-    font-family: var(--custom-font-style-primary);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 55px;
-    letter-spacing: 0px;
-    text-align: center;
-    color: white;
-  }
-  .what-are-you-waiting-section_wrapper h2 p b {
-    font-weight: 700;
-  }
-
-  p.why-do-we-love-we-do_under_header {
-    font-family: var(--custom-font-style-primary);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: white;
-    max-width: 516px;
-    margin: 9px auto 52px auto;
-  }
-
-  .what-are-you-waiting-section_wrapper .inner_item {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .why-do-we-love-we-do_video_block {
-    max-width: 1080px;
-    max-height: 667px;
-    margin: auto;
-  }
-  .why-do-we-love-we-do_video_block img {
-    width: 100%;
-  }
-
-  .what-are-you-waiting-section_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .what-are-you-waiting-section_wrapper__inner {
-    width: 969px;
-    height: 436px;
-  }
-  .what-are-you-waiting-section_wrapper__inner h2 {
-    margin: 0;
-    max-width: 714px;
-    margin: auto;
-  }
-  .what-are-you-waiting-section_wrapper__inner .images-text-list {
-    margin-top: 26px;
-    margin-bottom: -29px;
-  }
-  .what-are-you-waiting-img-text {
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 24px;
-    font-size: 25px;
-    color: var(--custom-font-color-secondary);
-    line-height: 31.13px;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  @media screen and (max-width: 1300px) {
-    .what-are-you-waiting-img-text {
-      font-size: 21px;
-      gap: 12;
-    }
-    .what-are-you-waiting-img-text img {
-      width: 50px;
-      height: 50px;
-    }
-  }
-  @media screen and (max-width: 1100px) {
-    .what-are-you-waiting-section_wrapper__inner {
-      padding-top: 40px;
-    }
     .what-are-you-waiting-section_wrapper {
-      height: auto;
+      background-image: url({{section.settings.image_desk | image_url}});
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 689px;
+      padding: 0 11px;
+      box-sizing: border-box;
+      margin-top: 90px;
     }
-    .what-are-you-waiting-img-text img {
-      width: 40px;
-      height: 40px;
+    .what-are-you-waiting-section_wrapper h2 p strong {
+      position: relative;
+      z-index:1;
     }
-    .what-are-you-waiting-img-text span {
-      font-size: 17px;
-    }
-    .what-are-you-waiting-section_wrapper .inner_item {
-      justify-content: space-around;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .what-are-you-waiting-section_wrapper h2 p {
-      font-size: 26px;
-      line-height: 29px;
-    }
-    p.why-do-we-love-we-do_under_header {
-      font-size: 14px;
-      line-height: 20px;
-      margin: 22px auto 26px auto;
-    }
-
-    .what-are-you-waiting-text_block {
-      font-size: 13.2px;
-      line-height: 19px;
-      font-weight:600;
-    }
-    .CTA_botton a span {
-      font-size: 18px;
-      line-height: 18px;
-    }
-    .what-are-you-waiting-text_block {
-      margin: 30px auto 21px auto;
-    }
-    .payment_wrapper_custom .list-payment {
-      padding: 0px;
+    .what-are-you-waiting-section_wrapper h2 p strong::after {
+      content: '';
+      width: calc(100% - 2px);
+      height: 19%;
+      background: rgba(75, 111, 116, 1);
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      border-radius: 30px;
+      z-index:-1;
     }
 
-    .what-are-you-waiting-img-text span {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 17px;
-      white-space: initial;
-      text-align:left;
+    .CTA_botton {
+      margin: 0;
+      padding: 0;
+      margin: auto;
+      max-width: 420px;
+      height: 60px;
+      border-radius: 4px;
+      background: rgba(25, 191, 111, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .what-are-you-waiting-section_wrapper__inner .images-text-list {
-      margin-bottom: -14px;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .what-are-you-waiting-section_wrapper .inner_item {
-      justify-content: space-between;
+    .CTA_botton a {
+      display: flex;
+      gap: 15px;
+      text-decoration: none;
       align-items: center;
     }
+
+    .CTA_botton a span {
+      font-family: var(--custom-font-style-primary);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: white;
+    }
+
+    .payment_wrapper_custom {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .what-are-you-waiting-text_block {
+      max-width: 940px;
+      margin: 54px auto;
+    }
+    .what-are-you-waiting-text_block {
+      font-family: var(--custom-font-style-secondary);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: center;
+      max-width: 866px;
+      color: white;
+    }
+    .what-are-you-waiting-section_wrapper p {
+      margin: 0;
+      padding: 0;
+    }
+    .what-are-you-waiting-section_wrapper h2 p {
+      font-family: var(--custom-font-style-primary);
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 55px;
+      letter-spacing: 0px;
+      text-align: center;
+      color: white;
+    }
+    .what-are-you-waiting-section_wrapper h2 p b {
+      font-weight: 700;
+    }
+
+    p.why-do-we-love-we-do_under_header {
+      font-family: var(--custom-font-style-primary);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: white;
+      max-width: 516px;
+      margin: 9px auto 52px auto;
+    }
+
+    .what-are-you-waiting-section_wrapper .inner_item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .why-do-we-love-we-do_video_block {
+      max-width: 1080px;
+      max-height: 667px;
+      margin: auto;
+    }
+    .why-do-we-love-we-do_video_block img {
+      width: 100%;
+    }
+
     .what-are-you-waiting-section_wrapper {
-      background-image: url({{section.settings.image_mob | image_url}});
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .what-are-you-waiting-section_wrapper__inner {
+      width: 969px;
+      height: 436px;
+    }
+    .what-are-you-waiting-section_wrapper__inner h2 {
+      margin: 0;
+      max-width: 714px;
+      margin: auto;
+    }
+    .what-are-you-waiting-section_wrapper__inner .images-text-list {
+      margin-top: 26px;
+      margin-bottom: -29px;
     }
     .what-are-you-waiting-img-text {
-      gap: 9px;
-      flex-basis:33%;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      gap: 24px;
+      font-size: 25px;
+      color: var(--custom-font-color-secondary);
+      line-height: 31.13px;
+      font-weight: 500;
+      white-space: nowrap;
     }
-    .what-are-you-waiting-img-text img {
-     width:38px;
-     height:38px;
+    @media screen and (max-width: 1300px) {
+      .what-are-you-waiting-img-text {
+        font-size: 21px;
+        gap: 12;
+      }
+      .what-are-you-waiting-img-text img {
+        width: 50px;
+        height: 50px;
+      }
     }
-  }
+    @media screen and (max-width: 1100px) {
+      .what-are-you-waiting-section_wrapper__inner {
+        padding-top: 40px;
+      }
+      .what-are-you-waiting-section_wrapper {
+        height: 600px;
+      }
+      .what-are-you-waiting-img-text img {
+        width: 40px;
+        height: 40px;
+      }
+      .what-are-you-waiting-img-text span {
+        font-size: 17px;
+      }
+      .what-are-you-waiting-section_wrapper .inner_item {
+        justify-content: space-around;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .what-are-you-waiting-section_wrapper {
+        height: auto;
+      }
+      .what-are-you-waiting-section_wrapper h2 p {
+        font-size: 26px;
+        line-height: 29px;
+      }
+      p.why-do-we-love-we-do_under_header {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 22px auto 26px auto;
+      }
+
+      .what-are-you-waiting-text_block {
+        font-size: 13.2px;
+        line-height: 19px;
+        font-weight:600;
+      }
+      .CTA_botton a span {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      .what-are-you-waiting-text_block {
+        margin: 30px auto 21px auto;
+      }
+      .payment_wrapper_custom .list-payment {
+        padding: 0px;
+      }
+
+      .what-are-you-waiting-img-text span {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        white-space: initial;
+        text-align:left;
+      }
+      .what-are-you-waiting-section_wrapper__inner .images-text-list {
+        margin-bottom: -14px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .what-are-you-waiting-section_wrapper .inner_item {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .what-are-you-waiting-section_wrapper {
+        background-image: url({{section.settings.image_mob | image_url}});
+      }
+      .what-are-you-waiting-img-text {
+        gap: 9px;
+        flex-basis:33%;
+      }
+      .what-are-you-waiting-img-text img {
+       width:38px;
+       height:38px;
+      }
+    }
 </style>
 
 <div class="what-are-you-waiting-section_wrapper">

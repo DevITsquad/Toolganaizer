@@ -1,0 +1,330 @@
+{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .footer-custom-wrapper {
+    height: 587px;
+    background: var(--custom-background-secondary);
+    padding: 105px 12px 61px 12px;
+  }
+  .footer-custom-wrapper-inner {
+    max-width: 1317px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-custom-wrapper h2 {
+    max-width: 582px;
+    margin: 0;
+  }
+  .footer-custom-wrapper h2 p {
+    margin: 0;
+    font-family: var(--custom-font-style-primary);
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-weight: 400;
+    color: white;
+  }
+  .footer-custom-wrapper h2 p b {
+    font-weight: 700;
+  }
+  .footer-custom-form-wrapper {
+    max-width: 552px;
+    flex-basis: 50%;
+  }
+  .footer-custom-wrapper_subscribe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 1);
+  }
+  .footer-custom-wrapper_subscribe span {
+    font-family: var(--custom-font-color-primary);
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+  }
+  .footer-custom-wrapper .field__input {
+    border: 1px solid rgba(255, 255, 255, 1);
+    background: var(--custom-background-secondary);
+    color: rgba(249, 249, 249, 1);
+    height: 60px;
+  }
+  .footer-custom-wrapper .field__label {
+    display: flex;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(249, 249, 249, 0.5);
+    font-family: var(--custom-font-style-secondary);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .footer-custom-wrapper .field__input:focus ~ .field__label {
+    top: calc(var(--inputs-border-width) + 1rem);
+  }
+
+  .text_under_subsciption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+  }
+  .text_under_subsciption span {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+  }
+  .footer-custom-wrapper .custom_delimiter {
+    max-width: 1240px;
+    background: rgba(223, 211, 153, 0.3);
+    margin: 82px auto 72px auto;
+  }
+
+  .bottom_foter_part div {
+    font-family: var(--custom-font-style-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: white;
+  }
+
+  .bottom_foter_part {
+    display: flex;
+    max-width: 1271px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_logo_img_wrapper img {
+    margin-left: -160px;
+  }
+  @media screen and (max-width: 1200px) {
+    .footer-custom-wrapper {
+      height: auto;
+    }
+    .footer_logo_img_wrapper img {
+      margin-left: 0;
+    }
+    .footer-custom-form-wrapper {
+      width: 100%;
+    }
+
+    .footer-custom-wrapper .newsletter-form__field-wrapper {
+      margin-top: 30px;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .footer-custom-wrapper-inner {
+      flex-direction: column;
+    }
+
+    .footer-custom-wrapper h2 p {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .footer-custom-wrapper .custom_delimiter {
+      margin: 30px auto;
+    }
+
+    .footer-custom-wrapper {
+      padding: 40px 12px;
+    }
+
+    .footer-custom-wrapper h2 p {
+      font-size: 26px;
+      line-height: 31px;
+      text-align: center;
+      max-width: 336px;
+    }
+    .text_under_subsciption span {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .bottom_foter_part div {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .bottom_foter_part {
+      flex-direction: column;
+    }
+    .footer_logo_img_wrapper {
+      order: -1;
+      max-width: 177px;
+      margin-bottom: 22px;
+    }
+    .footer_logo_img_wrapper img {
+      width: 100%;
+    }
+    .left_bottom_text {
+      margin-bottom: 10px;
+    }
+    .footer-custom-wrapper .field__label {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    .footer-custom-wrapper_subscribe span {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+</style>
+<footer class="footer-custom-wrapper">
+  <div class="footer-custom-wrapper-inner">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="footer-custom-form-wrapper">
+      {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="newsletter-form__field-wrapper">
+          <div class="field">
+            <input
+              id="NewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="field__input"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus
+                aria-invalid="true"
+                aria-describedby="ContactFooter-error"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="ContactFooter-success"
+              {% endif %}
+              placeholder="{{ section.settings.place_holder }}"
+              required
+            >
+            <label class="field__label" for="NewsletterForm--{{ section.id }}">
+              {{ section.settings.place_holder }}
+            </label>
+          </div>
+          {%- if form.errors -%}
+            <small class="newsletter-form__message form__message" id="ContactFooter-error">
+              {%- render 'icon-error' -%}
+              {{- form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email -}}
+            </small>
+          {%- endif -%}
+        </div>
+        {%- if form.posted_successfully? -%}
+          <h3
+            class="newsletter-form__message newsletter-form__message--success form__message"
+            id="ContactFooter-success"
+            tabindex="-1"
+            autofocus
+          >
+            {% render 'icon-success' -%}
+            {{- 'newsletter.success' | t }}
+          </h3>
+        {%- endif -%}
+
+        <button
+          type="submit"
+          class="newsletter-form__button footer-custom-wrapper_subscribe"
+          name="commit"
+          id="Subscribe"
+          aria-label="{{ 'newsletter.button_label' | t }}"
+        >
+          <span>{{ section.settings.text_1 | upcase }}</span>
+        </button>
+      {%- endform -%}
+      <div class="text_under_subsciption">
+        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1_1213)">
+          <path d="M7.99928 0.886719C5.52916 0.886719 3.51953 2.89634 3.51953 5.3665V7.56003C3.51953 7.70941 3.64075 7.83053 3.79012 7.83053H5.29191C5.44128 7.83053 5.56241 7.70941 5.56241 7.56003V5.3665C5.56241 4.02281 6.65556 2.92963 7.99925 2.92963C9.34294 2.92963 10.4361 4.02281 10.4361 5.3665V7.56003C10.4361 7.70941 10.5573 7.83053 10.7067 7.83053H12.2085C12.3579 7.83053 12.479 7.70941 12.479 7.56003V5.3665C12.4791 2.89634 10.4694 0.886719 7.99928 0.886719ZM11.9381 7.28953H10.9772V5.3665C10.9772 3.7245 9.64131 2.38863 7.99934 2.38863C6.35737 2.38863 5.0215 3.7245 5.0215 5.3665V7.28953H4.06063V5.3665C4.06063 3.19466 5.8275 1.42775 7.99931 1.42775C10.1712 1.42775 11.9381 3.19466 11.9381 5.3665V7.28953Z" fill="white"/>
+          <path d="M12.8322 7.28955H3.16784C2.52706 7.28955 2.00572 7.81089 2.00572 8.45168V15.7246C2.00572 16.3654 2.52706 16.8867 3.16784 16.8867H12.8322C13.473 16.8867 13.9943 16.3654 13.9943 15.7246V8.45168C13.9943 7.81089 13.473 7.28955 12.8322 7.28955ZM13.4533 15.7246C13.4533 16.0671 13.1747 16.3457 12.8322 16.3457H3.16784C2.82534 16.3457 2.54672 16.0671 2.54672 15.7246V8.45168C2.54672 8.10918 2.82534 7.83055 3.16784 7.83055H12.8322C13.1747 7.83055 13.4533 8.10918 13.4533 8.45168V15.7246Z" fill="white"/>
+          <path d="M8.90925 12.4425C9.22528 12.1763 9.40919 11.787 9.40919 11.3686C9.40919 10.5914 8.77681 9.95898 7.99953 9.95898C7.22222 9.95898 6.58984 10.5914 6.58984 11.3686C6.58984 11.787 6.77375 12.1763 7.08984 12.4426L6.78575 13.8914C6.76903 13.9712 6.78912 14.0543 6.8405 14.1175C6.89191 14.1808 6.96903 14.2175 7.0505 14.2175H8.94856C9.03006 14.2175 9.10719 14.1808 9.15853 14.1175C9.20987 14.0542 9.22997 13.9712 9.21325 13.8915L8.90925 12.4425ZM8.46366 12.1C8.36866 12.1605 8.321 12.2735 8.34416 12.3838L8.61541 13.6765H7.38369L7.655 12.3839C7.67812 12.2736 7.63056 12.1606 7.5355 12.1001C7.28212 11.9389 7.13087 11.6654 7.13087 11.3687C7.13087 10.8897 7.52053 10.5 7.99953 10.5C8.4785 10.5 8.86816 10.8897 8.86816 11.3687C8.86822 11.6655 8.71697 11.9389 8.46366 12.1Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1_1213">
+          <rect width="16" height="16" fill="white" transform="translate(0 0.886719)"/>
+          </clipPath>
+          </defs>
+        </svg>
+        <span>{{ section.settings.text_2 }}</span>
+      </div>
+    </div>
+  </div>
+  <hr class="custom_delimiter">
+  <div class="bottom_foter_part">
+    <div class="left_bottom_text">{{ section.settings.left_bottom_text }}</div>
+    <div class="footer_logo_img_wrapper"><img src="{{ section.settings.logo | image_url }}" alt="logo"></div>
+    <div class="right_bottom_text">{{ section.settings.right_bottom_text }}</div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "custom-footer",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "heading",
+      "default": "<p>subscribe to our newsletter for <b>amazing updates & special offers</b></p>"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Button Text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "place_holder",
+      "label": "place_holder",
+      "default": "enter your email"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "under button Text",
+      "default": "Your information will be safe with us!"
+    },
+    {
+      "type": "text",
+      "id": "left_bottom_text",
+      "label": "left botom text",
+      "default": "terms & condition - privacy policy"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "logo"
+    },
+    {
+      "type": "text",
+      "id": "right_bottom_text",
+      "label": "right botom text",
+      "default": "© 2023 toolganize"
+    }
+  ]
+}
+{% endschema %}

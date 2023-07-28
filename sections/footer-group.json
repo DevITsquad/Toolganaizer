@@ -3,7 +3,7 @@
   "type": "footer",
   "sections": {
     "footer": {
-      "type": "footer",
+      "type": "footer-custom",
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,

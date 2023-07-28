@@ -217,6 +217,16 @@
         "after_image": "shopify:\/\/shop_images\/Rectangle_348.png",
         "after_text": "after"
       }
+    },
+    "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c": {
+      "type": "why-do-we-love-we-do",
+      "settings": {
+        "heading": "<p>why do <b>we love<\/b> what we do?<\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "text_p_1": "<p>Say goodbye to the stress and frustration that comes with a cluttered workspace. Our products are designed to eliminate chaos, providing you with a serene and organized environment where you can focus on your projects with ease.<\/p>",
+        "text_p_2": "<p>Reclaim Your Space, <strong>Reclaim Your Time<\/strong> Bid farewell to clutter and welcome efficiency. Our solutions are specifically engineered to remove clutter, giving you back valuable space and allowing you to work more effectively. With a clean and organized setup, you'll find yourself completing projects in record time.<\/p>",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all"
+      }
     }
   },
   "order": [
@@ -224,6 +234,7 @@
     "adb9c12c-b0d1-42b4-9620-9ce0de7ff53e",
     "9ed89966-99d3-427a-a1ae-2b9d800bb8e4",
     "edda56f1-f6de-4672-b655-e689a88db0dd",
-    "dc340a76-1b5c-48ec-9690-71ca8d116aa8"
+    "dc340a76-1b5c-48ec-9690-71ca8d116aa8",
+    "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c"
   ]
 }

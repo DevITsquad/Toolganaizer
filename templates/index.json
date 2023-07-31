@@ -51,6 +51,8 @@
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-share-1"
       ],
       "settings": {
+        "heading": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
+        "text_1": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
         "custom_text": "get projects completed quickly with toolganize power tool organizer",
         "product": "toolganize-tool-organizer",
         "color_scheme": "",
@@ -106,7 +108,7 @@
           "type": "announcement",
           "settings": {
             "text": "select your product",
-            "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "textarea": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524.png"
           }
         },
@@ -114,7 +116,7 @@
           "type": "announcement",
           "settings": {
             "text": "get it delivered",
-            "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "textarea": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524_2.png"
           }
         },
@@ -122,7 +124,7 @@
           "type": "announcement",
           "settings": {
             "text": "Toolganize your garage",
-            "textarea": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "textarea": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524_1.png"
           }
         }
@@ -133,7 +135,7 @@
         "45b955a4-5b15-4629-ada5-4e74c03968ad"
       ],
       "settings": {
-        "text": "get your power tool org anizer in just 3 simple steps",
+        "heading": "<p>get your <strong>power tool organizer<\/strong> in just 3 simple steps<\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
     },
@@ -175,7 +177,7 @@
         "6a813fa1-7594-46db-afc5-6b5f230ced3a"
       ],
       "settings": {
-        "text": "explore the toolganize range",
+        "heading": "<p>explore the <strong>toolganize range<\/strong><\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
     },
@@ -186,21 +188,21 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_22.png",
-            "heading": "Neat and efficient power tool storage system"
+            "heading": "<p>Neat and efficient power tool storage system<\/p>"
           }
         },
         "1ea0c201-093e-469d-98c4-587de0e78679": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_11.png",
-            "heading": "Never lose your tools ever again"
+            "heading": "<p>Never lose your tools ever again<\/p>"
           }
         },
         "c94447f8-6648-4870-9f61-dc4f43c2c39d": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_23.png",
-            "heading": "Get your projects completed quickly"
+            "heading": "<p>Get your projects completed quickly<\/p>"
           }
         }
       },
@@ -210,7 +212,7 @@
         "c94447f8-6648-4870-9f61-dc4f43c2c39d"
       ],
       "settings": {
-        "heading": "say goodbye to wasting time looking for your tools by neatly organizing",
+        "heading": "<p>say goodbye to wasting time looking for <strong>your tools by neatly organizing<\/strong><\/p>",
         "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod.",
         "before_image": "shopify:\/\/shop_images\/Image-176_1_149329fb-a87a-49a1-a7ac-a87e28c5b052.png",
         "before_text": "before",

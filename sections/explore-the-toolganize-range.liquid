@@ -149,7 +149,9 @@ background: rgba(255, 253, 241, 1);
         margin-bottom: 53px;
     }
     
-    
+    .workflow-custom-tittle p{
+        margin:0;
+    }
 
     @media screen and (max-width:1300px){
         .explore-the-toolganize_grid{
@@ -242,6 +244,13 @@ background: rgba(255, 253, 241, 1);
             padding:0 12px;
             margin-bottom: 34px;
         }
+        .explore-the-toolganize_wrapper .workflow-custom-tittle p{
+           margin:0;
+            padding:0 10px;
+            font-size:26px;
+
+        
+        }
         
         .explore-the-toolganize_wrapper{
             min-height:848px;
@@ -254,7 +263,7 @@ background: rgba(255, 253, 241, 1);
 
 
 <div class='explore-the-toolganize_wrapper'>
-<h2 class="workflow-custom-tittle">{{section.settings.text}}<h2>
+<h2 class="markered_text workflow-custom-tittle">{{section.settings.heading}}<h2>
 <h4 class='workflow-custom-tittle_1'>{{section.settings.text_1}}<h4>
     <div class="explore-the-toolganize_grid">
     {% for block in section.blocks %}
@@ -335,10 +344,10 @@ background: rgba(255, 253, 241, 1);
   "max_blocks": 3,
   "settings": [
     {
-        "type": "text",
-        "id": "text",
+        "type": "richtext",
+        "id": "heading",
         "label": "heading",
-        "default": "some info"
+        "default": "<p>explore the <b>toolganize range</b></p>"
       },
     {
         "type": "text",

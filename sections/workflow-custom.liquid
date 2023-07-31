@@ -1,6 +1,8 @@
 
 <style>
-
+    .text_wrapper_1 p{
+        margin:0;
+    }
     .mobile_slider {
         display: none !important;
     }
@@ -190,8 +192,8 @@
 </style>
 
 <div class='workflow-custom-wrapper'> 
-<h2 class="workflow-custom-tittle product__title h1">
-    {{section.settings.text}}
+<h2 class="markered_text workflow-custom-tittle product__title h1">
+    {{section.settings.heading}}
 </h2> 
 <h5 class="workflow-custom-tittle_1"> {{section.settings.text_1}}</h5>
 
@@ -272,10 +274,10 @@
   "max_blocks": 3,
   "settings": [
     {
-        "type": "text",
-        "id": "text",
+        "type": "richtext",
+        "id": "heading",
         "label": "heading",
-        "default": "some info"
+        "default": "<p>get your <b>power tool organizer</b> in just 3 simple steps</p>"
       },
     {
         "type": "text",
@@ -296,10 +298,10 @@
           "default": "some info"
         },
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "textarea",
           "label": "text",
-          "default": "some info"
+          "default": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing<strong/> elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
         },
         {
           "type": "image_picker",

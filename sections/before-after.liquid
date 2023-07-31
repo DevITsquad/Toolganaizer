@@ -77,7 +77,8 @@
     gap: 30px;
     max-height: 190px;
   }
-  .features_item span {
+  .features_item span p{
+    margin:0;
     font-family: var(--custom-font-style-secondary);
     font-size: 25px;
     font-weight: 500;
@@ -118,7 +119,7 @@
     .features_wrapper {
       margin-top: 33px;
     }
-    .features_item span {
+    .features_item span p{
       font-size: 16px;
       line-height: 22px;
     }
@@ -144,14 +145,15 @@
       width: 40px;
       height: 40px;
     }
-    .features_item span {
+    .features_item span,
+    .features_item span p{
       text-align: left;
     }
   }
 </style>
 
 <div class="before-after-wrapper">
-  <h2 class="workflow-custom-tittle ">
+  <h2 class="markered_text workflow-custom-tittle">
     {{ section.settings.heading }}
   </h2>
   <h5 class="workflow-custom-tittle_1">{{ section.settings.text }}</h5>
@@ -182,16 +184,16 @@
   "max_blocks": 3,
   "settings": [
     {
-      "type": "text",
+      "type": "richtext",
       "id": "heading",
       "label": "heading",
-      "default": "some info"
+      "default": "<p>say goodbye to wasting time looking for <b>your tools by neatly organizing</b></p>"
     },
     {
       "type": "text",
       "id": "text",
       "label": "text",
-      "default": "some info"
+      "default": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
     },
     {
       "type": "image_picker",
@@ -229,8 +231,9 @@
         },
         {
           "label": "heading",
-          "type": "text",
-          "id": "heading"
+          "type": "richtext",
+          "id": "heading",
+          "default":"<p>Neat and efficient power tool storage system</p>"
         }
       ]
     }

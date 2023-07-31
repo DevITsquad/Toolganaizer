@@ -9,22 +9,7 @@
       box-sizing: border-box;
       margin-top: 90px;
     }
-    .what-are-you-waiting-section_wrapper h2 p strong {
-      position: relative;
-      z-index:1;
-    }
-    .what-are-you-waiting-section_wrapper h2 p strong::after {
-      content: '';
-      width: calc(100% - 2px);
-      height: 19%;
-      background: rgba(75, 111, 116, 1);
-      position: absolute;
-      left: 0;
-      bottom: 5px;
-      border-radius: 30px;
-      z-index:-1;
-    }
-
+ 
     .CTA_botton {
       margin: 0;
       padding: 0;
@@ -239,7 +224,7 @@
 
 <div class="what-are-you-waiting-section_wrapper">
   <div class="what-are-you-waiting-section_wrapper__inner">
-    <h2>{{ section.settings.heading }}</h2>
+    <h2 class="markered_text green">{{ section.settings.heading }}</h2>
 
     {%- if section.blocks.size > 0 -%}
       <div class="images-text-list">

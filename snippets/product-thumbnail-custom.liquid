@@ -1,46 +1,74 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {% comment %}
-    Renders a product thumbnail with a modal-opener
+  Renders a product thumbnail with a modal-opener
 
-    Accepts:
-    - media: {Object} Product Media object
-    - media_count: {Number} Number of media objects
-    - position: {String} Position of the media. Used for accessible label.
-    - desktop_layout: {String} Layout of the media for desktop.
-    - mobile_layout: {String} Layout of the media for mobile.
-    - loop: {Boolean} Enable video looping (optional)
-    - modal_id: {String} The product modal that will be shown by clicking the thumbnail
-    - xr_button: {Boolean} Renders the "View in your space" button (shopify-xr-button) if the media is a 3D Model
-    - constrain_to_viewport: {Boolean} Force media height to fit within viewport
-    - media_fit: {String} Method ("contain" or "cover") to fit image into container
-    - media_width: {Float} The width percentage that the media column occupies on desktop.
-    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  Accepts:
+  - media: {Object} Product Media object
+  - media_count: {Number} Number of media objects
+  - position: {String} Position of the media. Used for accessible label.
+  - desktop_layout: {String} Layout of the media for desktop.
+  - mobile_layout: {String} Layout of the media for mobile.
+  - loop: {Boolean} Enable video looping (optional)
+  - modal_id: {String} The product modal that will be shown by clicking the thumbnail
+  - xr_button: {Boolean} Renders the "View in your space" button (shopify-xr-button) if the media is a 3D Model
+  - constrain_to_viewport: {Boolean} Force media height to fit within viewport
+  - media_fit: {String} Method ("contain" or "cover") to fit image into container
+  - media_width: {Float} The width percentage that the media column occupies on desktop.
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
 
-    Usage:
-    {% render 'product-thumbnail',
-      media: media,
-      position: forloop.index,
-      loop: section.settings.enable_video_looping,
-      modal_id: section.id
-    %}
+  Usage:
+  {% render 'product-thumbnail',
+    media: media,
+    position: forloop.index,
+    loop: section.settings.enable_video_looping,
+    modal_id: section.id
+  %}
 {% endcomment %}
-      </span class="img-custom-size">
-
-      {% if media.preview_image %}
-        {{ media.preview_image | image_url: width: 1946 | image_tag:
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-        }}
-       {% else %}
-       {{ media | image_url: width: 1946 | image_tag:
+<div class="img-custom-size">
+  {% if media.preview_image %}
+    {{
+      media.preview_image
+      | image_url: width: 1946
+      | image_tag:
         loading: lazy,
         sizes: sizes,
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
-        
-      
-      {% endif %}
-    
-    </button>
+    }}
+  {% else %}
+    {{
+      media
+      | image_url: width: 1946
+      | image_tag:
+        loading: lazy,
+        sizes: sizes,
+        widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
+    }}
+  {% endif %}
+
+
+  <div class='collors_wrapper'> 
+  <p class='collors__header'>Available colors</p>
+  <div class="possible_colors">
    
+
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#D9DB32"/>
+    </svg>
+
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#E9B82D"/>
+    </svg>
+
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#BC2D33"/>
+    </svg>
+
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#F37328"/>
+    </svg>
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#6ABCC8"/>
+    </svg>
+  </div>
+  </div>
+</div>

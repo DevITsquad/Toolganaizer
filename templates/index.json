@@ -55,6 +55,10 @@
         "text_1": "get projects completed quickly with toolganize power tool organizer",
         "custom_text": "get projects completed quickly with toolganize power tool organizer",
         "product": "toolganize-tool-organizer",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "li_1": "<p><strong>3 tier power<\/strong> tool organizer<\/p>",
+        "li_2": "<p> Side storage to hold <strong>screwdrivers and drill<\/strong> bits.<\/p>",
+        "li_3": "<p><strong>5 Color<\/strong> variations available<\/p>",
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "medium",
@@ -272,43 +276,10 @@
         "text_0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
       }
     },
-    "dfae8e50-8358-4615-b19e-11239cb13df4": {
-      "type": "what-are-you-waiting-section",
-      "blocks": {
-        "0205f85c-b9e7-480a-bda7-41218fa9dd40": {
-          "type": "announcement",
-          "settings": {
-            "text": "built to last",
-            "image": "shopify:\/\/shop_images\/image_10.png"
-          }
-        },
-        "4798cae8-215b-42a9-b65d-27abb86883f2": {
-          "type": "announcement",
-          "settings": {
-            "text": "designed by tradesmen",
-            "image": "shopify:\/\/shop_images\/image_10_1.png"
-          }
-        },
-        "1447df1f-985d-4191-abd6-50640dabaa3d": {
-          "type": "announcement",
-          "settings": {
-            "text": "easy to assemble",
-            "image": "shopify:\/\/shop_images\/image_10_2.png"
-          }
-        }
-      },
-      "block_order": [
-        "0205f85c-b9e7-480a-bda7-41218fa9dd40",
-        "4798cae8-215b-42a9-b65d-27abb86883f2",
-        "1447df1f-985d-4191-abd6-50640dabaa3d"
-      ],
+    "45171614-2356-49c0-853f-896a6d6d1624": {
+      "type": "amazon-raiting-row",
       "settings": {
-        "heading": "<p>what are you waiting for get your <strong>power tool ganizer now<\/strong><\/p>",
-        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
-        "text_p_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
-        "image_desk": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
-        "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png"
+        "heading": "<p>our products are rated an average of 4.8 out of 5 on ----, on over 600+ sales<\/p>"
       }
     },
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f": {
@@ -363,6 +334,89 @@
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae",
         "open_first_collapsible_row": true
       }
+    },
+    "dfae8e50-8358-4615-b19e-11239cb13df4": {
+      "type": "what-are-you-waiting-section",
+      "blocks": {
+        "0205f85c-b9e7-480a-bda7-41218fa9dd40": {
+          "type": "announcement",
+          "settings": {
+            "text": "built to last",
+            "image": "shopify:\/\/shop_images\/image_10.png"
+          }
+        },
+        "4798cae8-215b-42a9-b65d-27abb86883f2": {
+          "type": "announcement",
+          "settings": {
+            "text": "designed by tradesmen",
+            "image": "shopify:\/\/shop_images\/image_10_1.png"
+          }
+        },
+        "1447df1f-985d-4191-abd6-50640dabaa3d": {
+          "type": "announcement",
+          "settings": {
+            "text": "easy to assemble",
+            "image": "shopify:\/\/shop_images\/image_10_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "0205f85c-b9e7-480a-bda7-41218fa9dd40",
+        "4798cae8-215b-42a9-b65d-27abb86883f2",
+        "1447df1f-985d-4191-abd6-50640dabaa3d"
+      ],
+      "settings": {
+        "heading": "<p>what are you waiting for get your <strong>power tool ganizer now<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "text_p_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "image_desk": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
+        "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png"
+      }
+    },
+    "377fa1fa-20f5-431d-b170-f49ea44f9e24": {
+      "type": "bottom-images-slider",
+      "blocks": {
+        "f78fee44-db39-4575-83b0-21a544a9df92": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
+          }
+        },
+        "9a72fc55-831d-4c7b-8e0f-aa19b695146e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
+          }
+        },
+        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
+          }
+        },
+        "ee741655-45d5-4683-bcd0-fe2f5b66763d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
+          }
+        },
+        "01a00935-4ca8-4988-b80d-40ab7e91f3a1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "f78fee44-db39-4575-83b0-21a544a9df92",
+        "9a72fc55-831d-4c7b-8e0f-aa19b695146e",
+        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d",
+        "ee741655-45d5-4683-bcd0-fe2f5b66763d",
+        "01a00935-4ca8-4988-b80d-40ab7e91f3a1"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -373,7 +427,9 @@
     "dc340a76-1b5c-48ec-9690-71ca8d116aa8",
     "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c",
     "60f31de0-0e2a-46ce-8a2b-913344f91554",
+    "45171614-2356-49c0-853f-896a6d6d1624",
+    "16a713e8-0dd5-48b3-8696-08d51bf4c53f",
     "dfae8e50-8358-4615-b19e-11239cb13df4",
-    "16a713e8-0dd5-48b3-8696-08d51bf4c53f"
+    "377fa1fa-20f5-431d-b170-f49ea44f9e24"
   ]
 }

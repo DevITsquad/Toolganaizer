@@ -39,6 +39,11 @@ p {
 .markered_text.green p strong {
     background-image: linear-gradient(90deg, #3D8790, #3D8790);
 }
+.CTA_botton a{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
 @media screen and (max-width: 767px) {
     .markered_text p strong {
         background-size: 100% 6.45px;

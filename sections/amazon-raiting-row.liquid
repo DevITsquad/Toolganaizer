@@ -1,5 +1,6 @@
 <style>
   .amazon_raiting_wrapper {
+    margin-top:100px;
     background: var(--custom-background-secondary);
     height: 111px;
     display: flex;
@@ -40,16 +41,13 @@
 
       .amazon_raiting_wrapper{
         height:84px;
+        margin-top:49px;
     }
   }
 </style>
 
 <div class="amazon_raiting_wrapper">
   <div class="amazon_raiting_text">
-    <script>
-
-      console.log("111",{{ section.settings.heading | split: '----' | first |json}})
-    </script>
     {%- if section.settings.heading != blank -%}
       {{ section.settings.heading | split: '----' | first }}
       <svg width="99" height="30" viewBox="0 0 99 30" fill="none" xmlns="http://www.w3.org/2000/svg">

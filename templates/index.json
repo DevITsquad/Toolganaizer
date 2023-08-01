@@ -235,6 +235,19 @@
         "text_in_button": "SHOP NOW"
       }
     },
+    "3334a083-c9ee-4d88-9173-38cfc438bd9b": {
+      "type": "featured-collection-custom",
+      "settings": {
+        "heading": "<p>check out <strong>toolganize products<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "dummy_description": "toolganize power tool organizer & storage wall mount bla bla bla",
+        "collection": "frontpage",
+        "button_text": "SHOP NOW",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "bottom_button_text": "Explore more products",
+        "variant_name": "Available colours"
+      }
+    },
     "60f31de0-0e2a-46ce-8a2b-913344f91554": {
       "type": "why-consider-toolganize",
       "blocks": {
@@ -463,6 +476,7 @@
     "edda56f1-f6de-4672-b655-e689a88db0dd",
     "dc340a76-1b5c-48ec-9690-71ca8d116aa8",
     "33e73bfc-0428-4ec8-ba36-2f4b6bfc325c",
+    "3334a083-c9ee-4d88-9173-38cfc438bd9b",
     "60f31de0-0e2a-46ce-8a2b-913344f91554",
     "45171614-2356-49c0-853f-896a6d6d1624",
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f",

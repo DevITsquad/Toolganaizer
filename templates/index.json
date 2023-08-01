@@ -53,11 +53,11 @@
       "settings": {
         "heading": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
         "text_1": "get projects completed quickly with toolganize power tool organizer",
-        "custom_text": "get projects completed quickly with toolganize power tool organizer",
         "product": "toolganize-tool-organizer",
         "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
         "li_1": "<p><strong>3 tier power<\/strong> tool organizer<\/p>",
         "li_2": "<p> Side storage to hold <strong>screwdrivers and drill<\/strong> bits.<\/p>",
+        "text_in_button": "SHOP NOW",
         "li_3": "<p><strong>5 Color<\/strong> variations available<\/p>",
         "color_scheme": "",
         "secondary_background": false,
@@ -231,7 +231,8 @@
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
         "text_p_1": "<p>Say goodbye to the stress and frustration that comes with a cluttered workspace. Our products are designed to eliminate chaos, providing you with a serene and organized environment where you can focus on your projects with ease.<\/p>",
         "text_p_2": "<p>Reclaim Your Space, <strong>Reclaim Your Time<\/strong> Bid farewell to clutter and welcome efficiency. Our solutions are specifically engineered to remove clutter, giving you back valuable space and allowing you to work more effectively. With a clean and organized setup, you'll find yourself completing projects in record time.<\/p>",
-        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all"
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "text_in_button": "SHOP NOW"
       }
     },
     "60f31de0-0e2a-46ce-8a2b-913344f91554": {
@@ -335,6 +336,85 @@
         "open_first_collapsible_row": true
       }
     },
+    "377fa1fa-20f5-431d-b170-f49ea44f9e24": {
+      "type": "bottom-images-slider",
+      "blocks": {
+        "f78fee44-db39-4575-83b0-21a544a9df92": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
+          }
+        },
+        "9a72fc55-831d-4c7b-8e0f-aa19b695146e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
+          }
+        },
+        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
+          }
+        },
+        "ee741655-45d5-4683-bcd0-fe2f5b66763d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
+          }
+        },
+        "01a00935-4ca8-4988-b80d-40ab7e91f3a1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
+          }
+        },
+        "9e94baa3-d94e-4b11-b75f-144d0d1fa47f": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
+          }
+        },
+        "8377ab08-10c7-4e25-a323-c393ee02fe38": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
+          }
+        },
+        "7ea40a58-d060-4c28-a747-1eb4c6a0d433": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
+          }
+        },
+        "edb83b97-fd22-43a6-b977-a30e66f70091": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
+          }
+        },
+        "6924e664-f0bb-4a9e-9ae6-e994eeaf42ce": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "f78fee44-db39-4575-83b0-21a544a9df92",
+        "9a72fc55-831d-4c7b-8e0f-aa19b695146e",
+        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d",
+        "ee741655-45d5-4683-bcd0-fe2f5b66763d",
+        "01a00935-4ca8-4988-b80d-40ab7e91f3a1",
+        "9e94baa3-d94e-4b11-b75f-144d0d1fa47f",
+        "8377ab08-10c7-4e25-a323-c393ee02fe38",
+        "7ea40a58-d060-4c28-a747-1eb4c6a0d433",
+        "edb83b97-fd22-43a6-b977-a30e66f70091",
+        "6924e664-f0bb-4a9e-9ae6-e994eeaf42ce"
+      ],
+      "settings": {
+      }
+    },
     "dfae8e50-8358-4615-b19e-11239cb13df4": {
       "type": "what-are-you-waiting-section",
       "blocks": {
@@ -371,51 +451,8 @@
         "text_p_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
         "image_desk": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
-        "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png"
-      }
-    },
-    "377fa1fa-20f5-431d-b170-f49ea44f9e24": {
-      "type": "bottom-images-slider",
-      "blocks": {
-        "f78fee44-db39-4575-83b0-21a544a9df92": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
-          }
-        },
-        "9a72fc55-831d-4c7b-8e0f-aa19b695146e": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
-          }
-        },
-        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
-          }
-        },
-        "ee741655-45d5-4683-bcd0-fe2f5b66763d": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
-          }
-        },
-        "01a00935-4ca8-4988-b80d-40ab7e91f3a1": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
-          }
-        }
-      },
-      "block_order": [
-        "f78fee44-db39-4575-83b0-21a544a9df92",
-        "9a72fc55-831d-4c7b-8e0f-aa19b695146e",
-        "ce9d4e8b-8963-429e-9e10-672bc6a35a2d",
-        "ee741655-45d5-4683-bcd0-fe2f5b66763d",
-        "01a00935-4ca8-4988-b80d-40ab7e91f3a1"
-      ],
-      "settings": {
+        "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
+        "text_in_button": "SHOP NOW"
       }
     }
   },
@@ -429,7 +466,7 @@
     "60f31de0-0e2a-46ce-8a2b-913344f91554",
     "45171614-2356-49c0-853f-896a6d6d1624",
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f",
-    "dfae8e50-8358-4615-b19e-11239cb13df4",
-    "377fa1fa-20f5-431d-b170-f49ea44f9e24"
+    "377fa1fa-20f5-431d-b170-f49ea44f9e24",
+    "dfae8e50-8358-4615-b19e-11239cb13df4"
   ]
 }

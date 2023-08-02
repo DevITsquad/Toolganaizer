@@ -48,6 +48,33 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "5b76f0d5-4d8c-443a-9f35-ace677a93785": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "content": "<p>dadaddadda<\/p>",
+            "page": ""
+          }
+        },
+        "9d437dfc-bd15-477b-891f-2f0c82943410": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "5a48c655-7bd8-4430-be1b-0d90f8efea96": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -58,7 +85,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "5b76f0d5-4d8c-443a-9f35-ace677a93785",
+        "9d437dfc-bd15-477b-891f-2f0c82943410",
+        "5a48c655-7bd8-4430-be1b-0d90f8efea96"
       ],
       "settings": {
         "enable_sticky_info": true,

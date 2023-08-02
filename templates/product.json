@@ -194,12 +194,92 @@
         "heading": "<p>get your <strong>power tool organizer<\/strong> in just 3 simple steps<\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
+    },
+    "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5": {
+      "type": "bottom-images-slider",
+      "blocks": {
+        "16950477-3759-4fb7-86a6-8e3803df23f0": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
+          }
+        },
+        "3566172c-36cb-4fd9-b8f1-57192052cc18": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
+          }
+        },
+        "a4f6968c-3301-4d2b-b909-85831da1b78e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
+          }
+        },
+        "ebe55e8b-2def-44d9-a945-bb52c592118c": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
+          }
+        },
+        "21dca364-19ca-45a6-b789-e59ee061dec1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
+          }
+        },
+        "c04462f3-74d1-48ae-9453-4de3239e0927": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_2.png"
+          }
+        },
+        "b4641827-6961-4ccc-9636-a458e24ac9a8": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_3.png"
+          }
+        },
+        "bdad8c7a-0744-4e74-95b8-7282581556e8": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_4_2.png"
+          }
+        },
+        "9f744400-98b5-4f4a-be29-c5d4d6f98c96": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_5.png"
+          }
+        },
+        "92efab43-4050-46f5-9b25-11f21f89aa83": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_Copy_6.png"
+          }
+        }
+      },
+      "block_order": [
+        "16950477-3759-4fb7-86a6-8e3803df23f0",
+        "3566172c-36cb-4fd9-b8f1-57192052cc18",
+        "a4f6968c-3301-4d2b-b909-85831da1b78e",
+        "ebe55e8b-2def-44d9-a945-bb52c592118c",
+        "21dca364-19ca-45a6-b789-e59ee061dec1",
+        "c04462f3-74d1-48ae-9453-4de3239e0927",
+        "b4641827-6961-4ccc-9636-a458e24ac9a8",
+        "bdad8c7a-0744-4e74-95b8-7282581556e8",
+        "9f744400-98b5-4f4a-be29-c5d4d6f98c96",
+        "92efab43-4050-46f5-9b25-11f21f89aa83"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "6bde4048-76f7-4a59-b6fb-020ef179d9d3",
-    "43fe03db-33d3-4766-a6f0-c7085e98353e"
+    "43fe03db-33d3-4766-a6f0-c7085e98353e",
+    "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5"
   ]
 }

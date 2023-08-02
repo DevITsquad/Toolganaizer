@@ -107,6 +107,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -155,11 +156,50 @@
       ],
       "settings": {
       }
+    },
+    "43fe03db-33d3-4766-a6f0-c7085e98353e": {
+      "type": "workflow-custom",
+      "blocks": {
+        "2a7a5419-68fd-4560-b657-348e0ea44e6c": {
+          "type": "announcement",
+          "settings": {
+            "text": "select your product",
+            "textarea": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/strong><\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1000004524.png"
+          }
+        },
+        "101f64e6-73f8-4eb6-a51b-a2c49d9a5bea": {
+          "type": "announcement",
+          "settings": {
+            "text": "get it delivered",
+            "textarea": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/strong><\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1000004524_2.png"
+          }
+        },
+        "63d3af4c-613e-4eac-9e47-b614bb9af1af": {
+          "type": "announcement",
+          "settings": {
+            "text": "toolganize your garage",
+            "textarea": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/strong><\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1000004524_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "2a7a5419-68fd-4560-b657-348e0ea44e6c",
+        "101f64e6-73f8-4eb6-a51b-a2c49d9a5bea",
+        "63d3af4c-613e-4eac-9e47-b614bb9af1af"
+      ],
+      "settings": {
+        "heading": "<p>get your <strong>power tool organizer<\/strong> in just 3 simple steps<\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "6bde4048-76f7-4a59-b6fb-020ef179d9d3"
+    "6bde4048-76f7-4a59-b6fb-020ef179d9d3",
+    "43fe03db-33d3-4766-a6f0-c7085e98353e"
   ]
 }

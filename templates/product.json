@@ -197,6 +197,40 @@
     },
     "f2044370-e51b-45e6-8c2f-258aebc01922": {
       "type": "why-consider-toolganize",
+      "blocks": {
+        "fd3cf1c9-62ed-4ead-9d73-a25448d1a582": {
+          "type": "text_1",
+          "settings": {
+            "text_1": "eliminates your stress",
+            "text_2": "remove clutter",
+            "text_3": "easy assembly",
+            "text_4": "variation of colors",
+            "text_5": "trusted brand"
+          }
+        },
+        "69c52898-bf25-4c3e-946c-123496f19642": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1000004572.png"
+          }
+        },
+        "2cd03b34-8545-42b8-a7c7-c7f6d45f96ce": {
+          "type": "text",
+          "settings": {
+            "text0": "others",
+            "text_1": "cheap materials",
+            "text_2": "small clutter",
+            "text_3": "easy oxidation",
+            "text_4": "basic color",
+            "text_5": "shady brand"
+          }
+        }
+      },
+      "block_order": [
+        "fd3cf1c9-62ed-4ead-9d73-a25448d1a582",
+        "69c52898-bf25-4c3e-946c-123496f19642",
+        "2cd03b34-8545-42b8-a7c7-c7f6d45f96ce"
+      ],
       "settings": {
         "heading": "<p>why consider <strong>toolganize<\/strong><\/p>",
         "text_0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."

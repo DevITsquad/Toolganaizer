@@ -52,7 +52,7 @@
         "5b76f0d5-4d8c-443a-9f35-ace677a93785": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Description",
             "icon": "none",
             "content": "<p>dadaddadda<\/p>",
             "page": ""
@@ -122,10 +122,44 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "6bde4048-76f7-4a59-b6fb-020ef179d9d3": {
+      "type": "line-under-product-home-page",
+      "blocks": {
+        "3a170ad6-9cd9-418e-9969-2bcdfafd77d0": {
+          "type": "announcement",
+          "settings": {
+            "text": "built to last",
+            "image": "shopify:\/\/shop_images\/image_10.png"
+          }
+        },
+        "fd99284f-5c1b-440c-bbe2-2a29469d201c": {
+          "type": "announcement",
+          "settings": {
+            "text": "designed by tradesmen",
+            "image": "shopify:\/\/shop_images\/image_10_1.png"
+          }
+        },
+        "66252404-b723-4aa3-aa93-e892a6d053d4": {
+          "type": "announcement",
+          "settings": {
+            "text": "easy to assemble",
+            "image": "shopify:\/\/shop_images\/image_10_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "3a170ad6-9cd9-418e-9969-2bcdfafd77d0",
+        "fd99284f-5c1b-440c-bbe2-2a29469d201c",
+        "66252404-b723-4aa3-aa93-e892a6d053d4"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "6bde4048-76f7-4a59-b6fb-020ef179d9d3"
   ]
 }

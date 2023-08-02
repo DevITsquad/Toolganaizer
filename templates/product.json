@@ -195,6 +195,72 @@
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
     },
+    "f2044370-e51b-45e6-8c2f-258aebc01922": {
+      "type": "why-consider-toolganize",
+      "settings": {
+        "heading": "<p>why consider <strong>toolganize<\/strong><\/p>",
+        "text_0": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+      }
+    },
+    "20ffb162-6d3a-4c44-a34c-747aa3b02a76": {
+      "type": "amazon-raiting-row",
+      "settings": {
+        "heading": "<p>our products are rated an average of 4.8 out of 5 on ----, on over 600+ sales<\/p>"
+      }
+    },
+    "7eb6b982-ec17-48a5-a4f4-4336114d70e9": {
+      "type": "collapsible-content-custom",
+      "blocks": {
+        "14c3a0bf-6514-4c09-9aed-f6eef5e830c5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "db7aac13-9c11-4625-9300-2a2a2c57ea45": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "57e86bba-c3cb-42c2-906e-e69ae5027e3f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "23d7e4ae-29c4-4574-b9fb-7b84cc161103": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "168abaab-b0eb-411a-b01e-7cdfe889a6eb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "14c3a0bf-6514-4c09-9aed-f6eef5e830c5",
+        "db7aac13-9c11-4625-9300-2a2a2c57ea45",
+        "57e86bba-c3cb-42c2-906e-e69ae5027e3f",
+        "23d7e4ae-29c4-4574-b9fb-7b84cc161103",
+        "168abaab-b0eb-411a-b01e-7cdfe889a6eb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Logo_Final_Yellow-01_1.png",
+        "heading": "<p>frequently asked <strong>questions<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae",
+        "open_first_collapsible_row": true
+      }
+    },
     "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5": {
       "type": "bottom-images-slider",
       "blocks": {
@@ -273,6 +339,19 @@
       ],
       "settings": {
       }
+    },
+    "029e6697-bde3-4080-95a0-2ee10afe4bac": {
+      "type": "featured-collection-custom",
+      "settings": {
+        "heading": "<p>check out <strong>toolganize products<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "dummy_description": "toolganize power tool organizer & storage wall mount bla bla bla",
+        "collection": "frontpage",
+        "button_text": "SHOP NOW",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "bottom_button_text": "Explore more products",
+        "variant_name": "Available colours"
+      }
     }
   },
   "order": [
@@ -280,6 +359,10 @@
     "related-products",
     "6bde4048-76f7-4a59-b6fb-020ef179d9d3",
     "43fe03db-33d3-4766-a6f0-c7085e98353e",
-    "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5"
+    "f2044370-e51b-45e6-8c2f-258aebc01922",
+    "20ffb162-6d3a-4c44-a34c-747aa3b02a76",
+    "7eb6b982-ec17-48a5-a4f4-4336114d70e9",
+    "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5",
+    "029e6697-bde3-4080-95a0-2ee10afe4bac"
   ]
 }

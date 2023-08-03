@@ -10,6 +10,76 @@
   Usage:
   {% render 'price', product: product %}
 {% endcomment %}
+
+{% style %}
+  .custom_bage {
+    padding: 11px 13px 8px 15px;
+    border-radius: 95px;
+    gap: 10px;
+    background: rgba(251, 188, 4, 1);
+    font-family: var(--custom-font-style-primary);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .custom-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap:wrap;
+  }
+
+  .inventory_quantity_bage {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--custom-font-style-primary);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .inventory_quantity_bage.mobile {
+    display: none;
+  }
+
+  .custom-price .price-item:not(s) {
+    font-family: var(--custom-font-style-primary);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+  }
+
+  .custom-price .price-item.price-item--regular {
+    font-family: var(--custom-font-style-primary);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media screen and (max-width: 1050px) {
+    .custom-price .price-item:not(s),
+    .custom-price .price-item.price-item--regular {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .inventory_quantity_bage.desc {
+      display: none;
+    }
+    .inventory_quantity_bage.mobile {
+      display: block;
+    }
+  }
+{% endstyle %}
 {%- liquid
   if use_variant
     assign target = product.selected_or_first_available_variant
@@ -22,7 +92,7 @@
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
+    assign money_price = price | money
   endif
 
   if target == product and product.price_varies
@@ -32,6 +102,7 @@
 
 <div
   class="
+    custom-price
     price
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} price--sold-out {% endif -%}
@@ -58,8 +129,6 @@
         <span>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
-            {% else %}
               {{ compare_at_price | money }}
             {% endif %}
           </s>
@@ -86,12 +155,21 @@
     </small>
   </div>
   {%- if show_badges -%}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      {{ 'products.product.on_sale' | t }}
-    </span>
+    <span class="custom_bage"> You Saved {{ compare_at_price | minus: product.price | money }} </span>
 
-    <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
-      {{ 'products.product.sold_out' | t }}
+    <span class="inventory_quantity_bage desc">
+      {%- if product.selected_or_first_available_variant.available -%}
+        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="9.5" r="9" fill="#2ADC87" fill-opacity="0.2"/>
+          <circle cx="9" cy="9.5" r="5" fill="#2ADC87"/>
+        </svg>
+        {{ product.selected_or_first_available_variant.inventory_quantity }} Left In Stock
+
+      {%- else -%}
+        <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
+          {{ 'products.product.sold_out' | t }}
+        </span>
+      {%- endif -%}
     </span>
   {%- endif -%}
 </div>

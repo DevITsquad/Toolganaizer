@@ -1,11 +1,11 @@
 <style>
-  .accordion details[open] .opened_content {
+  .collapsible-content-custom-wrapper .accordion details[open] .opened_content {
     display: none;
   }
-  .accordion details[open] .accordion__title {
+  .collapsible-content-custom-wrapper .accordion details[open] .accordion__title {
     background: rgba(249, 245, 230, 1);
   }
-  .accordion details:not([open]) .closed_content {
+  .collapsible-content-custom-wrapper .accordion details:not([open]) .closed_content {
     display: none;
   }
   .collapsible-content-custom-wrapper .accordion svg {
@@ -58,6 +58,7 @@
   }
   .collapsible-content-custom-wrapper .accordion summary {
     align-items: center;
+    display:flex;
   }
   .collapsible-content-custom-wrapper .accordion__content {
     padding-left: 80px;

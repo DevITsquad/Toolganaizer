@@ -239,6 +239,12 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom-variables.css' | asset_url | stylesheet_tag }}
+    {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
+
 
     <style>
          @font-face {
@@ -431,11 +437,7 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    >
-
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>

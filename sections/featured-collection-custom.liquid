@@ -249,7 +249,7 @@
   <div class="featured-collection-custom_grid desctop_collection">
     {%- for item in section.settings.collection.products -%}
       <div class="featured-collection-custom_grid_element">
-        <img src="{{item.featured_image | image_url}}" alt="img">
+        <img loading="lazy" src="{{item.featured_image | image_url}}" alt="img">
         <div class="featured-collection-custom_grid_element_description">
           {%- if item.description != blank -%}
             {% if item.description.size > 55 -%}
@@ -326,7 +326,7 @@
     <div class="swiper-wrapper">
       {%- for item in section.settings.collection.products -%}
         <div class="featured-collection-custom_grid_element swiper-slide">
-          <img src="{{item.featured_image | image_url}}" alt="img">
+          <img loading="lazy" src="{{item.featured_image | image_url}}" alt="img">
           <div class="featured-collection-custom_grid_element_description">
             {%- if item.description != blank -%}
               {% if item.description.size > 55 -%}

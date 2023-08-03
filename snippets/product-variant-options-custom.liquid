@@ -1,0 +1,169 @@
+{% comment %}
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+
+
+  Usage:
+  {% render 'product-variant-options',
+    product: product,
+    option: option,
+    block: block
+  %}
+{% endcomment %}
+{% style %}
+  .custom-hidden-input {
+    display: none;
+  }
+  .product-variant-custom_color_wrapper svg:not(.checked_mark),
+  .product-variant-custom_color_wrapper {
+    display: block;
+    position: relative;
+    height: 61px;
+    width: 61px;
+  }
+
+  .checked_mark {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .variants__title {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+    margin-right:30px
+  }
+  @media screen and (max-width: 1100px) {
+    .product-variant-custom_color_wrapper svg:not(.checked_mark),
+  .product-variant-custom_color_wrapper {
+    height: 31px;
+    width: 31px;
+  }
+  }
+  @media screen and (max-width: 750px) {
+    .variants__title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-right:15px
+    }
+  }
+
+{% endstyle %}
+{%- liquid
+  assign variants_available_arr = product.variants | map: 'available'
+  assign variants_option1_arr = product.variants | map: 'option1'
+  assign variants_option2_arr = product.variants | map: 'option2'
+  assign variants_option3_arr = product.variants | map: 'option3'
+
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
+<span class="variants__title">{{ block.settings.items_variant }}</span>
+{%- for value in option.values -%}
+  {% style %}
+  {% endstyle %}
+  {%- liquid
+    assign option_disabled = true
+
+    for option1_name in variants_option1_arr
+      case option.position
+        when 1
+          if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 2
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 3
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+            assign option_disabled = false
+          endif
+      endcase
+    endfor
+  -%}
+
+  <input
+    class="custom-hidden-input {% if option_disabled %}disabled{% endif %}"
+    type="radio"
+    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+    name="{{ option.name }}"
+    value="{{ value | escape }}"
+    form="{{ product_form_id }}"
+    {% if option.selected_value == value %}
+      checked
+    {% endif %}
+  >
+  <label class="product-variant-custom_color_wrapper" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+    <svg class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+    </svg>
+
+    {%- case value -%}
+      {%- when 'skyblue' -%}
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.0328" cy="11.6321" r="11" fill="#6ABCC8"/>
+        </svg>
+
+      {%- when 'yellow' -%}
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
+        </svg>
+
+      {%- when 'sunshine' -%}
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
+        </svg>
+
+      {%- when 'red' -%}
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.8551" cy="11.6322" r="11" fill="#BC2D33"/>
+        </svg>
+
+      {%- when 'orange' -%}
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.1289" cy="11.6322" r="11" fill="#F37328"/>
+        </svg>
+
+      {%- else -%}
+    {%- endcase -%}
+
+    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+  </label>
+{%- endfor -%}
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const allInputes = document.querySelectorAll('.custom-hidden-input');
+    console.log(allInputes);
+    allInputes.forEach((el) => {
+      console.log(el);
+      if (el.checked) {
+        document.querySelector(`[for='${el.id}'] .checked_mark`).style = 'display:block;';
+      }
+    });
+
+    allInputes.forEach((el) => {
+      el.addEventListener('change', (e) => {
+        allInputes.forEach((el) => {
+          el.removeAttribute('checked');
+          document.querySelector(`[for='${el.id}'] .checked_mark`).style = 'display:none;';
+        });
+        e.target.setAttribute('checked', true);
+        console.log(e.target.id);
+        document.querySelector(`[for='${e.target.id}'] .checked_mark`).style = 'display:block;';
+      });
+    });
+  });
+</script>

@@ -10,7 +10,49 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
+
+{% style %}
+  .button_wrapper {
+    width: 100%;
+    max-width: 450px;
+  }
+  .custom_buy_button {
+    padding: 0;
+    margin: auto;
+    height: 60px;
+    border-radius: 4px;
+    background: rgba(25, 191, 111, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    max-width: 450px;
+    width: 100%;
+    gap: 15px;
+    cursor:pointer;
+  }
+  .custom_buy_button span {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+  }
+  @media screen and (max-width: 750px) {
+    .custom_buy_button span {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+{% endstyle %}
+
+<div class="button_wrapper" {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -74,29 +116,23 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="custom_buy_button"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
               disabled
             {% endif %}
           >
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
+                {{ 'products.product.sold_out' | t | upcase}}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                {{ 'products.product.add_to_cart' | t | upcase }}
               {%- endif -%}
             </span>
-            <div class="loading-overlay__spinner hidden">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
+            <div class="loading-overlay__spinner hidden"></div>
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.0165 2.01546L21.9998 7L17.0165 11.9845" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 6.99998H20.514" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}

@@ -159,11 +159,11 @@
   <h5 class="workflow-custom-tittle_1">{{ section.settings.text }}</h5>
   <div class="before-after-images-wrapper">
     <div class="before-after-images-wrapper-inner">
-      <img src="{{ section.settings.before_image | image_url }}" alt="Before Image">
+      <img loading='lazy' src="{{ section.settings.before_image | image_url }}" alt="Before Image">
       <div class="text-custom-label">{{ section.settings.before_text }}</div>
     </div>
     <div class="before-after-images-wrapper-inner">
-      <img src="{{ section.settings.after_image | image_url }}" alt="Before Image">
+      <img loading='lazy' src="{{ section.settings.after_image | image_url }}" alt="Before Image">
       <div class="text-custom-label">{{ section.settings.after_text }}</div>
     </div>
   </div>

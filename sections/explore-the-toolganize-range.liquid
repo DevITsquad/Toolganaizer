@@ -303,9 +303,9 @@ background: rgba(255, 253, 241, 1);
             <div class='element-img-part'>
 
                 {% if block.settings.image != blank %}
-                    {{ block.settings.image | image_url: width: 250 | image_tag: height: 260 }}
+                    {{ block.settings.image | image_url: width: 250 | image_tag: height: 260,loading:"lazy" }}
                     {% else %}
-                    {{ block.settings.product.featured_image | image_url: width: 250 | image_tag: height: 260 }}
+                    {{ block.settings.product.featured_image | image_url: width: 250 | image_tag: height: 260,loading:"lazy" }}
                 {% endif %}
               
             </div>

@@ -20,10 +20,19 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "text_1": "Get the most out of your shop or garage with the Toolganize Power Tool Storage Organizer and enjoy a neat, efficient shop.",
+            "li_1": "<p><strong>3 tier power<\/strong> tool organizer<\/p>",
+            "li_2": "<p> Side storage to hold <strong>screwdrivers and drill<\/strong> bits.<\/p>",
+            "li_3": "<p><strong>5 Color<\/strong> variations available<\/p>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "items_variant": "Select colour:"
           }
         },
         "quantity_selector": {
@@ -36,11 +45,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "share": {
@@ -81,10 +85,10 @@
         "vendor",
         "title",
         "price",
+        "description",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "share",
         "5b76f0d5-4d8c-443a-9f35-ace677a93785",
         "9d437dfc-bd15-477b-891f-2f0c82943410",

@@ -1,10 +1,11 @@
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{% comment %} 
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}  {% endcomment %}
+
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 {%- style -%}
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -31,7 +32,9 @@
         padding:0 !important;
 
       }
-
+      .product-media-modal__dialog{
+        display:none !important;
+      }
       .product__media-item{
         height:675px;
         width:530px !important;
@@ -95,17 +98,46 @@
 
       }
 
+      product-info .CTA_botton {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    max-width: 420px;
+    height: 60px;
+    border-radius: 4px;
+    background: rgba(25, 191, 111, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  product-info .CTA_botton a {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  product-info .CTA_botton a span {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+  }
+      
      .CTA_botton.featured-product-CTA{
         margin:0;
       }
 
-      .payment_wrapper_custom.feachered-product-custom{
+      .payment_wrapper_custom.feachered-product-custom:not(.custom-payment){
         max-width:423px;
         justify-content:center;
         padding:0;
 
       }
-      .payment_wrapper_custom.feachered-product-custom ul{
+      .payment_wrapper_custom.feachered-product-custom:not(.custom-payment) ul{
         justify-content:center;
       }
 
@@ -119,6 +151,7 @@
         color:var(--custom-font-color-primary);
         max-width:566px;
         margin:0px;
+        margin-top:20px;
       }
 
 
@@ -156,7 +189,7 @@
         bottom:0;
 
       }
-      .payment_wrapper_custom {
+      .payment_wrapper_custom:not(.custom-payment) {
       margin-top: 16px;
       display: flex;
       justify-content: center;
@@ -178,14 +211,6 @@
       }
       }
 
-
-
-
-
-
-      /* @media screen and (max-width:1000px) {
-
-      } */
       @media screen and (max-width: 751px) {
 
        
@@ -221,7 +246,9 @@
         font-size: 14px;
         line-height: 20px;
       }
-
+      .product_section_description{
+        margin-top: 45px;
+      }
       .product_section_description li p{
         font-size: 14px;
         line-height: 16px;
@@ -330,7 +357,8 @@
                     xr_button: false,
                     media_width: media_width,
                     media_fit: section.settings.media_fit,
-                    constrain_to_viewport: section.settings.constrain_to_viewport
+                    constrain_to_viewport: section.settings.constrain_to_viewport,
+                    is_show_collors:section.settings.is_show_collors
                   %}
                 </div>
               {%- endif -%}
@@ -353,13 +381,14 @@
                       xr_button: false,
                       media_width: media_width,
                       media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport
+                      constrain_to_viewport: section.settings.constrain_to_viewport,
+                      is_show_collors:section.settings.is_show_collors
                     %}
                   </div>
                 {%- endif -%}
               {%- endfor -%}
             {%- else -%}
-              {% render 'product-thumbnail-custom', media: section.settings.image %}
+              {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
             {%- endif -%}
           </div>
           {%- if first_3d_model -%}
@@ -414,23 +443,41 @@
                   {%- endif -%}
                 </h2>
 
+
+          
+              
                 <div class="hidden-image">
-                  {%- if product.images.first -%}
-                    {% render 'product-thumbnail-custom',
-                      media: product.images.first,
-                      position: 'featured',
-                      loop: section.settings.enable_video_looping,
-                      modal_id: section.id,
-                      xr_button: false,
-                      media_width: media_width,
-                      media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport
-                    %}
+                  {%- if section.settings.image -%}
+                 {% render 'product-thumbnail-custom', media: section.settings.image,is_show_collors:section.settings.is_show_collors %}
+                    
                   {% else %}
-                    {% render 'product-thumbnail-custom', media: section.settings.image %}
+                  {% render 'product-thumbnail-custom',
+                    media: product.images.first,
+                    position: 'featured',
+                    loop: section.settings.enable_video_looping,
+                    modal_id: section.id,
+                    xr_button: false,
+                    media_width: media_width,
+                    media_fit: section.settings.media_fit,
+                    constrain_to_viewport: section.settings.constrain_to_viewport,
+                    is_show_collors:section.settings.is_show_collors
+                  %}
+                  
                   {%- endif -%}
                 </div>
 
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'price' -%}
+                    <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                      {%- render 'price',
+                        product: product,
+                        use_variant: true,
+                        show_badges: true,
+                        price_class: 'price--large'
+                      -%}
+                    </div>
+                  {%- endif -%}
+                  {%endfor%}
                 {% if section.settings.text_1 != blank %}
                   <p class="custom_product_under_tittle">{{ section.settings.text_1 }}</p>
                 {% endif %}
@@ -457,15 +504,8 @@
                   </li>
                 </ul>
 
-              {%- when 'price' -%}
-                <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
-                </div>
+           
+                
                 {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
                     {%- if cart.taxes_included -%}
@@ -687,7 +727,8 @@
                       xr_button: false,
                       media_width: media_width,
                       media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport
+                      constrain_to_viewport: section.settings.constrain_to_viewport,
+                      is_show_collors:section.settings.is_show_collors
                     %}
                   </div>
                 {%- endif -%}
@@ -704,7 +745,8 @@
                         xr_button: false,
                         media_width: media_width,
                         media_fit: section.settings.media_fit,
-                        constrain_to_viewport: section.settings.constrain_to_viewport
+                        constrain_to_viewport: section.settings.constrain_to_viewport,
+                        is_show_collors:section.settings.is_show_collors
                       %}
                     </div>
                   {%- endif -%}
@@ -742,9 +784,9 @@
   </div>
 </section>
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></scr>
 {%- if section.settings.image_zoom == 'hover' -%}
-  <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
+  <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></>
 {%- endif %}
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
@@ -1668,6 +1710,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {"type":"checkbox",
+      "id": "is_show_collors",
+      "label": "show collors",
+      "default": true
     },
     {
       "label": "link",

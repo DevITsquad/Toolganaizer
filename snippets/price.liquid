@@ -65,6 +65,9 @@
   }
 
   @media screen and (max-width: 1050px) {
+    .custom-price{
+      gap:0px;
+    }
     .custom-price .price-item:not(s),
     .custom-price .price-item.price-item--regular {
       font-size: 16px;
@@ -76,7 +79,10 @@
       display: none;
     }
     .inventory_quantity_bage.mobile {
-      display: block;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      margin-top:13px;
     }
   }
 {% endstyle %}

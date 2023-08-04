@@ -75,6 +75,17 @@
             "content": "<p>some info<\/p>",
             "is_opened": false
           }
+        },
+        "a958a2d2-28bb-4abe-91fb-0b22f60c8d87": {
+          "type": "image-text",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/image_22.png",
+            "text_1": "<p><strong>Neat and efficient<\/strong> power tool storage system<\/p>",
+            "image_2": "shopify:\/\/shop_images\/image_11.png",
+            "text_2": "<p><strong>Never lose<\/strong> your tools ever again<\/p>",
+            "image_3": "shopify:\/\/shop_images\/image_23.png",
+            "text_3": "<p>Get your projects <strong>completed quickly<\/strong><\/p>"
+          }
         }
       },
       "block_order": [
@@ -88,7 +99,8 @@
         "share",
         "5b76f0d5-4d8c-443a-9f35-ace677a93785",
         "9d437dfc-bd15-477b-891f-2f0c82943410",
-        "5a48c655-7bd8-4430-be1b-0d90f8efea96"
+        "5a48c655-7bd8-4430-be1b-0d90f8efea96",
+        "a958a2d2-28bb-4abe-91fb-0b22f60c8d87"
       ],
       "settings": {
         "enable_sticky_info": true,

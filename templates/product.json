@@ -207,6 +207,99 @@
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
       }
     },
+    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e": {
+      "type": "emotive-headline-grid",
+      "blocks": {
+        "e3313f16-168c-4584-b7af-54d3e331d45b": {
+          "type": "text-img",
+          "settings": {
+            "heading": "banish stress, embrace tranquility",
+            "paragraph": "<p>Say goodbye to the stress and frustration that comes with a cluttered workspace. Our products are designed to <strong>eliminate chaos<\/strong>, providing you with a <strong>serene and organized environment<\/strong> where you can focus on your projects with ease.<\/p>",
+            "image": "shopify:\/\/shop_images\/Image-174_1.png"
+          }
+        },
+        "238b30ae-32b4-446b-b162-7ab27ae90745": {
+          "type": "text-img",
+          "settings": {
+            "heading": "reclaim your space, reclaim your time",
+            "paragraph": "<p>Bid farewell to clutter and welcome efficiency. Our solutions are specifically engineered to remove clutter, giving you back <strong>valuable space<\/strong> and allowing you to work more effectively. With a clean and organized setup, you'll find yourself completing projects in record time.<\/p>",
+            "image": "shopify:\/\/shop_images\/Image-174_1_1.png"
+          }
+        },
+        "9aec2664-647a-4368-9eb6-66b48394da16": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        },
+        "ad3b43ef-a880-44a8-b466-6b50fd099015": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "e3313f16-168c-4584-b7af-54d3e331d45b",
+        "238b30ae-32b4-446b-b162-7ab27ae90745",
+        "9aec2664-647a-4368-9eb6-66b48394da16",
+        "ad3b43ef-a880-44a8-b466-6b50fd099015"
+      ],
+      "settings": {
+        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae",
+        "text_in_button": "Get mine now"
+      }
+    },
+    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f": {
+      "type": "emotive-headline",
+      "blocks": {
+        "98a6cfb8-5c71-46b9-b179-c0db3cc6be0a": {
+          "type": "text-img",
+          "settings": {
+            "heading": "wall mount",
+            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "image": "shopify:\/\/shop_images\/Outline.svg"
+          }
+        },
+        "d9b27da6-fab0-4c8f-aefd-5a0bc096e6fc": {
+          "type": "text-img",
+          "settings": {
+            "heading": "larger in size",
+            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "image": "shopify:\/\/shop_images\/Clip_path_group.svg"
+          }
+        },
+        "6f966a85-a4cd-4de0-bc95-ca26b3f56c4a": {
+          "type": "text-img",
+          "settings": {
+            "heading": "efficient system",
+            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "image": "shopify:\/\/shop_images\/Vector_4.svg"
+          }
+        },
+        "acd5d766-8912-4125-a2ba-111f3b53a00c": {
+          "type": "text-img",
+          "settings": {
+            "heading": "strongly built",
+            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "image": "shopify:\/\/shop_images\/weight_1.svg"
+          }
+        }
+      },
+      "block_order": [
+        "98a6cfb8-5c71-46b9-b179-c0db3cc6be0a",
+        "d9b27da6-fab0-4c8f-aefd-5a0bc096e6fc",
+        "6f966a85-a4cd-4de0-bc95-ca26b3f56c4a",
+        "acd5d766-8912-4125-a2ba-111f3b53a00c"
+      ],
+      "settings": {
+        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae"
+      }
+    },
     "f2044370-e51b-45e6-8c2f-258aebc01922": {
       "type": "why-consider-toolganize",
       "blocks": {
@@ -449,21 +542,6 @@
         "bottom_button_text": "Explore more products",
         "variant_name": "Available colours"
       }
-    },
-    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f": {
-      "type": "emotive-headline",
-      "settings": {
-        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
-        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae"
-      }
-    },
-    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e": {
-      "type": "emotive-headline-grid",
-      "settings": {
-        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
-        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae",
-        "text_in_button": "Get mine now"
-      }
     }
   },
   "order": [
@@ -471,13 +549,13 @@
     "related-products",
     "6bde4048-76f7-4a59-b6fb-020ef179d9d3",
     "43fe03db-33d3-4766-a6f0-c7085e98353e",
+    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e",
+    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f",
     "f2044370-e51b-45e6-8c2f-258aebc01922",
     "20ffb162-6d3a-4c44-a34c-747aa3b02a76",
     "7eb6b982-ec17-48a5-a4f4-4336114d70e9",
     "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5",
     "24c23ca6-dd6a-4688-91e0-61c94da1580c",
-    "029e6697-bde3-4080-95a0-2ee10afe4bac",
-    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f",
-    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e"
+    "029e6697-bde3-4080-95a0-2ee10afe4bac"
   ]
 }

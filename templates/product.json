@@ -387,6 +387,56 @@
       "settings": {
       }
     },
+    "24c23ca6-dd6a-4688-91e0-61c94da1580c": {
+      "type": "featured-product-custom",
+      "blocks": {
+        "cd61f325-cc9c-457a-a937-f5d3e092f74c": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "768015b2-63df-4d71-8ee1-cad3b832d68d": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "d6d95cea-dc94-4019-a629-3078fee75006": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "cd61f325-cc9c-457a-a937-f5d3e092f74c",
+        "768015b2-63df-4d71-8ee1-cad3b832d68d",
+        "d6d95cea-dc94-4019-a629-3078fee75006"
+      ],
+      "settings": {
+        "heading": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod.",
+        "product": "copy-of-toolganize-tool-organizer-all-black",
+        "image": "shopify:\/\/shop_images\/Group_1000004585.png",
+        "is_show_collors": false,
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "li_1": "<p><strong>3 tier power<\/strong> tool organizer<\/p>",
+        "li_2": "<p> Side storage to hold <strong>screwdrivers and drill<\/strong> bits.<\/p>",
+        "text_in_button": "GET MINE NOW",
+        "li_3": "<p><strong>5 Color<\/strong> variations available<\/p>",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "029e6697-bde3-4080-95a0-2ee10afe4bac": {
       "type": "featured-collection-custom",
       "settings": {
@@ -399,6 +449,21 @@
         "bottom_button_text": "Explore more products",
         "variant_name": "Available colours"
       }
+    },
+    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f": {
+      "type": "emotive-headline",
+      "settings": {
+        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae"
+      }
+    },
+    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e": {
+      "type": "emotive-headline-grid",
+      "settings": {
+        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae",
+        "text_in_button": "Get mine now"
+      }
     }
   },
   "order": [
@@ -410,6 +475,9 @@
     "20ffb162-6d3a-4c44-a34c-747aa3b02a76",
     "7eb6b982-ec17-48a5-a4f4-4336114d70e9",
     "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5",
-    "029e6697-bde3-4080-95a0-2ee10afe4bac"
+    "24c23ca6-dd6a-4688-91e0-61c94da1580c",
+    "029e6697-bde3-4080-95a0-2ee10afe4bac",
+    "6c0e8d66-0003-4e70-a67e-fbbd7dd9cc8f",
+    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e"
   ]
 }

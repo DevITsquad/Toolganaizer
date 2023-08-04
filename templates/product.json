@@ -229,15 +229,17 @@
         "9aec2664-647a-4368-9eb6-66b48394da16": {
           "type": "text-img",
           "settings": {
-            "heading": "",
-            "paragraph": ""
+            "heading": "protect your valuable investments",
+            "paragraph": "<p>Never again worry about misplacing your expensive tools. Our products ensure that your prized possessions have a designated place, eliminating the risk of loss or damage. Feel <strong>confident knowing your tools are always within reach,<\/strong> saving you both time and money.<\/p>",
+            "image": "shopify:\/\/shop_images\/Image-174_1_2.png"
           }
         },
         "ad3b43ef-a880-44a8-b466-6b50fd099015": {
           "type": "text-img",
           "settings": {
-            "heading": "",
-            "paragraph": ""
+            "heading": "a harmonious home life",
+            "paragraph": "<p>We believe in the adage <strong>\"happy wife, happy life.\"<\/strong> By investing in our products, you'll not only enjoy the benefits of an organized workspace but also the satisfaction of completing those pending projects at home. Experience the joy of a well-maintained household, fostering a harmonious environment for you and your loved ones.<\/p>",
+            "image": "shopify:\/\/shop_images\/Image-174_1_3.png"
           }
         }
       },

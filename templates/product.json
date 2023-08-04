@@ -63,8 +63,8 @@
         "9d437dfc-bd15-477b-891f-2f0c82943410": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "content": "",
+            "heading": "What’s Included",
+            "content": "<p><strong>Product Dimensions:<\/strong> 9.05\"D x 23.33\"W x 12\"<\/p>",
             "is_opened": false
           }
         },

@@ -3,11 +3,10 @@
     "main": {
       "type": "main-product-custom",
       "blocks": {
-        "vendor": {
+        "50e302b3-6ce8-427b-bf29-874036cfcaba": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "title": {
@@ -57,32 +56,29 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Description",
-            "icon": "none",
             "content": "<p>dadaddadda<\/p>",
-            "page": ""
+            "is_opened": false
           }
         },
         "9d437dfc-bd15-477b-891f-2f0c82943410": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "content": "",
-            "page": ""
+            "is_opened": false
           }
         },
         "5a48c655-7bd8-4430-be1b-0d90f8efea96": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "content": "",
-            "page": ""
+            "is_opened": false
           }
         }
       },
       "block_order": [
-        "vendor",
+        "50e302b3-6ce8-427b-bf29-874036cfcaba",
         "title",
         "price",
         "description",

@@ -45,8 +45,9 @@
       "settings": {
         "heading": "<p>Conquer Clutter, Embrace Control: Discover the power of<strong> perfectly organized workshops<\/strong>!<\/p>",
         "text_1": "Don't waste money running to the store again to replace lost tools, get your tools and workspace organized !",
-        "product": "",
         "image": "shopify:\/\/shop_images\/image1_1.png",
+        "is_show_collors": true,
+        "is_product_page": false,
         "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
         "li_1": "<p>Remove all clutter and have your tools <strong>centrally located<\/strong><\/p>",
         "li_2": "<p>Work Faster and get <em>projects<\/em> <strong>completed quickly<\/strong><\/p>",
@@ -133,7 +134,7 @@
       ],
       "settings": {
         "heading": "<p>get your <strong>power tool organizer<\/strong> in just 3 simple steps<\/p>",
-        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
+        "text_1": "select , deliver , organize"
       }
     },
     "edda56f1-f6de-4672-b655-e689a88db0dd": {

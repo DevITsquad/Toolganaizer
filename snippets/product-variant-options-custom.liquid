@@ -146,9 +146,7 @@
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     const allInputes = document.querySelectorAll('.custom-hidden-input');
-    console.log(allInputes);
     allInputes.forEach((el) => {
-      console.log(el);
       if (el.checked) {
         document.querySelector(`[for='${el.id}'] .checked_mark`).style = 'display:block;';
       }
@@ -161,7 +159,6 @@
           document.querySelector(`[for='${el.id}'] .checked_mark`).style = 'display:none;';
         });
         e.target.setAttribute('checked', true);
-        console.log(e.target.id);
         document.querySelector(`[for='${e.target.id}'] .checked_mark`).style = 'display:block;';
       });
     });

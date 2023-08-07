@@ -569,7 +569,7 @@
                     <path d="M9 0L11.1137 6.89121L18 6.87539L12.42 11.1186L14.5623 18L9 13.7312L3.43769 18L5.58 11.1186L0 6.87539L6.88632 6.89121L9 0Z" fill="#FBBC04"/>
                     </svg>
                 {% endfor %}  
-              </span> {{- block.settings.text -}}
+                   </span> {{- block.settings.text -}}
               </div>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
@@ -992,6 +992,10 @@
               {% render 'icon-with-text',
                 block: block
               %}
+              {%- when 'custom-review' -%}
+                {% if section.settings.is_product_page != true %}
+                  {% render 'dumy-review-custom' , block:block %}
+                {% endif %}
           {%- endcase -%}
         {%- endfor -%}
       </product-info>
@@ -1132,8 +1136,34 @@
   "tag": "section",
   "class": "section",
   "blocks": [
+
     {
       "type": "@app"
+    },
+    {
+      "type": "custom-review",
+        "name": "custom-review",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image_1",
+              "label": "img"
+            },
+            {
+              "type": "text",
+              "id": "text_1",
+              "label": "text 1",
+              "default":"Great Quality - Easy Assembly/ Installation - Super Customer Service."
+            },
+            {
+              "type": "text",
+              "id": "text_2",
+              "label": "text 2",
+              "default":"Marc R Ward --- Verified buyer"
+
+            }
+    
+          ]
     },
     {
       "type": "text",

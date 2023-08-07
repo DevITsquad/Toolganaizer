@@ -309,16 +309,10 @@
         },
         "f2d11a43-f7c5-496f-b883-92586705401b": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
-            "heading": "Lorem ipsum dolor sit amet",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
-          }
-        },
-        "469d43b8-bf0a-442a-9768-c037ea591e9d": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Lorem ipsum dolor sit amet",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "heading": "Do you offer any warranties or guarantees on your organization products?",
+            "row_content": "<p>Yes, customer satisfaction is our top priority. We are confident in the quality of our organization products, and that's why we offer a 3 year warranty on all our items. If you encounter any issues with our products due to manufacturing defects or workmanship during this period, we will gladly replace them for you. Your satisfaction is guaranteed!<\/p>"
           }
         },
         "82e1b93f-532e-4d2f-be28-82c2ff5a2564": {
@@ -333,7 +327,6 @@
         "04a29669-5798-4ba5-84c4-2fea8147667f",
         "5e85f111-aaed-45ed-a8d3-4a5fabce8471",
         "f2d11a43-f7c5-496f-b883-92586705401b",
-        "469d43b8-bf0a-442a-9768-c037ea591e9d",
         "82e1b93f-532e-4d2f-be28-82c2ff5a2564"
       ],
       "settings": {

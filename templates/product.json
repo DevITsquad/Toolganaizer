@@ -372,8 +372,8 @@
         "db7aac13-9c11-4625-9300-2a2a2c57ea45": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Lorem ipsum dolor sit amet",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+            "heading": "Are your organization products durable and built to last?",
+            "row_content": "<p>Yes, our organization products are crafted from high-quality materials and designed with durability in mind. We understand the demands of a workshop environment, and that's why we ensure our products can withstand heavy-duty use and are built to last for years to come. Rest assured that our commitment to quality ensures your power tools remain safely and securely stored.<\/p>"
           }
         },
         "57e86bba-c3cb-42c2-906e-e69ae5027e3f": {
@@ -389,21 +389,13 @@
             "heading": "Lorem ipsum dolor sit amet",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
-        },
-        "168abaab-b0eb-411a-b01e-7cdfe889a6eb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Lorem ipsum dolor sit amet",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua orem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
-          }
         }
       },
       "block_order": [
         "14c3a0bf-6514-4c09-9aed-f6eef5e830c5",
         "db7aac13-9c11-4625-9300-2a2a2c57ea45",
         "57e86bba-c3cb-42c2-906e-e69ae5027e3f",
-        "23d7e4ae-29c4-4574-b9fb-7b84cc161103",
-        "168abaab-b0eb-411a-b01e-7cdfe889a6eb"
+        "23d7e4ae-29c4-4574-b9fb-7b84cc161103"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Logo_Final_Yellow-01_1.png",

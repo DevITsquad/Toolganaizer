@@ -6,7 +6,8 @@
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-title-1": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-price-1": {
@@ -33,6 +34,14 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "a8f798d2-176f-4426-bcb8-7c43e44b6080": {
+          "type": "custom-review",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/Ellipse_92.png",
+            "text_1": "Great Quality - Easy Assembly\/ Installation - Super Customer Service.",
+            "text_2": "Marc R Ward --- Verified buyer"
+          }
         }
       },
       "block_order": [
@@ -40,7 +49,8 @@
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-price-1",
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-variant_picker-1",
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-buy_buttons-1",
-        "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-share-1"
+        "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-share-1",
+        "a8f798d2-176f-4426-bcb8-7c43e44b6080"
       ],
       "settings": {
         "heading": "<p>Conquer Clutter, Embrace Control: Discover the power of<strong> perfectly organized workshops<\/strong>!<\/p>",

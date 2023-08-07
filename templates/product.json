@@ -193,7 +193,7 @@
           "type": "announcement",
           "settings": {
             "text": "get it delivered",
-            "textarea": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/strong><\/p>",
+            "textarea": "<p><strong>Free Shipping :<\/strong> 3-5<br\/><strong>DaysExpedited :<\/strong> 2 Days<br\/><strong>Priority :<\/strong> 1 Day<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524_2.png"
           }
         },

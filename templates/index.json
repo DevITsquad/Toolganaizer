@@ -114,7 +114,7 @@
           "type": "announcement",
           "settings": {
             "text": "get it delivered",
-            "textarea": "<p>Free Shipping : 3-5 DaysExpedited : 2 Days<br\/>Priority : 1 Day<\/p>",
+            "textarea": "<p>Free Shipping : 3-5<br\/>DaysExpedited : 2 Days<br\/>Priority : 1 Day<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524_2.png"
           }
         },

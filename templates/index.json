@@ -106,7 +106,7 @@
           "type": "announcement",
           "settings": {
             "text": "select your product",
-            "textarea": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.<\/p>",
+            "textarea": "<p>Select your product and choose your color<\/p>",
             "image": "shopify:\/\/shop_images\/Group_1000004524.png"
           }
         },

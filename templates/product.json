@@ -511,9 +511,9 @@
       "settings": {
         "heading": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod.",
-        "product": "copy-of-toolganize-tool-organizer-all-black",
         "image": "shopify:\/\/shop_images\/Group_1000004585.png",
         "is_show_collors": false,
+        "is_product_page": true,
         "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
         "li_1": "<p><strong>3 tier power<\/strong> tool organizer<\/p>",
         "li_2": "<p> Side storage to hold <strong>screwdrivers and drill<\/strong> bits.<\/p>",

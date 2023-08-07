@@ -45,8 +45,9 @@
         "9bc3a75b-23bb-41bd-91ce-19233c61ce25": {
           "type": "text-img",
           "settings": {
-            "heading": "",
-            "paragraph": ""
+            "heading": "customer satisfaction",
+            "paragraph": "We value our customers above all else, and we back our products with a 100% satisfaction guarantee. We are dedicated to providing exceptional customer service, and we go above and beyond to ensure our customers are happy with their purchase.",
+            "image": "shopify:\/\/shop_images\/Frame.svg"
           }
         }
       },

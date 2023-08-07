@@ -86,6 +86,14 @@
             "image_3": "shopify:\/\/shop_images\/image_23.png",
             "text_3": "<p>Get your projects <strong>completed quickly<\/strong><\/p>"
           }
+        },
+        "efecd75a-0179-4c6d-a002-b98623807d14": {
+          "type": "custom-review",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/Ellipse_92.png",
+            "text_1": "Great Quality - Easy Assembly\/ Installation - Super Customer Service.",
+            "text_2": "Marc R Ward --- Verified buyer"
+          }
         }
       },
       "block_order": [
@@ -100,7 +108,8 @@
         "5b76f0d5-4d8c-443a-9f35-ace677a93785",
         "9d437dfc-bd15-477b-891f-2f0c82943410",
         "5a48c655-7bd8-4430-be1b-0d90f8efea96",
-        "a958a2d2-28bb-4abe-91fb-0b22f60c8d87"
+        "a958a2d2-28bb-4abe-91fb-0b22f60c8d87",
+        "efecd75a-0179-4c6d-a002-b98623807d14"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -488,7 +497,8 @@
         "cd61f325-cc9c-457a-a937-f5d3e092f74c": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "768015b2-63df-4d71-8ee1-cad3b832d68d": {

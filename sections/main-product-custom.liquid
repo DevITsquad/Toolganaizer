@@ -245,6 +245,10 @@
    max-height:60px;
 
   }
+  .custom-price{
+    margin-top:20px;
+
+  }
   @media screen and (max-width: 1050px) {
     .custom-price{
       justify-content:center;
@@ -282,7 +286,7 @@
     line-height: 16px;
   }
   }
-  @media screen and (max-width: 749px) {
+  @media screen and (max-width: 750px) {
 
     .custom-images_under_slider.mobile{
       display:flex;
@@ -578,7 +582,8 @@
                   product: product,
                   use_variant: true,
                   show_badges: true,
-                  price_class: 'price--large'
+                  price_class: 'price--large',
+                  is_product_page:false
                 -%}
               </div>
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}

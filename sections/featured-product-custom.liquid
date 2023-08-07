@@ -216,7 +216,8 @@
        
         .featured-product.product.product--{{ section.settings.media_size }}{
           flex-direction: column-reverse;
-      padding-top:45px;
+          padding-top:35px;
+          padding-bottom:50px;
 
       }
       .own_width .featured-product{
@@ -294,12 +295,60 @@
 
 
       }
+
+
+      /* for PDP only */
+{%- if section.settings.is_product_page-%}
+    .own_width {
+         background:white;
+      }
+      .custom_product_under_tittle {
+        display:none;
+      }
+      .product__info-wrapper h2.markered_text,.product__info-wrapper .markered_text p {
+      margin:auto 0;
+      }
+
+
+      .hidden-image{
+        height:auto;
+        width:auto;
+        margin-top:29px;
+      }
+
+      .custom_product_under_tittle.desc{
+        display:block !important;
+      }
+
+    @media screen and (max-width:750px){
+    .custom_product_under_tittle.desc{
+    text-align:center;
+    }
+
+    .product_section_description{
+      margin-top:25px;
+    }
+    .own_width.inventory_quantity_bage.desc{
+    order:1;
+    }
+    .own_width .custom-price{
+      gap:10px !important;
+    }
+    .custom_bage{
+      order:2;
+
+    }
+}
+{%- endif -%}
+
+
 {%- endstyle -%}
+
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
-  assign product = section.settings.product
+ 
 
   if section.settings.media_size == 'large'
     assign media_width = 0.65
@@ -473,13 +522,14 @@
                         product: product,
                         use_variant: true,
                         show_badges: true,
-                        price_class: 'price--large'
+                        price_class: 'price--large',
+                        is_product_page:section.settings.is_product_page
                       -%}
                     </div>
                   {%- endif -%}
                   {%endfor%}
                 {% if section.settings.text_1 != blank %}
-                  <p class="custom_product_under_tittle">{{ section.settings.text_1 }}</p>
+                  <p class="custom_product_under_tittle desc">{{ section.settings.text_1 }}</p>
                 {% endif %}
                 <ul class="product_section_description">
                   <li>
@@ -1702,11 +1752,6 @@
       "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod."
     },
     {
-      "type": "product",
-      "id": "product",
-      "label": "t:sections.featured-product.settings.product.label"
-    },
-    {
       "type": "image_picker",
       "id": "image",
       "label": "Image"
@@ -1715,6 +1760,12 @@
       "id": "is_show_collors",
       "label": "show collors",
       "default": true
+    },
+    {
+      "type":"checkbox",
+      "id": "is_product_page",
+      "label": "is product page?",
+      "default": false
     },
     {
       "label": "link",

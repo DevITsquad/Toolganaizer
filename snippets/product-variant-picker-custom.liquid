@@ -9,7 +9,9 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
-
+<script>
+  console.log({{ product.url | json }})
+</script>
 {% style %}
 fieldset.js.custom-variants-block{
   margin-top:20px;
@@ -29,6 +31,8 @@ fieldset.js.custom-variants-block{
     }
   }
 {% endstyle %}
+
+
 {%- unless product.has_only_default_variant -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"

@@ -6,9 +6,62 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "03c4e423-5bd8-41eb-8623-e5bc76547a32": {
+      "type": "our-values",
+      "blocks": {
+        "d281b912-7fe9-4082-8484-fc7370c25bc5": {
+          "type": "text-img",
+          "settings": {
+            "heading": "quality",
+            "paragraph": "We believe in using only the highest quality materials to create our products. We are committed to excellence in everything we do, from the design process to the finished product.",
+            "image": "shopify:\/\/shop_images\/Outline.svg"
+          }
+        },
+        "65cb4bdb-84d4-419b-a099-487ffa65fe74": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        },
+        "27e4b83d-d695-477f-bc73-6d1f5072789b": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        },
+        "ed5c9c21-d71c-43f0-940d-0b2d60a1ff87": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        },
+        "9bc3a75b-23bb-41bd-91ce-19233c61ce25": {
+          "type": "text-img",
+          "settings": {
+            "heading": "",
+            "paragraph": ""
+          }
+        }
+      },
+      "block_order": [
+        "d281b912-7fe9-4082-8484-fc7370c25bc5",
+        "65cb4bdb-84d4-419b-a099-487ffa65fe74",
+        "27e4b83d-d695-477f-bc73-6d1f5072789b",
+        "ed5c9c21-d71c-43f0-940d-0b2d60a1ff87",
+        "9bc3a75b-23bb-41bd-91ce-19233c61ce25"
+      ],
+      "settings": {
+        "heading": "<p>our <strong>values<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "03c4e423-5bd8-41eb-8623-e5bc76547a32"
   ]
 }

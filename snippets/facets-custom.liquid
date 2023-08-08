@@ -406,25 +406,32 @@
                             class="field__input"
                             name="{{ filter.min_value.param_name }}"
                             id="Filter-{{ filter.label | escape }}-GTE"
-                            value="{{filter.min_value.value | divided_by: 100}}"
+                            {%- if filter.min_value.value -%}
+                              value="{{ filter.min_value.value | divided_by: 100 }}"
+                              {%- else -%}
+                              value="0"
+                            {%- endif -%}
                             type="range"
                             min="0"
                             max="{{ filter.range_max }}"
                             step="1"
                             data-min="0"
-                            data-max="0"
                           >
                           <input
                             class="field__input"
                             name="{{ filter.max_value.param_name }}"
                             id="Filter-{{ filter.label | escape }}-LTE"
-                            value="{{ filter.max_value.value | divided_by: 100 }} "
+                            {%- if filter.max_value.value -%}
+                              value="{{ filter.max_value.value | divided_by: 100 }}"
+                              {%- else -%}
+                              value="{{ filter.range_max }}"
+                            {%- endif -%}
+                            
                             type="range"
                             min="0"
                             max="{{ filter.range_max }}"
                             step="1"
-                            data-min="0"
-                            data-max="0"
+                            data-max="{{ filter.range_max }}"
                           >
                         </div>
                       </price-range>

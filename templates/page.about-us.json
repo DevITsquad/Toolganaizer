@@ -83,7 +83,8 @@
         "e71163d6-ea1b-4e12-94c9-5efbcf05c3c7": {
           "type": "announcement",
           "settings": {
-            "text": "built to last"
+            "text": "easy to assemble",
+            "image": "shopify:\/\/shop_images\/image_10_2.png"
           }
         }
       },

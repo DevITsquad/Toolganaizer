@@ -259,8 +259,8 @@ class PriceRange extends HTMLElement {
     console.log('min', min)
     console.log('max', max)
     console.log('input.value', input.value)
-    if (value < min) input.value = min;
-    if (value > max) input.value = max;
+    if (value < (min - minRange)) input.value = (min - minRange);
+    if (value > (max- minRange)) input.value = (max- minRange);
   }
 }
 

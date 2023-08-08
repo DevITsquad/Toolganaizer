@@ -280,7 +280,7 @@ class FacetRemove extends HTMLElement {
     form.onActiveFilterClick(event);
   }
 }
-    document.addEventListener('DOMContentLoaded', () => {
+    
 
       
 

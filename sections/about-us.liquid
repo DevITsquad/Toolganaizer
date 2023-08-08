@@ -1,0 +1,270 @@
+{% style %}
+  .about-us-wrapper {
+    background: linear-gradient(180deg, rgba(219, 201, 114, 0.3) 0%, rgba(219, 201, 114, 0) 55.56%),
+      linear-gradient(0deg, #ffffff, #ffffff);
+    padding: 11px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  .about-us-wrapper h2,
+  .about-us-wrapper h2 p {
+    margin: 0;
+  }
+  .about-us-wrapper h2:not(.about-us-big-imamges-text-content h2) {
+    max-width: 210px;
+    margin: auto;
+  }
+
+  .about-us-wrapper .about-us-under_header {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+    max-width: 566px;
+    margin: auto;
+    margin-top: 30px;
+    color: var(--custom-font-color-primary);
+  }
+
+  .about-us-small-imamges_wrapper {
+    display: flex;
+    max-width: 996px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
+  .about-us-small-imamges-text {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .about-us-small-imamges-text span {
+    font-family: var(--custom-font-style-primary);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--custom-font-color-primary);
+  }
+
+  .about-us-big-imamges_wrapper {
+    max-width: 1244px;
+    margin: auto;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    gap: 100px;
+  }
+  .about-us-big-imamges-text {
+    gap: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about-us-big-imamges-text:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .about-us-big-imamges-text img {
+    width: 608px;
+    height: 624px;
+    border-radius: 15px;
+  }
+  .about-us-big-imamges-text-content {
+    max-width: 575px;
+  }
+
+  .about-us-big-imamges-text-content p:not(.markered_text p) {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--custom-font-color-primary);
+    margin: 0px;
+    margin-top:40px;
+
+  }
+  @media screen and (max-width: 1250px) {
+    .about-us-big-imamges-text-content p:not(.markered_text p) {
+      text-align: center;
+    }
+    .about-us-wrapper .about-us-big-imamges-text {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .about-us-big-imamges-text-content p:not(.markered_text p) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top:25px;
+    }
+    .about-us-wrapper {
+      padding-top: 38px;
+      padding-bottom: 43px;
+    }
+    .about-us-wrapper .about-us-under_header {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 25px;
+    }
+    .about-us-small-imamges_wrapper {
+      margin-top: 29px;
+      max-width: 262px;
+    }
+    .about-us-small-imamges-text {
+      flex-direction: column;
+      gap: 15px;
+      flex-basis: 33%;
+    }
+    .about-us-small-imamges-text span {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+    .about-us-small-imamges-text img {
+      width: 45px;
+      height: 45px;
+    }
+    .about-us-big-imamges_wrapper {
+      margin-top: 33px;
+      gap: 44px;
+    }
+
+    .about-us-big-imamges-text img {
+      width: 330px;
+      height: 339px;
+    }
+  }
+{% endstyle %}
+
+<div class="about-us-wrapper">
+  <h2 class="markered_text">{{ section.settings.heading }}</h2>
+  <p class="about-us-under_header">{{ section.settings.text_1 }}</p>
+
+  <div class="about-us-small-imamges_wrapper">
+    {% for block in section.blocks %}
+      {%- if block.type == 'text-img-small' -%}
+        <div class="about-us-small-imamges-text">
+          {{ block.settings.image | image_url: width: 71 | image_tag: height: 71, loading: 'lazy' }}
+          <span>
+            {{ block.settings.text }}
+          </span>
+        </div>
+      {%- endif -%}
+    {% endfor %}
+  </div>
+
+  <div class="about-us-big-imamges_wrapper">
+    {% for block in section.blocks %}
+      {%- if block.type == 'text-img-big' -%}
+        <div class="about-us-big-imamges-text">
+          <img src=" {{ block.settings.image | image_url}}" alt="img" loading="lazy">
+          <div class="about-us-big-imamges-text-content">
+            <h2 class="markered_text">{{ block.settings.heading }}</h2>
+            {{ block.settings.text_1 }}
+          </div>
+        </div>
+      {%- endif -%}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "about-us",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "label": "heading",
+      "type": "richtext",
+      "id": "heading",
+      "default": "<p><strong>about us</strong></p>"
+    },
+    {
+      "label": "text1",
+      "type": "text",
+      "id": "text_1",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+    },
+    {
+      "label": "text_p_1",
+      "type": "text",
+      "id": "text_p_1",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "label": "link",
+      "type": "text",
+      "id": "link_shop_now",
+      "default": "https://toolganize.myshopify.com/collections/all"
+    },
+    {
+      "label": "image_picker_desk",
+      "type": "image_picker",
+      "id": "image_desk"
+    },
+    {
+      "label": "image_picker_mob",
+      "type": "image_picker",
+      "id": "image_mob"
+    },
+    {
+      "label": "button_label",
+      "type": "text",
+      "id": "text_in_button",
+      "default": "SHOP NOW"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text-img-small",
+      "name": "text-img-small",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "text",
+          "default": "built to last"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    },
+    {
+      "type": "text-img-big",
+      "name": "text-img-big",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "text",
+          "default": "<p>our <strong>story</strong></p>"
+        },
+        {
+          "type": "richtext",
+          "id": "text_1",
+          "label": "text",
+          "default": "<p>our <strong>story</strong></p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "about-us"
+    }
+  ]
+}
+{% endschema %}

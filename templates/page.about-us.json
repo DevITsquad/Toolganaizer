@@ -27,14 +27,16 @@
         "d4ff6846-9b83-4fa5-a934-c78ff6ce47a6": {
           "type": "text-img-small",
           "settings": {
-            "text": "built to last"
+            "text": "easy to assemble",
+            "image": "shopify:\/\/shop_images\/image_10_4.svg"
           }
         },
         "a6a2ec94-ffbe-4b6d-98e3-a416df2f20e9": {
           "type": "text-img-big",
           "settings": {
             "heading": "<p>our <strong>story<\/strong><\/p>",
-            "text_1": "<p>our <strong>story<\/strong><\/p>"
+            "text_1": "<p>Our story began with my own frustration of constantly digging throughpiles of power tools to find the one | needed. | knew that organization was key to getting the job done efficiently, but | couldn't find any products on the <strong>market that met my needs. <\/strong>That's when | decided to take matters into my own hands and create a solution myself. | enlisted the help of my fellow tradesmen to design and develop a line of power tool storage products that were not onlyfunctional but also stylish.<br\/><br\/>We started small, selling our products to friends and family, but soonword spread and demand grew. Today, Toolganize is a well knownbusiness, and our products can be found in workshops and job sites all over the world. But even as we've grown, we've never lost sight of our mission: to take your tools from chaos to organized bliss and bring a smile to your face. <strong>We're proud to be a company that's designed by tradesmen<\/strong> for tradesmen, and we'll continue to innovate and create products that make your job easier and more enjoyable.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_182.png"
           }
         },
         "b1e2760f-f464-4c9d-8ae0-86cc368fa570": {

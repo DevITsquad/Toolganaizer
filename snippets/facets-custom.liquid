@@ -406,11 +406,10 @@
                             class="field__input"
                             name="{{ filter.min_value.param_name }}"
                             id="Filter-{{ filter.label | escape }}-GTE"
-                            value="{{ filter.min_value.value}}"
+                            value="0"
                             type="range"
-                            placeholder="0"
                             min="0"
-                            max="{{ filter.range_max}}"
+                            max="{{ filter.range_max }}"
                             step="1"
                           >
                           <input

@@ -235,6 +235,44 @@ class PriceRange extends HTMLElement {
   }
 
   onRangeChange(event) {
+    let rangeMin = 100;
+    const range = document.querySelector(".range-selected");
+    const rangeInput = document.querySelectorAll(".range-input input");
+    const rangePrice = document.querySelectorAll(".range-price input");
+
+    rangeInput.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        let minRange = parseInt(rangeInput[0].value);
+        let maxRange = parseInt(rangeInput[1].value);
+        if (maxRange - minRange < rangeMin) {
+          if (e.target.className === "min") {
+            rangeInput[0].value = maxRange - rangeMin;
+          } else {
+            rangeInput[1].value = minRange + rangeMin;
+          }
+        } else {
+          rangePrice[0].value = minRange;
+          rangePrice[1].value = maxRange;
+          range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+          range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+        }
+      });
+    });
+    rangePrice.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        let minPrice = rangePrice[0].value;
+        let maxPrice = rangePrice[1].value;
+        if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
+          if (e.target.className === "min") {
+            rangeInput[0].value = minPrice;
+            range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+          } else {
+            rangeInput[1].value = maxPrice;
+            range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+          }
+        }
+      });
+    });
     this.adjustToValidValues(event.currentTarget);
     this.setMinAndMaxValues();
   }
@@ -243,16 +281,16 @@ class PriceRange extends HTMLElement {
     const inputs = this.querySelectorAll('input');
     const minInput = inputs[0];
     const maxInput = inputs[1];
-    if (maxInput.value) minInput.setAttribute('max', maxInput.value);
-    if (minInput.value) maxInput.setAttribute('min', minInput.value);
-    if (minInput.value === '') maxInput.setAttribute('min', 0);
-    if (maxInput.value === '') minInput.setAttribute('max', maxInput.getAttribute('max'));
+    if (maxInput.value) minInput.setAttribute('data-max', maxInput.value);
+    if (minInput.value) maxInput.setAttribute('data-min', minInput.value);
+    if (minInput.value === '') maxInput.setAttribute('data-min', 0);
+    if (maxInput.value === '') minInput.setAttribute('data-max', maxInput.getAttribute('data-max'));
   }
 
   adjustToValidValues(input) {
     const value = Number(input.value);
-    const min = Number(input.getAttribute('min'));
-    const max = Number(input.getAttribute('max'));
+    const min = Number(input.getAttribute('data-min'));
+    const max = Number(input.getAttribute('data-max'));
 
     if (value < min) input.value = min;
     if (value > max) input.value = max;

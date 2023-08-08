@@ -62,10 +62,50 @@
         "heading": "<p>our <strong>values<\/strong><\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
       }
+    },
+    "4eaf3b35-e540-4187-b843-d08dc2892e2a": {
+      "type": "what-are-you-waiting-section",
+      "blocks": {
+        "b4a3ebfd-e32b-445f-8627-81527f928017": {
+          "type": "announcement",
+          "settings": {
+            "text": "built to last",
+            "image": "shopify:\/\/shop_images\/image_10.png"
+          }
+        },
+        "f14c3360-24d1-47ef-bc2e-d0d056c411f8": {
+          "type": "announcement",
+          "settings": {
+            "text": "designed by tradesmen",
+            "image": "shopify:\/\/shop_images\/image_10_1.png"
+          }
+        },
+        "e71163d6-ea1b-4e12-94c9-5efbcf05c3c7": {
+          "type": "announcement",
+          "settings": {
+            "text": "built to last"
+          }
+        }
+      },
+      "block_order": [
+        "b4a3ebfd-e32b-445f-8627-81527f928017",
+        "f14c3360-24d1-47ef-bc2e-d0d056c411f8",
+        "e71163d6-ea1b-4e12-94c9-5efbcf05c3c7"
+      ],
+      "settings": {
+        "heading": "<p>what are you waiting for get your <strong>power tool ganizer now<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "text_p_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales dignissim euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link_shop_now": "https:\/\/toolganize.myshopify.com\/collections\/all",
+        "image_desk": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
+        "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4_1.png",
+        "text_in_button": "SHOP NOW"
+      }
     }
   },
   "order": [
     "main",
-    "03c4e423-5bd8-41eb-8623-e5bc76547a32"
+    "03c4e423-5bd8-41eb-8623-e5bc76547a32",
+    "4eaf3b35-e540-4187-b843-d08dc2892e2a"
   ]
 }

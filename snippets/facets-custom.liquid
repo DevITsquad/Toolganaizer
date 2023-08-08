@@ -406,21 +406,25 @@
                             class="field__input"
                             name="{{ filter.min_value.param_name }}"
                             id="Filter-{{ filter.label | escape }}-GTE"
-                            value="0"
+                            value="{{filter.min_value.value}}"
                             type="range"
                             min="0"
                             max="{{ filter.range_max }}"
                             step="1"
+                            data-min=""
+                            data-max=""
                           >
                           <input
                             class="field__input"
                             name="{{ filter.max_value.param_name }}"
                             id="Filter-{{ filter.label | escape }}-LTE"
-                            value="{{ filter.range_max }}"
+                            value="{{ filter.max_value.value }}"
                             type="range"
                             min="0"
                             max="{{ filter.range_max }}"
                             step="1"
+                            data-min=""
+                            data-max=""
                           >
                         </div>
                       </price-range>

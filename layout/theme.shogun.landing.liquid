@@ -246,8 +246,76 @@ This file can be re-written at any time.
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom-variables.css' | asset_url | stylesheet_tag }}
+    {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
 
+        @font-face {
+          font-family: "Athletics";
+          font-weight: normal;
+          font-style: normal;
+          src: url({{ "Athletics Regular.otf" | asset_url }}) format("opentype");
+      }
+
+      @font-face {
+          font-family: "Athletics";
+          font-weight: bold;
+          font-style: normal;
+          src: url({{ "Athletics Bold.otf" | asset_url }}) format("opentype");
+      }
+
+      @font-face {
+          font-family: "Athletics";
+          font-weight: normal;
+          font-style: italic;
+          src: url({{ "Athletics Regular Italic.otf" | asset_url }}) format("opentype");
+      }
+
+      @font-face {
+          font-family: "Athletics";
+          font-weight: bold;
+          font-style: italic;
+          src: url({{ "Athletics Bold Italic.otf" | asset_url }}) format("opentype");
+      }
+      @font-face {
+        font-family: 'Roboto';
+        src: url({{'font-1.ttf'| asset_url }}) format('opentype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* roboto-300italic - latin */
+      @font-face {
+        font-family: 'Roboto';
+        src: url({{'font-2.ttf' | asset_url }}) format('opentype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* roboto-regular - latin */
+      @font-face {
+        font-family: 'Roboto';
+        src: url({{'font-3.ttf' | asset_url }}) format('opentype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* roboto-italic - latin */
+      @font-face {
+        font-family: 'Roboto';
+        src: url({{'font-4.ttf' | asset_url }}) format('opentype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* roboto-500 - latin */
+      @font-face {
+        font-family: 'Roboto';
+        src: url({{'font-5.ttf'| asset_url }}) format('opentype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+    
+
+   
+      body{
+        color:var(--custom-font-color-primary)}
+    </style>
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -271,9 +339,9 @@ This file can be re-written at any time.
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  
 
-  {% render 'shogun-head' %}
+    {% render 'shogun-head' %}
+  
 </head>
 
 
@@ -313,6 +381,7 @@ This file can be re-written at any time.
       };
     </script>
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <style type="text/css">
     body, html {
       width: 100% !important;

@@ -431,7 +431,7 @@
                             min="0"
                             max="{{ filter.range_max }}"
                             step="1"
-                            data-max="{{ filter.range_max | divided_by: 100}}"
+                            data-max="{{ filter.range_max }}"
                           >
                         </div>
                       </price-range>

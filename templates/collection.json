@@ -61,10 +61,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "71c2d1f8-000c-444d-bbcd-9526e6881359": {
+      "type": "amazon-raiting-row",
+      "settings": {
+        "heading": "<p>our products are rated an average of 4.8 out of 5 on ----, on over 600+ sales<\/p>"
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "71c2d1f8-000c-444d-bbcd-9526e6881359"
   ]
 }

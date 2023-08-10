@@ -13,7 +13,230 @@
 {% endcomment %}
 
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
+<style>
+  .range-input-custom .range-slider {
+    position: relative;
+    width: 215px;
+    height: 35px;
+    text-align: center;
+  }
 
+  .range-input-custom .range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 215px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .range-input-custom .range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+  }
+
+  .range-input-custom .range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+  }
+
+  .range-input-custom .range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+  }
+
+  .range-input-custom .range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+  }
+
+  .range-input-custom .range-slider input[type='range']::-moz-focus-outer {
+    border: 0;
+  }
+
+  .range-input-custom .rangeValue {
+    width: 30px;
+  }
+
+  .range-input-custom .output {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 0em;
+    position: absolute;
+    width: 35px;
+    height: 18px;
+    text-align: center;
+    display: inline-block;
+    bottom: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 2px;
+    color: white;
+    background: var(--custom-background-secondary);
+    top: -5px;
+  }
+  .range-input-custom .output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .range-input-custom .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .range-input-custom input[type='range'] {
+    -webkit-appearance: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .range-input-custom input[type='range']::-webkit-slider-runnable-track {
+    height: 5px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+  }
+
+  .range-input-custom input[type='range']::-ms-track {
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .range-input-custom input[type='range']::-moz-range-track {
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .range-input-custom input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: var(--custom-background-secondary);
+    margin-top: -5px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .range-input-custom input[type='range']::-ms-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: var(--custom-background-secondary);
+    margin-top: -5px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .range-input-custom input[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: var(--custom-background-secondary);
+    margin-top: -5px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .range-input-custom input[type='range']:focus {
+    outline: none;
+  }
+
+  .range-input-custom .full-range,
+  .range-input-custom .incl-range,
+  .range-input-custom .incl-range_mob {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 21px;
+    position: absolute;
+    background: var(--custom-background-secondary);
+  }
+  .range-input-custom .outputOne,
+  .range-input-custom .outputOne_mob {
+    left: 0;
+  }
+  .range-input-custom .outputTwo,
+  .range-input-custom .outputTwo_mob {
+    left: 100%;
+  }
+  .range-input-custom .field__input:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  .field.range-input-custom:after {
+    display: none;
+  }
+
+  .field.range-input-custom:focus {
+    border: none;
+    box-shadow: none;
+    background: green;
+  }
+  .custom_filtress_wrapper {
+    border: 1px solid rgba(185, 178, 148, 1);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .facets__display-vertical {
+    padding-bottom: 0;
+  }
+  .filter_heading_wrapper {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 30px !important;
+  }
+  .filter_heading_wrapper div svg {
+    position: initial;
+  }
+  .filter_heading_wrapper div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filter_customizing {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .filter_customizing {
+    font-family: var(--custom-font-style-primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--custom-font-color-primary);
+  }
+</style>
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
@@ -25,7 +248,10 @@
   endif
 -%}
 
-<div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+<div
+  style="display:block;"
+  class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+>
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
       <form
@@ -110,8 +336,12 @@
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
+
+            {% assign mandatotyFilters = 'Water, Oil, Juice' | split: ', ' %}
+
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
+
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
@@ -123,17 +353,12 @@
                     {% endif %}
                   >
                     <summary
-                      class="facets__summary caption-large focus-offset"
+                      class="facets__summary caption-large focus-offset filter_heading_wrapper"
                       aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                     >
                       <div>
                         <span>
                           {{- filter.label | escape }}
-                          {%- if filter_type == 'vertical' -%}
-                            <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                              ({{ filter.active_values.size }})</span
-                            >
-                          {%- endif -%}
                         </span>
                         {% render 'icon-caret' %}
                       </div>
@@ -302,9 +527,10 @@
                       {%- endif %}
                     </div>
                   </details>
+
                 {% when 'price_range' %}
                   {% liquid
-                    assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                    assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND,UAH' | split: ','
                     assign uses_comma_decimals = false
                     if currencies_using_comma_decimals contains cart.currency.iso_code
                       assign uses_comma_decimals = true
@@ -312,13 +538,13 @@
                   %}
                   <details
                     id="Details-{{ forloop.index }}-{{ section.id }}"
-                    class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                    class="custom_filtress_wrapper {% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
                     {% if filter_type == 'vertical' and forloop.index == 1 %}
                       open
                     {% endif %}
                   >
-                    <summary class="facets__summary caption-large focus-offset">
+                    <summary class="facets__summary caption-large focus-offset filter_heading_wrapper">
                       <div>
                         <span>{{ filter.label | escape }}</span>
                         {% render 'icon-caret' %}
@@ -328,112 +554,68 @@
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
-                      <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
-                        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-                        <span class="facets__selected">
-                          {{- 'products.facets.max_price' | t: price: max_price_amount -}}
-                        </span>
-                        {%- if filter_type != 'vertical' -%}
-                          <facet-remove>
-                            <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
-                              {{ 'products.facets.reset' | t }}
-                            </a>
-                          </facet-remove>
-                        {%- endif -%}
-                      </div>
                       <price-range class="facets__price">
-                        <style>
-                          .range-input {
-                            position: relative;
-                          }
+                        <div class="field range-input-custom">
+                          <section class="range-slider container">
+                            <span class="output outputOne">
+                              {{- cart.currency.symbol -}}
 
-                          .range-input input {
-                            position: absolute;
-                            width: 100%;
-                            height: 5px;
-                            top: -7px;
-                            background: none;
-                            pointer-events: none;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                          }
-
-                          .range-input input::-webkit-slider-thumb {
-                            height: 20px;
-                            width: 20px;
-                            border-radius: 50%;
-                            border: 3px solid #1b53c0;
-                            background-color: #fff;
-                            pointer-events: auto;
-                            -webkit-appearance: none;
-                          }
-
-                          .range-input input::-moz-range-thumb {
-                            height: 15px;
-                            width: 15px;
-                            border-radius: 50%;
-                            border: 3px solid #1b53c0;
-                            background-color: #fff;
-                            pointer-events: auto;
-                            -moz-appearance: none;
-                          }
-                          .range-input input.field__input:focus {
-                            box-shadow: none;
-                          }
-                          .range-slider {
-                            height: 5px;
-                            position: relative;
-                            background-color: #e1e9f6;
-                            border-radius: 2px;
-                          }
-
-                          .range-selected {
-                            height: 100%;
-                            left: 30%;
-                            right: 30%;
-                            position: absolute;
-                            border-radius: 5px;
-                            background-color: #1b53c0;
-                          }
-                        </style>
-                        <span class="field-currency">{{ cart.currency.symbol }}</span>
-
-                        <div class="field range-input">
-                          <div class="range-slider">
-                            <span class="range-selected"></span>
-                          </div>
-                          <input
-                            class="field__input"
-                            name="{{ filter.min_value.param_name }}"
-                            id="Filter-{{ filter.label | escape }}-GTE"
-                            {%- if filter.min_value.value -%}
-                              value="{{ filter.min_value.value | divided_by: 100 }}"
+                              <span>
+                                {%- if filter.min_value.value -%}
+                                  {{ filter.min_value.value | divided_by: 100 }}
+                                {%- else -%}
+                                  0
+                                {%- endif -%}
+                              </span>
+                            </span>
+                            <span class="output outputTwo">
+                              {{- cart.currency.symbol -}}
+                              <span>
+                                {%- if filter.max_value.value -%}
+                                  {{ filter.max_value.value | divided_by: 100 }}
+                                {%- else -%}
+                                  {{ filter.range_max | divided_by: 100 | plus: 1 }}
+                                {%- endif -%}
+                              </span>
+                            </span>
+                            <span class="full-range"></span>
+                            <span class="incl-range"></span>
+                            <input
+                              id="rangeMin"
+                              class="field__input"
+                              name="{{ filter.min_value.param_name }}"
+                              id="Filter-{{ filter.label | escape }}-GTE"
+                              {%- if filter.min_value.value -%}
+                                value="{{ filter.min_value.value | divided_by: 100 }}"
                               {%- else -%}
-                              value="0"
-                            {%- endif -%}
-                            type="range"
-                            min="0"
-                            max="{{ filter.range_max }}"
-                            step="1"
-                            data-min="0"
-                          >
-                          <input
-                            class="field__input"
-                            name="{{ filter.max_value.param_name }}"
-                            id="Filter-{{ filter.label | escape }}-LTE"
-                            {%- if filter.max_value.value -%}
-                              value="{{ filter.max_value.value | divided_by: 100 }}"
+                                value="0"
+                              {%- endif -%}
+                              type="range"
+                              min="0"
+                              max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                              step="1"
+                              data-min="0"
+                            >
+                            <input
+                              id="rangeMax"
+                              class="field__input"
+                              name="{{ filter.max_value.param_name }}"
+                              id="Filter-{{ filter.label | escape }}-LTE"
+                              {%- if filter.max_value.value -%}
+                                value="{{ filter.max_value.value | divided_by: 100 | plus: 1}}"
                               {%- else -%}
-                              value="{{ filter.range_max }}"
-                            {%- endif -%}
-                            
-                            type="range"
-                            min="0"
-                            max="{{ filter.range_max }}"
-                            step="1"
-                            data-max="{{ filter.range_max }}"
-                          >
+                                value="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                              {%- endif -%}
+
+                              type="range"
+                              min="0"
+                              max="{{ filter.range_max | divided_by: 100 | plus: 1 }}"
+                              step="1"
+                              data-max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                            >
+                          </section>
                         </div>
+                        <script></script>
                       </price-range>
                     </div>
                   </details>
@@ -621,11 +803,21 @@
     class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
     data-breakpoint="mobile"
   >
-    <details class="mobile-facets__disclosure disclosure-has-popup">
+    <details style="width:100%" class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
-        <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
-          {% render 'icon-filter' %}
-          <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
+        <span class="filter_customizing mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_10253)">
+            <path d="M0.78125 4.40708H12.676C13.0345 6.03887 14.4917 7.26392 16.2296 7.26392C17.9675 7.26392 19.4248 6.03892 19.7833 4.40708H24.2188C24.6502 4.40708 25 4.05728 25 3.62583C25 3.19438 24.6502 2.84458 24.2188 2.84458H19.7829C19.4237 1.21362 17.9645 -0.012207 16.2296 -0.012207C14.4939 -0.012207 13.0354 1.21343 12.6763 2.84458H0.78125C0.349805 2.84458 0 3.19438 0 3.62583C0 4.05728 0.349805 4.40708 0.78125 4.40708ZM14.1542 3.62788C14.1542 3.6251 14.1542 3.62227 14.1542 3.61948C14.1576 2.47852 15.0886 1.55034 16.2296 1.55034C17.369 1.55034 18.3001 2.47725 18.305 3.61768L18.3052 3.62915C18.3034 4.77207 17.373 5.70146 16.2296 5.70146C15.0868 5.70146 14.1567 4.773 14.1541 3.63076L14.1542 3.62788ZM24.2188 20.5927H19.7829C19.4236 18.9618 17.9645 17.7359 16.2296 17.7359C14.4939 17.7359 13.0354 18.9616 12.6763 20.5927H0.78125C0.349805 20.5927 0 20.9424 0 21.3739C0 21.8054 0.349805 22.1552 0.78125 22.1552H12.676C13.0345 23.787 14.4917 25.012 16.2296 25.012C17.9675 25.012 19.4248 23.787 19.7833 22.1552H24.2188C24.6502 22.1552 25 21.8054 25 21.3739C25 20.9424 24.6502 20.5927 24.2188 20.5927ZM16.2296 23.4495C15.0868 23.4495 14.1567 22.521 14.1541 21.3788L14.1542 21.376C14.1542 21.3731 14.1542 21.3704 14.1542 21.3676C14.1576 20.2266 15.0886 19.2984 16.2296 19.2984C17.369 19.2984 18.3001 20.2253 18.305 21.3657L18.3052 21.3771C18.3035 22.5202 17.3731 23.4495 16.2296 23.4495ZM24.2188 11.7187H12.324C11.9655 10.0869 10.5083 8.86187 8.77036 8.86187C7.03247 8.86187 5.57524 10.0869 5.21675 11.7187H0.78125C0.349805 11.7187 0 12.0685 0 12.4999C0 12.9314 0.349805 13.2812 0.78125 13.2812H5.21714C5.57637 14.9121 7.03555 16.1379 8.77036 16.1379C10.5061 16.1379 11.9646 14.9123 12.3237 13.2812H24.2188C24.6502 13.2812 25 12.9314 25 12.4999C25 12.0685 24.6502 11.7187 24.2188 11.7187ZM10.8458 12.4979C10.8458 12.5007 10.8458 12.5035 10.8458 12.5062C10.8424 13.6472 9.91138 14.5754 8.77036 14.5754C7.63096 14.5754 6.6999 13.6485 6.69497 12.5081L6.69482 12.4967C6.69653 11.3536 7.62695 10.4244 8.77036 10.4244C9.91323 10.4244 10.8433 11.3528 10.8459 12.4951L10.8458 12.4979Z" fill="#1E4B51"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1_10253">
+            <rect width="25" height="25" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+
+          <span class=" mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
               {{ 'products.facets.filter_and_sort' | t }}
             {%- elsif enable_filtering -%}
@@ -815,64 +1007,55 @@
                           <p class="mobile-facets__info">
                             {{ 'products.facets.max_price' | t: price: max_price_amount }}
                           </p>
-
                           <price-range class="facets__price">
-                            <span class="field-currency">{{ cart.currency.symbol }}</span>
-                            <div class="field">
-                              <input
-                                class="field__input"
-                                name="{{ filter.min_value.param_name }}"
-                                id="Mobile-Filter-{{ filter.label | escape }}-GTE"
-                                {%- if filter.min_value.value -%}
-                                  {%- if uses_comma_decimals -%}
-                                    value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+                            <div class="field range-input-custom">
+                              <section class="range-slider container">
+                                <span class="output outputOne_mob">
+                                  {{- cart.currency.symbol -}}
+                                  <span>0</span></span
+                                >
+                                <span class="output outputTwo_mob">
+                                  {{- cart.currency.symbol -}}
+                                  <span>{{ filter.range_max | divided_by: 100 | plus: 1 }}</span></span
+                                >
+                                <span class="full-range"></span>
+                                <span class="incl-range_mob"></span>
+                                <input
+                                  id="rangeMin_mob"
+                                  class="field__input"
+                                  name="{{ filter.min_value.param_name }}"
+                                  id="Filter-{{ filter.label | escape }}-GTE"
+                                  {%- if filter.min_value.value -%}
+                                    value="{{ filter.min_value.value | divided_by: 100 }}"
                                   {%- else -%}
-                                    value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
-                                  {%- endif %}
-                                {%- endif -%}
-                                type="number"
-                                placeholder="0"
-                                min="0"
-                                inputmode="decimal"
-                                {%- if uses_comma_decimals -%}
-                                  max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                {%- else -%}
-                                  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                {% endif %}
-                              >
-                              <label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-GTE">
-                                {{- 'products.facets.from' | t -}}
-                              </label>
-                            </div>
+                                    value="0"
+                                  {%- endif -%}
+                                  type="range"
+                                  min="0"
+                                  max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                  step="1"
+                                  data-min="0"
+                                >
+                                <input
+                                  id="rangeMax_mob"
+                                  class="field__input"
+                                  name="{{ filter.max_value.param_name }}"
+                                  id="Filter-{{ filter.label | escape }}-LTE"
+                                  {%- if filter.max_value.value -%}
+                                    value="{{ filter.max_value.value | divided_by: 100 | plus: 1}}"
+                                  {%- else -%}
+                                    value="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                  {%- endif -%}
 
-                            <span class="field-currency">{{ cart.currency.symbol }}</span>
-                            <div class="field">
-                              <input
-                                class="field__input"
-                                name="{{ filter.max_value.param_name }}"
-                                id="Mobile-Filter-{{ filter.label | escape }}-LTE"
-                                {%- if filter.max_value.value -%}
-                                  {%- if uses_comma_decimals -%}
-                                    value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                  {%- else -%}
-                                    value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
-                                  {%- endif %}
-                                {%- endif -%}
-                                type="number"
-                                min="0"
-                                inputmode="decimal"
-                                {%- if uses_comma_decimals -%}
-                                  placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                  max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
-                                {%- else -%}
-                                  placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                  max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                                {% endif %}
-                              >
-                              <label class="field__label" for="Mobile-Filter-{{ filter.label | escape }}-LTE">
-                                {{- 'products.facets.to' | t -}}
-                              </label>
+                                  type="range"
+                                  min="0"
+                                  max="{{ filter.range_max | divided_by: 100 | plus: 1 }}"
+                                  step="1"
+                                  data-max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                >
+                              </section>
                             </div>
+                            <script></script>
                           </price-range>
                           <div class="no-js-hidden mobile-facets__footer">
                             <facet-remove class="mobile-facets__clear-wrapper">
@@ -904,28 +1087,41 @@
                   class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
                   data-index="mobile-{{ forloop.index }}"
                 >
+                  <style>
+                    .custom_sort_form_inner .select_mobile {
+                      flex-direction: column;
+                    }
+                    .custom_sort_form_inner .select_mobile input[type='radio'] {
+                      display: none;
+                    }
+                  </style>
+
                   <div class="mobile-facets__summary">
-                    <div class="mobile-facets__sort">
+                    <div class="mobile-facets__sort custom_sort_form_inner">
                       <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                      <div class="select">
-                        <select
+                      <div class="select select_mobile radio_custom_sort">
+                        <div 
                           name="sort_by"
-                          class="select__select"
+                          class="select__select radio_custom_sort"
                           id="SortBy-mobile"
                           aria-describedby="a11y-refresh-page-message"
                         >
-                          {%- for option in results.sort_options -%}
-                            <option
-                              value="{{ option.value | escape }}"
-                              {% if option.value == sort_by %}
-                                selected="selected"
-                              {% endif %}
-                            >
+                          {%- for option in collection.sort_options -%}
+                            <label class="sort-option custom_sort_label">
+                              <input
+                                type="radio"
+                                name="sort_by"
+                                value="{{ option.value | escape }}"
+                                {% if option.value == sort_by %}
+                                  checked="checked"
+                                {% endif %}
+                              >
+
+                              <div class="custom_sort_checkbox"></div>
                               {{ option.name | escape }}
-                            </option>
+                            </label>
                           {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1059,36 +1255,7 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-  <div
-    class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-    role="status"
-  >
-    <h2 class="product-count__text text-body">
-      <span id="ProductCount">
-        {%- if results.results_count -%}
-          {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
-        {%- elsif results.products_count == results.all_products_count -%}
-          {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
-        {%- else -%}
-          {{
-            'products.facets.product_count'
-            | t: product_count: results.products_count, count: results.all_products_count
-          }}
-        {%- endif -%}
-      </span>
-    </h2>
-    <div class="loading-overlay__spinner">
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        class="spinner"
-        viewBox="0 0 66 66"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-      </svg>
-    </div>
-  </div>
+
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">

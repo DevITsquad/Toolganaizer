@@ -207,10 +207,13 @@ class QuantityInput extends HTMLElement {
 customElements.define('quantity-input', QuantityInput);
 
 function debounce(fn, wait) {
+console.log(11111)
   let t;
   return (...args) => {
     clearTimeout(t);
-    t = setTimeout(() => fn.apply(this, args), wait);
+    t = setTimeout(() => {
+      
+      return fn.apply(this, args) }, wait);
   };
 }
 
@@ -727,7 +730,7 @@ class SlideshowComponent extends SliderComponent {
       [this.prevButton, this.nextButton].forEach((button) => {
         button.addEventListener('click', () => {
           this.announcementBarArrowButtonWasClicked = true;
-        }, {once: true});
+        }, { once: true });
       });
     }
 
@@ -872,7 +875,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1009,8 +1012,7 @@ class VariantSelects extends HTMLElement {
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-        this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
       }`
     )
       .then((response) => response.text())
@@ -1135,7 +1137,7 @@ class ProductRecommendations extends HTMLElement {
 
   connectedCallback() {
     const handleIntersection = (entries, observer) => {
-      if (!entries[0].isIntersecting) return;
+      if (!entries[0].isIntersecting) return;console
       observer.unobserve(this);
 
       fetch(this.dataset.url)

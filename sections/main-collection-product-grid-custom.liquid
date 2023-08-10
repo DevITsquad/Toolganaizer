@@ -12,7 +12,7 @@
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
+{{ 'component-facets.css' | asset_url | stylesheet_tag }}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -25,84 +25,347 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .collection_custom_wrapper{
+          padding:0;
+        }
+        .collection_custom_gradient{
+          background: linear-gradient(180deg, rgba(219, 201, 114, 0.3) 0%, rgba(219, 201, 114, 0) 55.56%),
+          linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+        }
+        .collection_custom.markered_text,
+        .collection_custom.markered_text p{
+          text-align:center;
+          margin:0 auto;
+        }
+        .collection_custom.markered_text p{
+          margin-top:20px;
+        }
+        .collection_custom.markered_text + .featured-collection-custom_under_header {
+          text-align:center;
+          margin:0 auto;
+          margin-top:30px;
+        }
+          .main-collection-product-grid-custom_wrapper{
+            padding:0 11px;
+          }
+          .radio_custom_sort {
+            display: flex;
+            flex-direction: column;
+            height:auto;
+          }
+          .custom_sort_wrapper,
+          .custom_sort_form,
+          .custom_sort_form_inner {
+            padding: 0;
+          }
+          .custom_sort_form,
+          .facet-filters__field{
+            justify-content:flex-start;
+          }
+          .custom_sort_form{
+            margin-top:16px;
+          }
+
+          .custom_sort_wrapper{
+            border: 1px solid rgba(185, 178, 148, 1);
+            border-radius:4px;
+            padding:20px;
+          }
+          .radio_custom_sort,
+          .custom_sort_label {
+            display: flex;
+            gap: 16px;
+          }
+          .custom_sort_checkbox {
+            display: block !important;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(185, 178, 148, 1);
+            border-radius: 3px;
+          }
+          .custom_sort_label input{
+          display:none;
+        }
+          .custom_sort_label input:checked + .custom_sort_checkbox{
+          background-image: url('{{ 'icons8-done-50.png' | asset_url }}');
+          background-size: contain;
+           background-repeat: no-repeat;
+
+          }
+          .facet-filters__label label[for='SortBy'],
+            label.custom_sort_label,
+          .filter_heading_wrapper div span {
+            font-family: var(--custom-font-style-secondary);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:var(--custom-font-color-primary)
+          }
+          label.custom_sort_label{
+            font-weight: 400;
+          }
+
+
+          @media screen and (max-width:750px){
+            .radio_custom_sort{
+              gap:7px;
+            }
+
+            .collection_custom.markered_text + .featured-collection-custom_under_header {
+              margin-top:16px;
+            }
+            .collection_custom.markered_text p{
+              margin-top:15px;
+            }
+          }
+          .featured-collection-custom_under_header {
+    max-width: 699px;
+    margin: auto;
+    margin-top: 21px;
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    color: var(--custom-font-color-primary);
+  }
+  .featured-collection-custom_grid {
+    max-width: 1244px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 30px;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .featured-collection-custom_grid_element {
+    background: white;
+    max-width: 288px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    box-shadow: 0px 0px 30px 0px rgba(239, 233, 203, 1);
+    padding: 28px 11px;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  .featured-collection-custom_grid_element p {
+    margin: 0;
+    margin-top: 16px;
+    max-width: 213px;
+  }
+  .featured-collection-custom_grid_element img {
+    max-width: 182px;
+    height: 210px;
+  }
+  .featured-collection-custom_grid_element_description p{
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+    margin: 0;
+    min-height: 60px;
+    padding: 0 10px;
+  }
+  .featured-collection-custom_grid_element svg {
+    margin-top: 8px;
+  }
+
+  .featured-collection-custom_grid_element .price__sale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .featured-collection-custom_grid_element .price__sale span {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0px;
+    color: var(--custom-font-color-primary);
+  }
+
+  .featured-collection-custom_grid_element .prouct-link {
+    font-family: var(--custom-font-style-primary);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background: #19bf6f;
+    padding: 14.5px 34.5px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 27px;
+  }
+
+  .featured-collection-custom_grid_element .variants_tittle {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+    margin-top: 4px;
+  }
+  .featured-collection-custom_grid_element .variants {
+    height: 25px;
+    max-width: 165px;
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+  }
+  .featured-collection-custom_grid_element .variants svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .featured-collection-custom_bottom_btn {
+    {% comment %} width: 256px; {% endcomment %}
+    margin: auto;
+    margin-top: 64px;
+    height: 33px;
+  }
+  .featured-collection-custom_bottom_btn a {
+    text-decoration: none;
+    font-family: var(--custom-font-style-primary);
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: var(--custom-font-color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+  .featured-collection-custom_bottom_btn_border {
+    display: block !important;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: rgba(248, 233, 165, 1);
+    max-width: 255px;
+    margin: auto;
+  }
+
+  .mobile_only {
+    display: none !important;
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 1200px) {
+    .featured-collection-custom_grid .featured-collection-custom_grid_element:last-child {
+      display: none !important;
+    }
+    .featured-collection-custom_grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .featured-collection-custom_grid_element {
+      width: 100%; 
+      margin:auto;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      display: none !important;
+    }
+   .featured-collection-custom_grid_element .variants svg {
+  width: 20px;
+  height: 20px;
+}
+    .featured-collection-custom_wrapper .desctop_collection {
+      display: none;
+    }
+    .featured-collection-custom_wrapper .markered_text {
+      padding: 40px 12px 0 12px;
+    }
+    .featured-collection-custom_wrapper {
+      height: 854px;
+    }
+    .featured-collection-custom_under_header {
+      max-width: 336px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .featured-collection-custom_grid {
+      margin-top: 40px;
+      gap:10px;
+    }
+    .featured-collection-custom_grid_element {
+      justify-content: space-between;
+      max-width: 241px;
+    }
+    .featured-collection-custom_grid_element img {
+      max-width: 110px;
+      height: 140px;
+    }
+    .featured-collection-custom_grid_element_description p{
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 187px;
+    }
+
+    .featured-collection-custom_grid_element .prouct-link {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 13px 31.5px;
+      margin-top: 20px;
+    }
+    .featured-collection-custom_bottom_btn {
+      margin-top: 20px;
+    }
+    .featured-collection-custom_bottom_btn a {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    .mobile_only {
+      display: block !important;
+    }
+    .featured-collection-custom_wrapper .swiper-pagination {
+      position: initial !important;
+      margin-top: 25px;
+    }
+    .featured-collection-custom_wrapper .swiper-pagination-bullet {
+      background: rgba(30, 75, 81, 1) !important;
+      height: 12px !important;
+      width: 12px !important;
+    }
+  }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding">
+<div class="collection_custom_wrapper section-{{ section.id }}-padding">
+
+
+{% comment %}  or collection tittle {% endcomment %}
+<div class="collection_custom_gradient">
+  <h2 class="collection_custom markered_text">{{ section.settings.heading }}</h2>
+  <p class="featured-collection-custom_under_header">{{ section.settings.text_1 }}</p>
+</div>
+
+
+  
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-      <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
-        <form class="facets-vertical-form" id="FacetSortForm">
-          <div class="facet-filters sorting caption">
-            <div class="facet-filters__field">
-              <h2 class="facet-filters__label caption-large text-body">
-                <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-              </h2>
-              <div class="select">
-                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                <select
-                  name="sort_by"
-                  class="facet-filters__sort select__select caption-large"
-                  id="SortBy"
-                  aria-describedby="a11y-refresh-page-message"
-                >
-                  {%- for option in collection.sort_options -%}
-                    <option
-                      value="{{ option.value | escape }}"
-                      {% if option.value == sort_by %}
-                        selected="selected"
-                      {% endif %}
-                    >
-                      {{ option.name | escape }}
-                    </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-            </div>
-            <noscript>
-              <button type="submit" class="facets__button-no-js button button--secondary">
-                {{ 'products.facets.sort_button' | t }}
-              </button>
-            </noscript>
-          </div>
-
-          <div class="product-count-vertical light" role="status">
-            <h2 class="product-count__text text-body">
-              <span id="ProductCountDesktop">
-                {%- if collection.results_count -%}
-                  {{
-                    'templates.search.results_with_count'
-                    | t: terms: collection.terms, count: collection.results_count
-                  }}
-                {%- elsif collection.products_count == collection.all_products_count -%}
-                  {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
-                {%- else -%}
-                  {{
-                    'products.facets.product_count'
-                    | t: product_count: collection.products_count, count: collection.all_products_count
-                  }}
-                {%- endif -%}
-              </span>
-            </h2>
-            <div class="loading-overlay__spinner">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
-          </div>
-        </form>
-      </facet-filters-form>
     {%- endif -%}
 
-    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+    <div class="main-collection-product-grid-custom_wrapper {% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+     
+      <style>
+        
+      </style>
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
@@ -118,12 +381,53 @@
             filter_type: section.settings.filter_type,
             paginate: paginate
           %}
+
+          <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden custom_sort_wrapper">
+            <h2 class="facet-filters__label caption-large text-body small-hide">
+              <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+            </h2>
+            <form class="facets-vertical-form custom_sort_form" id="FacetSortForm">
+              <div class="facet-filters sorting caption custom_sort_form_inner">
+                <div class="facet-filters__field">
+                  <div class="select">
+                    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                    <div
+                      class="facet-filters__sort radio_custom_sort"
+                      id="SortBy"
+                      aria-describedby="a11y-refresh-page-message"
+                    >
+                      {%- for option in collection.sort_options -%}
+                        <label class="sort-option custom_sort_label">
+                          <input
+                            type="radio"
+                            name="sort_by"
+                            value="{{ option.value | escape }}"
+                            {% if option.value == sort_by %}
+                              checked="checked"
+                            {% endif %}
+                          >
+
+                          <div class="custom_sort_checkbox"></div>
+                          {{ option.name | escape }}
+                        </label>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+                <noscript>
+                  <button type="submit" class="facets__button-no-js button button--secondary">
+                    {{ 'products.facets.sort_button' | t }}
+                  </button>
+                </noscript>
+              </div>
+            </form>
+          </facet-filters-form>
         </aside>
       {%- endif -%}
 
-      <div
+      <div id="ProductGridContainer"
         class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        id="ProductGridContainer"
+        
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
         {% endif %}
@@ -143,17 +447,93 @@
             </div>
           </div>
         {%- else -%}
-          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
-            <div class="loading-overlay gradient"></div>
 
-            <ul
-              id="product-grid"
-              data-id="{{ section.id }}"
-              class="
-                grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                grid--{{ section.settings.columns_desktop }}-col-desktop
-              "
-            >
+       
+
+          <div  class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
+            <div  class="loading-overlay gradient"></div>
+            <div class="featured-collection-custom_wrapper_collection_pproduct">
+              <div id="product-grid"
+                data-id="{{ section.id }}"
+                class="featured-collection-custom_grid desctop_collection
+                  grid product-grid"
+              >
+
+              {%- for item in collection.products -%}
+                <div class="featured-collection-custom_grid_element">
+                  <img loading="lazy" src="{{item.featured_image | image_url}}" alt="img">
+                  <div class="featured-collection-custom_grid_element_description">
+                    {%- if item.description != blank -%}
+                      {% if item.description.size > 55 -%}
+                        {{- item.description | truncate: 55, '...' }}
+                      {%- else -%}
+                      {{ item.description }}
+                        
+                      {% endif %}
+                    {% else %}
+                      {% if section.settings.dummy_description.size > 55 %}
+                        <p> {{ section.settings.dummy_description | truncate: 55, '...' }}</p>
+                      {%- else -%}
+                    </p> {{ section.settings.dummy_description }}</p>
+                      {% endif %}
+                    {%- endif -%}
+                  </div>
+                  <svg width="96" height="16" viewBox="0 0 96 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 0L9.87882 6.12552L16 6.11146L11.04 9.88317L12.9443 16L8 12.2055L3.05573 16L4.96 9.88317L0 6.11146L6.12118 6.12552L8 0Z" fill="#FBBC04"/>
+                    <path d="M28 0L29.8788 6.12552L36 6.11146L31.04 9.88317L32.9443 16L28 12.2055L23.0557 16L24.96 9.88317L20 6.11146L26.1212 6.12552L28 0Z" fill="#FBBC04"/>
+                    <path d="M48 0L49.8788 6.12552L56 6.11146L51.04 9.88317L52.9443 16L48 12.2055L43.0557 16L44.96 9.88317L40 6.11146L46.1212 6.12552L48 0Z" fill="#FBBC04"/>
+                    <path d="M68 0L69.8788 6.12552L76 6.11146L71.04 9.88317L72.9443 16L68 12.2055L63.0557 16L64.96 9.88317L60 6.11146L66.1212 6.12552L68 0Z" fill="#FBBC04"/>
+                    <path d="M88 1.70511L89.4008 6.27214L89.5095 6.62637L89.88 6.62552L94.5119 6.61488L90.7373 9.48517L90.4585 9.69725L90.5626 10.0318L91.9984 14.6438L88.3044 11.8089L88 11.5753L87.6956 11.8089L84.0016 14.6438L85.4374 10.0318L85.5415 9.69725L85.2626 9.48517L81.4881 6.61488L86.12 6.62552L86.4905 6.62637L86.5992 6.27214L88 1.70511Z" stroke="#FBBC04"/>
+                    <path d="M83.0557 16L88 12.2055V0L86.1212 6.12552L80 6.11146L84.96 9.88317L83.0557 16Z" fill="#FBBC04"/>
+                  </svg>
+          
+                  {% render 'price', product: item, price_class: '' %}
+          
+                  <div class="variants_tittle">{{ section.settings.variant_name }}</div>
+                  <div class="variants">
+                    {%- if item.variants.size > 1 -%}
+                      {%- for variant in item.variants -%}
+                        {%- if variant.available -%}
+                          {%- case variant.title -%}
+                            {%- when 'skyblue' -%}
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.0328" cy="11.6321" r="11" fill="#6ABCC8"/>
+                              </svg>
+          
+                            {%- when 'yellow' -%}
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
+                              </svg>
+          
+                            {%- when 'sunshine' -%}
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
+                              </svg>
+          
+                            {%- when 'red' -%}
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.8551" cy="11.6322" r="11" fill="#BC2D33"/>
+                              </svg>
+          
+                            {%- when 'orange' -%}
+                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.1289" cy="11.6322" r="11" fill="#F37328"/>
+                              </svg>
+          
+                            {%- else -%}
+                          {%- endcase -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+                  </div>
+          
+                  <a class="prouct-link" href="{{item.url}}">{{ section.settings.button_text }}</a>
+                </div>
+              {%- endfor -%}
+
+            </div>
+          </div>
+{% comment %} 
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
@@ -178,8 +558,8 @@
                     section_id: section.id
                   %}
                 </li>
-              {%- endfor -%}
-            </ul>
+              {%- endfor -%} {% endcomment %}
+            
 
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
@@ -199,6 +579,30 @@
   "name": "main-collection-custom",
   "class": "section",
   "settings": [
+    {
+      "label": "heading",
+      "type": "richtext",
+      "id": "heading",
+      "default": "<p>toolganize <strong>collection</strong></p>"
+    },
+    {
+      "label": "text1",
+      "type": "text",
+      "id": "text_1",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales."
+    },
+    {
+      "label": "dummy description",
+      "type": "text",
+      "id": "dummy_description",
+      "default": "toolganize power tool organizer & storage wall mount bla bla bla "
+    },
+    {
+      "label": "button_text",
+      "type": "text",
+      "id": "button_text",
+      "default": "SHOP NOW"
+    },
     {
       "type": "range",
       "id": "products_per_page",

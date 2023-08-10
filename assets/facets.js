@@ -4,7 +4,11 @@ class FacetFiltersForm extends HTMLElement {
     this.onActiveFilterClick = this.onActiveFilterClick.bind(this);
 
     this.debouncedOnSubmit = debounce((event) => {
-      this.onSubmitHandler(event);
+
+      this.onSubmitHandler(event)
+
+
+
     }, 500);
 
     const facetForm = this.querySelector('form');
@@ -62,7 +66,6 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.filterData = [...FacetFiltersForm.filterData, { html, url }];
         FacetFiltersForm.renderFilters(html, event);
         FacetFiltersForm.renderProductGridContainer(html);
-        FacetFiltersForm.renderProductCount(html);
         if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
       });
   }
@@ -71,7 +74,6 @@ class FacetFiltersForm extends HTMLElement {
     const html = FacetFiltersForm.filterData.find(filterDataUrl).html;
     FacetFiltersForm.renderFilters(html, event);
     FacetFiltersForm.renderProductGridContainer(html);
-    FacetFiltersForm.renderProductCount(html);
     if (typeof initializeScrollAnimationTrigger === 'function') initializeScrollAnimationTrigger(html.innerHTML);
   }
 
@@ -85,19 +87,22 @@ class FacetFiltersForm extends HTMLElement {
       .querySelectorAll('.scroll-trigger')
       .forEach((element) => {
         element.classList.add('scroll-trigger--cancel');
-      });
-  }
+      }),
 
-  static renderProductCount(html) {
-    const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
-    const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
-    container.innerHTML = count;
-    container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
-    }
+      (async () => {
+        console.log('callback after rendering')
+        renderMobile(), updateView.call(rangeOne);
+        updateView.call(rangeTwo);
+        var rangeInputs = document.querySelectorAll('.range-input-custom input[type="range"]');
+        rangeInputs.forEach(function (rangeInput) {
+          rangeInput.addEventListener('mouseup', function () {
+            this.blur();
+          });
+          rangeInput.addEventListener('mousedown', updateView);
+          rangeInput.addEventListener('input', updateView);
+        });
+      })()
+
   }
 
   static renderFilters(html, event) {
@@ -206,6 +211,9 @@ class FacetFiltersForm extends HTMLElement {
       });
       this.onSubmitForm(forms.join('&'), event);
     }
+
+
+
   }
 
   onActiveFilterClick(event) {
@@ -255,10 +263,6 @@ class PriceRange extends HTMLElement {
     const value = Number(input.value);
     const min = Number(input.getAttribute('data-min'));
     const max = Number(input.getAttribute('data-max'));
-
-    console.log('min', min)
-    console.log('max', max)
-    console.log('input.value', input.value)
     if (value < min) input.value = min;
     if (value > max) input.value = max;
   }
@@ -283,9 +287,90 @@ class FacetRemove extends HTMLElement {
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
     form.onActiveFilterClick(event);
   }
+
+
+}
+
+var rangeOne = document.querySelector('#rangeMin'),
+  rangeTwo = document.querySelector('#rangeMax'),
+  outputOneValue = document.querySelector('.outputOne span'),
+  outputTwoValue = document.querySelector('.outputTwo span'),
+  outputOne = document.querySelector('.outputOne'),
+  outputTwo = document.querySelector('.outputTwo'),
+  inclRange = document.querySelector('.incl-range');
+
+
+const renderMobile = () => {
+  if (window.innerWidth <= 749) {
+    rangeOne = document.querySelector('#rangeMin_mob');
+    rangeTwo = document.querySelector('#rangeMax_mob');
+    outputOneValue = document.querySelector('.outputOne_mob span');
+    outputTwoValue = document.querySelector('.outputTwo_mob span');
+    outputOne = document.querySelector('.outputOne_mob');
+    outputTwo = document.querySelector('.outputTwo_mob');
+    inclRange = document.querySelector('.incl-range_mob');
+  } else {
+    rangeOne = document.querySelector('#rangeMin'),
+      rangeTwo = document.querySelector('#rangeMax'),
+      outputOneValue = document.querySelector('.outputOne span'),
+      outputTwoValue = document.querySelector('.outputTwo span'),
+      outputOne = document.querySelector('.outputOne'),
+      outputTwo = document.querySelector('.outputTwo'),
+      inclRange = document.querySelector('.incl-range');
+  }
 }
 
 
+window.addEventListener('resize', function () {
+  renderMobile()
+});
+
+function updateView() {
+  if (outputOne && outputTwo) {
+    if (this.id === 'rangeMin' || this.id === 'rangeMin_mob') {
+      outputOneValue.innerHTML = this.value;
+      outputOne.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+      rangeTwo.style.zIndex = 9;
+      rangeOne.style.zIndex = 10;
+    } else {
+      outputTwo.style.left = (this.value / this.getAttribute('max')) * 100 + '%';
+      outputTwoValue.innerHTML = this.value;
+      rangeTwo.style.zIndex = 10;
+      rangeOne.style.zIndex = 9;
+    }
+
+    if (parseInt(rangeOne.value) < parseInt(rangeTwo.value)) {
+      inclRange.style.width =
+        ((rangeTwo.value - rangeOne.value) / this.getAttribute('max')) * 100 + '%';
+      inclRange.style.left = (rangeOne.value / this.getAttribute('max')) * 100 + '%';
+    } else {
+      inclRange.style.width = 0;
+      if (this.id === 'rangeMin') {
+        outputOne.style.left = outputTwo.style.left;
+        outputOneValue.innerHTML = outputTwoValue.innerHTML;
+      } else {
+        outputTwo.style.left = outputOne.style.left;
+        outputTwoValue.innerHTML = outputOneValue.innerHTML;
+      }
+    }
+
+  }
+
+}
+document.addEventListener('DOMContentLoaded', function () {
+  renderMobile(),
+    updateView.call(rangeOne);
+  updateView.call(rangeTwo);
+
+  var rangeInputs = document.querySelectorAll('.range-input-custom input[type="range"]');
+  rangeInputs.forEach(function (rangeInput) {
+    rangeInput.addEventListener('mouseup', function () {
+      this.blur();
+    });
+    rangeInput.addEventListener('mousedown', updateView);
+    rangeInput.addEventListener('input', updateView);
+  });
+});
 
 
 

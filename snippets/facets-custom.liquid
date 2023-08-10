@@ -249,7 +249,7 @@
 -%}
 
 <div
-  style="display:block;"
+  style="display:block;padding-top:0;"
   class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
@@ -282,7 +282,7 @@
                 <div class="active-facets-vertical-filter">
                   {%- unless results.filters == empty -%}
                     <h2
-                      class="facets__heading facets__heading--vertical caption-large text-body"
+                      class="facets__heading facets__heading--vertical caption-large text-body custom_filter_tittle"
                       id="verticalTitle"
                       tabindex="-1"
                     >
@@ -817,7 +817,7 @@
             </defs>
           </svg>
 
-          <span class=" mobile-facets__open-label button-label medium-hide large-up-hide">
+          <span style="margin:0;" class=" mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
               {{ 'products.facets.filter_and_sort' | t }}
             {%- elsif enable_filtering -%}
@@ -1161,11 +1161,11 @@
     </details>
   </menu-drawer>
 
-  <div class="active-facets active-facets-mobile medium-hide large-up-hide">
+  <div style="margin:0;justify-content: space-between;" class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
-          <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
+          <a style="padding-right:0;padding-left:0;" href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
             <span class="active-facets__button-inner button button--tertiary">
               {{ filter.label }}: {{ value.label | escape }}
               {% render 'icon-close-small' %}
@@ -1178,7 +1178,7 @@
       {%- if filter.type == 'price_range' -%}
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
-            <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
+            <a style="padding-right:0;padding-left:0;" href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
               <span class="active-facets__button-inner button button--tertiary">
                 {%- if filter.min_value.value -%}
                   {{ filter.min_value.value | money }}
@@ -1200,7 +1200,7 @@
       {%- endif -%}
     {%- endfor -%}
     <facet-remove class="active-facets__button-wrapper">
-      <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+      <a style="padding-right:0;padding-left:0;" href="{{ results_url }}" class="active-facets__button-remove underlined-link">
         <span>{{ 'products.facets.clear_all' | t }}</span>
       </a>
     </facet-remove>

@@ -25,12 +25,50 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+
+
+
+
+  .custom_reviews_text{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    justify-content:center;
+  }
+   .custom_reviews_text span{
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+ .custom_reviews_text span svg{
+   min-width:18px;
+   min-height:18px;
+  }
+   .custom_reviews_text p{
+    font-family: var(--custom-font-style-secondary);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin:0;
+    color:var(--custom-font-color-primary)
+  }
+  .custom_reviews_text p strong{
+    font-weight: 700;
+    padding:0 4px;
+  }
+
   .collection_custom_wrapper{
-          padding:0;
+          padding:0 0 100px 0;
+
+
         }
         .collection_custom_gradient{
           background: linear-gradient(180deg, rgba(219, 201, 114, 0.3) 0%, rgba(219, 201, 114, 0) 55.56%),
           linear-gradient(0deg, #FFFFFF, #FFFFFF);
+          padding-top:78px;
 
         }
         .collection_custom.markered_text,
@@ -47,6 +85,7 @@
           margin-top:30px;
         }
           .main-collection-product-grid-custom_wrapper{
+            margin-top:81px;
             padding:0 11px;
           }
           .radio_custom_sort {
@@ -110,6 +149,13 @@
 
 
           @media screen and (max-width:750px){
+            .main-collection-product-grid-custom_wrapper{
+            margin-top:34px;
+          }
+            .collection_custom_gradient{
+          padding-top:34px;
+
+        }
             .radio_custom_sort{
               gap:7px;
             }
@@ -120,6 +166,34 @@
             .collection_custom.markered_text p{
               margin-top:15px;
             }
+             .custom_reviews_text p strong{
+              padding:0 2px;
+            }
+             .custom_reviews_text{
+              gap:4px;
+              justify-content:center;
+            }
+             .custom_reviews_text span{
+              gap:0;
+            }
+             .custom_reviews_text span svg {
+            min-width:auto !important;
+            min-height:auto !important;
+            max-width:13px !important;
+            max-height:13px !important;
+            height:13px !important;
+            width:13px !important;
+            }
+             .custom_reviews_text p{
+              font-size: 12px;
+              line-height: 16px;
+            }
+
+            .collection_custom_wrapper{
+          padding:0 0 50px 0;
+
+
+        }
           }
           .featured-collection-custom_under_header {
     max-width: 699px;
@@ -138,7 +212,6 @@
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 30px;
     margin: auto;
-    margin-top: 60px;
   }
 
   .featured-collection-custom_grid_element {
@@ -152,6 +225,7 @@
     padding: 28px 11px;
     box-sizing: border-box;
     border-radius: 4px;
+    height:100%;
   }
 
   .featured-collection-custom_grid_element p {
@@ -263,6 +337,27 @@
     display: none !important;
     margin-top: 40px;
   }
+  .about-us-small-imamges_wrapper {
+    display: flex;
+    max-width: 996px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
+  .about-us-small-imamges-text {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .about-us-small-imamges-text span {
+    font-family: var(--custom-font-style-primary);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--custom-font-color-primary);
+  }
   @media screen and (max-width: 1200px) {
     .featured-collection-custom_grid .featured-collection-custom_grid_element:last-child {
       display: none !important;
@@ -277,6 +372,28 @@
   }
 
   @media screen and (max-width: 750px) {
+    .about-us-small-imamges_wrapper {
+      margin-top: 29px;
+      max-width: 262px;
+    }
+    .about-us-small-imamges-text {
+      flex-direction: column;
+      gap: 15px;
+      flex-basis: 33%;
+    }
+    .about-us-small-imamges-text span {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+    .about-us-small-imamges-text img {
+      width: 45px;
+      height: 45px;
+    }
+    .about-us-small-imamges_wrapper {
+      margin-top: 29px;
+      max-width: 262px;
+    }
     .swiper-button-prev:after,
     .swiper-button-next:after {
       display: none !important;
@@ -350,8 +467,30 @@
 
 {% comment %}  or collection tittle {% endcomment %}
 <div class="collection_custom_gradient">
+
+  <div class="custom_reviews_text">
+    <span>
+     {% for item in (1..5) %}
+       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 0L11.1137 6.89121L18 6.87539L12.42 11.1186L14.5623 18L9 13.7312L3.43769 18L5.58 11.1186L0 6.87539L6.88632 6.89121L9 0Z" fill="#FBBC04"/>
+         </svg>
+     {% endfor %}  
+        </span> {{- section.settings.dummy_review -}}
+   </div>
   <h2 class="collection_custom markered_text">{{ section.settings.heading }}</h2>
   <p class="featured-collection-custom_under_header">{{ section.settings.text_1 }}</p>
+  <div class="about-us-small-imamges_wrapper">
+    {% for block in section.blocks %}
+      {%- if block.type == 'text-img-small' -%}
+        <div class="about-us-small-imamges-text">
+          {{ block.settings.image | image_url: width: 71 | image_tag: height: 71, loading: 'lazy' }}
+          <span>
+            {{ block.settings.text }}
+          </span>
+        </div>
+      {%- endif -%}
+    {% endfor %}
+  </div>
 </div>
 
 
@@ -578,6 +717,25 @@
 {
   "name": "main-collection-custom",
   "class": "section",
+  "blocks":[
+    {
+      "type": "text-img-small",
+      "name": "text-img-small",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "text",
+          "default": "built to last"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Img"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "label": "heading",
@@ -603,6 +761,18 @@
       "id": "button_text",
       "default": "SHOP NOW"
     },
+    {
+      "label": "text",
+      "type": "text",
+      "id": "variant_name",
+      "default": "Available colours"
+    }, 
+      {
+          "type": "richtext",
+          "id": "dummy_review",
+          "label": "t:sections.main-product.blocks.text.settings.text.label",
+          "default": "<p><strong>4.5/5</strong>Based On<strong>600+</strong>Happy Customer Reviews</p>"
+        },
     {
       "type": "range",
       "id": "products_per_page",

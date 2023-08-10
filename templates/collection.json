@@ -10,7 +10,39 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid-custom",
+      "blocks": {
+        "8c3394e4-9ba6-4f4d-bed2-30846bf6630d": {
+          "type": "text-img-small",
+          "settings": {
+            "text": "built to last",
+            "image": "shopify:\/\/shop_images\/image_10_2.svg"
+          }
+        },
+        "640bfdab-de21-4cba-adb4-68c5f5b9727a": {
+          "type": "text-img-small",
+          "settings": {
+            "text": "built to last"
+          }
+        },
+        "34fc55b7-1e97-4a34-9fca-04462c509deb": {
+          "type": "text-img-small",
+          "settings": {
+            "text": "built to last"
+          }
+        }
+      },
+      "block_order": [
+        "8c3394e4-9ba6-4f4d-bed2-30846bf6630d",
+        "640bfdab-de21-4cba-adb4-68c5f5b9727a",
+        "34fc55b7-1e97-4a34-9fca-04462c509deb"
+      ],
       "settings": {
+        "heading": "<p>toolganize <strong>collection<\/strong><\/p>",
+        "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
+        "dummy_description": "toolganize power tool organizer & storage wall mount bla bla bla",
+        "button_text": "SHOP NOW",
+        "variant_name": "Available colours",
+        "dummy_review": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>",
         "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",

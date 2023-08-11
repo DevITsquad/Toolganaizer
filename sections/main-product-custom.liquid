@@ -431,7 +431,10 @@
       {% for link in product.images %}
         <div class="swiper-slide">
           <div class="swiper-main-img_wrapper">
-            <img  class="swiper-main-img" src="{{link | image_url}}" alt="product_image"/>
+            <img class="swiper-main-img" src="{{ link | image_url }}" alt="product_image"
+              {%- if forloop.index == 1 -%}  
+              loading="eager" fetchpriority="high"{%- else -%}
+              loading="lazy"{%- endif -%} />
           </div>
         </div>
       {% endfor %}
@@ -451,7 +454,7 @@
     <div class="swiper-wrapper">
       {% for link in product.images %}
         <div class="swiper-slide">
-          <img  class="swiper-small-img" src="{{link | image_url}}" alt="product_image" />
+          <img  class="swiper-small-img" src="{{link | image_url}}" alt="product_image" loading='lazy'/>
         </div>
       {% endfor %}
     </div>
@@ -526,15 +529,15 @@
   
       {% if block.type == "image-text" %}
         <div class="custom-image">
-          {{block.settings.image_1 | image_url | img_tag}}
+          {{block.settings.image_1 | image_url | img_tag: loading:"lazy"}}
           {{block.settings.text_1}}
         </div>
         <div class="custom-image">
-          {{block.settings.image_2 | image_url | img_tag}}
+          {{block.settings.image_2 | image_url | img_tag: loading:"lazy"}}
           {{block.settings.text_2}}
         </div>
         <div class="custom-image">
-          {{block.settings.image_3 | image_url | img_tag}}
+          {{block.settings.image_3 | image_url | img_tag: loading:"lazy"}}
           {{block.settings.text_3}}
         </div>
       {% endif %}
@@ -820,15 +823,15 @@
             
                 {% if block.type == "image-text" %}
                   <div class="custom-image">
-                    {{block.settings.image_1 | image_url | img_tag}}
+                    {{block.settings.image_1 | image_url | img_tag: loading:"lazy"}}
                     {{block.settings.text_1}}
                   </div>
                   <div class="custom-image">
-                    {{block.settings.image_2 | image_url | img_tag}}
+                    {{block.settings.image_2 | image_url | img_tag: loading:"lazy"}}
                     {{block.settings.text_2}}
                   </div>
                   <div class="custom-image">
-                    {{block.settings.image_3 | image_url | img_tag}}
+                    {{block.settings.image_3 | image_url | img_tag: loading:"lazy"}}
                     {{block.settings.text_3}}
                   </div>
                 {% endif %}

@@ -122,7 +122,7 @@
   <div class="emotive-headline-items">
     {% for block in section.blocks %}
       <div class="emotive-headline-item">
-        <img src="{{ block.settings.image | image_url}}" alt="img">
+        <img src="{{ block.settings.image | image_url}}" alt="img" loading='lazy'>
         <div>
           <h4>{{ block.settings.heading }}</h4>
           <p>{{ block.settings.paragraph }}</p>

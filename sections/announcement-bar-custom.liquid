@@ -70,7 +70,7 @@
     {% for block in section.blocks %}
       <div style="{% if forloop.last %}border:none;{% endif -%}" class="announcement-element">
         {%- if block.settings.image != blank -%}
-          {{ block.settings.image | image_url: width: 30 | image_tag: height: 30 }}
+          {{ block.settings.image | image_url: width: 30 | image_tag: height: 30 ,loading:"lazy"}}
         {%- endif -%}
         <span>
           {{ block.settings.text }}

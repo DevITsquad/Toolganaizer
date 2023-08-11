@@ -36,14 +36,50 @@ p {
     background-position: 50% 85%;
     font-weight: 700;
 }
+
 .markered_text.green p strong {
     background-image: linear-gradient(90deg, #3D8790, #3D8790);
 }
-.CTA_botton a{
+
+.CTA_botton a {
     width: 100%;
     height: 100%;
     justify-content: center;
 }
+.shop_now_btn svg,
+.featured-collection-custom_grid_element,
+.newsletter-form__button.footer-custom-wrapper_subscribe,
+.featured-collection-custom_bottom_btn,
+.featured-collection-custom_bottom_btn svg,
+.prouct-link,
+.CTA_botton:hover svg,
+.CTA_botton {
+    transition: 0.2s;
+}
+
+.newsletter-form__button.footer-custom-wrapper_subscribe:hover,
+.prouct-link:hover,
+.CTA_botton:hover {
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.featured-collection-custom_bottom_btn:hover{
+    transform: scale(1.5);
+}
+.featured-collection-custom_grid_element:hover{
+    transform: scale(1.06);
+}
+.shop_now_btn:hover svg,
+.featured-collection-custom_bottom_btn:hover svg,
+.CTA_botton:hover svg{
+    transform: translate(5px)
+}
+.featured-collection-custom_bottom_btn:hover{
+
+}
+
 @media screen and (max-width: 767px) {
     .markered_text p strong {
         background-size: 100% 6.45px;

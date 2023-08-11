@@ -149,7 +149,7 @@
   <div class="emotive-headline-grid_wrapper-inner">
     {% for block in section.blocks %}
       <div class="emotive-headline-grid_element element__{{forloop.index}}">
-        <img src="{{ block.settings.image | image_url}}" alt="img">
+        <img src="{{ block.settings.image | image_url}}" alt="img" loading='lazy'>
         <div class="emotive-headline-grid_element_text">
           <h4>{{ block.settings.heading }}</h4>
           <p>{{ block.settings.paragraph }}</p>

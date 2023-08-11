@@ -469,6 +469,7 @@
       "blocks": {
         "5c960519-cd80-4a25-acd3-f38bbd43a4c0": {
           "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "disabled": true,
           "settings": {
             "product": "",
             "name": "Review Box",
@@ -492,15 +493,15 @@
         "4f95e375-e937-4e5a-be15-c933551b05ee": {
           "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/review-carousel-basic\/bf2eea72-0400-4db1-8908-44b7418f9a88",
           "settings": {
-            "number_of_columns_desktop": 4,
+            "number_of_columns_desktop": 3,
             "columns_spacing": 16,
             "enable_autoplay": true,
-            "autoplay_speed": 5,
-            "border_radius": 16,
+            "autoplay_speed": 3,
+            "border_radius": 6,
             "primary_text_color": "#ffffff",
             "font_size": 14,
             "customer_name_format": "full_name",
-            "show_title": false,
+            "show_title": true,
             "review_title": "Customer Reviews",
             "on_click_review": "show_popup_detail",
             "rating_icon_shape": "thin",
@@ -511,10 +512,34 @@
 
             ]
           }
+        },
+        "43eb9cfc-abb4-4c1f-8e0c-ee15f6d6c805": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/review-carousel-basic\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "number_of_columns_desktop": 5,
+            "columns_spacing": 16,
+            "enable_autoplay": true,
+            "autoplay_speed": 5,
+            "border_radius": 16,
+            "primary_text_color": "#ffffff",
+            "font_size": 14,
+            "customer_name_format": "full_name",
+            "show_title": true,
+            "review_title": "Customer Reviews",
+            "on_click_review": "show_popup_detail",
+            "rating_icon_shape": "default",
+            "rating_icon_filled_color": "#FAAD14",
+            "rating_icon_empty_color": "#D9D9D9",
+            "rating_icon_size": 16,
+            "product_ids": [
+
+            ]
+          }
         }
       },
       "block_order": [
-        "4f95e375-e937-4e5a-be15-c933551b05ee"
+        "4f95e375-e937-4e5a-be15-c933551b05ee",
+        "43eb9cfc-abb4-4c1f-8e0c-ee15f6d6c805"
       ],
       "settings": {
         "include_margins": true

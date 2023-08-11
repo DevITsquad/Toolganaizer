@@ -199,7 +199,9 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
+            
+<div product-id="{{ card_product.id }}" product-handle="{{ card_product.handle }}" class="alireviews-review-star-rating"></div>
+{% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
         {%- if show_quick_add -%}

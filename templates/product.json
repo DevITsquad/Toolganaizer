@@ -94,11 +94,17 @@
             "text_1": "Great Quality - Easy Assembly\/ Installation - Super Customer Service.",
             "text_2": "Marc R Ward --- Verified buyer"
           }
+        },
+        "0172516a-bee8-4456-b96d-e0af987cf241": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "50e302b3-6ce8-427b-bf29-874036cfcaba",
         "title",
+        "0172516a-bee8-4456-b96d-e0af987cf241",
         "price",
         "description",
         "variant_picker",
@@ -546,6 +552,27 @@
         "bottom_button_text": "Explore more products",
         "variant_name": "Available colours"
       }
+    },
+    "alireviews-section-51859e94-ed61-4241-a6ce-9f4f11e0678d": {
+      "type": "apps",
+      "blocks": {
+        "7c9d01aa-19a5-4435-9324-5b2ae330516d": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "name": "Review Box",
+            "vertical_alignment": "2",
+            "rating_color": "#1F1F1F",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1F1F1F"
+          }
+        }
+      },
+      "block_order": [
+        "7c9d01aa-19a5-4435-9324-5b2ae330516d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -560,6 +587,7 @@
     "7eb6b982-ec17-48a5-a4f4-4336114d70e9",
     "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5",
     "24c23ca6-dd6a-4688-91e0-61c94da1580c",
-    "029e6697-bde3-4080-95a0-2ee10afe4bac"
+    "029e6697-bde3-4080-95a0-2ee10afe4bac",
+    "alireviews-section-51859e94-ed61-4241-a6ce-9f4f11e0678d"
   ]
 }

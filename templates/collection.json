@@ -46,7 +46,7 @@
         "button_text": "SHOP NOW",
         "variant_name": "Available colours",
         "dummy_review": "<p><strong>4.8\/5<\/strong>Based On<strong>20,000+<\/strong>Happy Customer Reviews<\/p>",
-        "products_per_page": 24,
+        "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",
         "image_shape": "default",

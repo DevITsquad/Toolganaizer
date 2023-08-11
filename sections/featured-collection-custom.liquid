@@ -61,8 +61,7 @@
     max-width: 182px;
     height: 210px;
   }
-  .featured-collection-custom_grid_element_description p,
-  .featured-collection-custom_grid_element_description {
+  .featured-collection-custom_grid_element_description p {
     font-family: var(--custom-font-style-primary);
     font-size: 20px;
     font-weight: 700;
@@ -207,8 +206,7 @@
     .featured-collection-custom_grid_element img {
       max-width: 151px;
     }
-    .featured-collection-custom_grid_element_description p,
-    .featured-collection-custom_grid_element_description {
+    .featured-collection-custom_grid_element_description p {
       font-size: 16px;
       line-height: 20px;
       max-width: 187px;
@@ -247,7 +245,7 @@
   <p class="featured-collection-custom_under_header">{{ section.settings.text_1 }}</p>
 
   <div class="featured-collection-custom_grid desctop_collection">
-    {%- for item in section.settings.collection.products -%}
+    {%- for item in section.settings.collection.products limit:4 -%}
       <div class="featured-collection-custom_grid_element">
         <img loading="lazy" src="{{item.featured_image | image_url}}" alt="img">
         <div class="featured-collection-custom_grid_element_description">
@@ -259,9 +257,9 @@
             {% endif %}
           {% else %}
             {% if section.settings.dummy_description.size > 55 %}
-              {{ section.settings.dummy_description | truncate: 55, '...' }}
+              <p> {{ section.settings.dummy_description | truncate: 55, '...' }}</p>
             {%- else -%}
-              {{ section.settings.dummy_description }}
+            <p> {{ section.settings.dummy_description }}</p>
             {% endif %}
           {%- endif -%}
         </div>

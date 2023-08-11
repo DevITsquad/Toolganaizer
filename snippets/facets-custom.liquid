@@ -978,106 +978,102 @@
                         </div>
                       </details>
                     {% when 'price_range' %}
-                      <details
+                      <div
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
                         class="mobile-facets__details js-filter"
                         data-index="mobile-{{ forloop.index }}"
                       >
-                        <summary class="mobile-facets__summary focus-inset">
-                          <div>
+                       
+                        <style>
+                          .mobile-facets__summary_inner_wrapper {
+                            border: 1px solid rgba(185, 178, 148, 1);
+                            border-radius: 4px;
+                            padding: 20px;
+                        
+                            flex-direction: column;
+                            align-items:flex-start !important;
+                            max-width:90%;
+                            margin:auto;
+
+                          }
+                          .mobile-facets__summary_inner_wrapper .facets__price{
+                            align-self:center;
+                          }
+                          .custom_sort_form_inner .select_mobile {
+                            flex-direction: column;
+                          }
+                          .custom_sort_form_inner .select_mobile input[type='radio'] {
+                            display: none;
+                          }
+      
+                          .mobile-facets__sort.custom_sort_form_inner{
+                            border: 1px solid rgba(185, 178, 148, 1);
+                            border-radius: 4px;
+                            padding: 20px;
+                            max-width:90%;
+                            margin:auto;
+                            margin-top:16px;
+                          }
+                        </style>
+                        <div class="focus-inset">
+                          <div class='mobile-facets__summary_inner_wrapper'>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
-                            <noscript>{% render 'icon-caret' %}</noscript>
-                          </div>
-                        </summary>
-                        <div
-                          id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
-                          class="mobile-facets__submenu gradient"
-                        >
-                          <button
-                            class="mobile-facets__close-button link link--text focus-inset"
-                            aria-expanded="true"
-                            type="button"
-                          >
-                            {% render 'icon-arrow' %}
-                            {{ filter.label | escape }}
-                          </button>
-
-                          {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-                          <p class="mobile-facets__info">
-                            {{ 'products.facets.max_price' | t: price: max_price_amount }}
-                          </p>
-                          <price-range class="facets__price">
-                            <div class="field range-input-custom">
-                              <section class="range-slider container">
-                                <span class="output outputOne_mob">
-                                  {{- cart.currency.symbol -}}
-                                  <span>0</span></span
-                                >
-                                <span class="output outputTwo_mob">
-                                  {{- cart.currency.symbol -}}
-                                  <span>{{ filter.range_max | divided_by: 100 | plus: 1 }}</span></span
-                                >
-                                <span class="full-range"></span>
-                                <span class="incl-range_mob"></span>
-                                <input
-                                  id="rangeMin_mob"
-                                  class="field__input"
-                                  name="{{ filter.min_value.param_name }}"
-                                  id="Filter-{{ filter.label | escape }}-GTE"
-                                  {%- if filter.min_value.value -%}
-                                    value="{{ filter.min_value.value | divided_by: 100 }}"
-                                  {%- else -%}
-                                    value="0"
-                                  {%- endif -%}
-                                  type="range"
-                                  min="0"
-                                  max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
-                                  step="1"
-                                  data-min="0"
-                                >
-                                <input
-                                  id="rangeMax_mob"
-                                  class="field__input"
-                                  name="{{ filter.max_value.param_name }}"
-                                  id="Filter-{{ filter.label | escape }}-LTE"
-                                  {%- if filter.max_value.value -%}
-                                    value="{{ filter.max_value.value | divided_by: 100 | plus: 1}}"
-                                  {%- else -%}
-                                    value="{{ filter.range_max | divided_by: 100 | plus: 1}}"
-                                  {%- endif -%}
-
-                                  type="range"
-                                  min="0"
-                                  max="{{ filter.range_max | divided_by: 100 | plus: 1 }}"
-                                  step="1"
-                                  data-max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
-                                >
-                              </section>
-                            </div>
-                            <script></script>
-                          </price-range>
-                          <div class="no-js-hidden mobile-facets__footer">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
-                              </a>
-                            </facet-remove>
-                            <button
-                              type="button"
-                              class="no-js-hidden button button--primary"
-                              onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
-                            >
-                              {{ 'products.facets.apply' | t }}
-                            </button>
-                            <noscript
-                              ><button class="button button--primary">
-                                {{ 'products.facets.apply' | t }}
-                              </button></noscript
-                            >
+                        
+                              <price-range class="facets__price">
+                                <div class="field range-input-custom">
+                                  <section class="range-slider container">
+                                    <span class="output outputOne_mob">
+                                      {{- cart.currency.symbol -}}
+                                      <span>0</span></span
+                                    >
+                                    <span class="output outputTwo_mob">
+                                      {{- cart.currency.symbol -}}
+                                      <span>{{ filter.range_max | divided_by: 100 | plus: 1 }}</span></span
+                                    >
+                                    <span class="full-range"></span>
+                                    <span class="incl-range_mob"></span>
+                                    <input
+                                      id="rangeMin_mob"
+                                      class="field__input"
+                                      name="{{ filter.min_value.param_name }}"
+                                      id="Filter-{{ filter.label | escape }}-GTE"
+                                      {%- if filter.min_value.value -%}
+                                        value="{{ filter.min_value.value | divided_by: 100 }}"
+                                      {%- else -%}
+                                        value="0"
+                                      {%- endif -%}
+                                      type="range"
+                                      min="0"
+                                      max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                      step="1"
+                                      data-min="0"
+                                    >
+                                    <input
+                                      id="rangeMax_mob"
+                                      class="field__input"
+                                      name="{{ filter.max_value.param_name }}"
+                                      id="Filter-{{ filter.label | escape }}-LTE"
+                                      {%- if filter.max_value.value -%}
+                                        value="{{ filter.max_value.value | divided_by: 100 | plus: 1}}"
+                                      {%- else -%}
+                                        value="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                      {%- endif -%}
+    
+                                      type="range"
+                                      min="0"
+                                      max="{{ filter.range_max | divided_by: 100 | plus: 1 }}"
+                                      step="1"
+                                      data-max="{{ filter.range_max | divided_by: 100 | plus: 1}}"
+                                    >
+                                  </section>
+                                </div>
+                                <script></script>
+                              </price-range>
+                            
+                            
                           </div>
                         </div>
-                      </details>
+                      </div>
                   {% endcase %}
                 {%- endfor -%}
               {%- endif -%}
@@ -1087,20 +1083,13 @@
                   class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
                   data-index="mobile-{{ forloop.index }}"
                 >
-                  <style>
-                    .custom_sort_form_inner .select_mobile {
-                      flex-direction: column;
-                    }
-                    .custom_sort_form_inner .select_mobile input[type='radio'] {
-                      display: none;
-                    }
-                  </style>
+               
 
-                  <div class="mobile-facets__summary">
+                  <div class="">
                     <div class="mobile-facets__sort custom_sort_form_inner">
-                      <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
                       <div class="select select_mobile radio_custom_sort">
-                        <div 
+                        <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
+                        <div
                           name="sort_by"
                           class="select__select radio_custom_sort"
                           id="SortBy-mobile"
@@ -1161,11 +1150,18 @@
     </details>
   </menu-drawer>
 
-  <div style="margin:0;justify-content: space-between;" class="active-facets active-facets-mobile medium-hide large-up-hide">
+  <div
+    style="margin:0;justify-content: space-between;"
+    class="active-facets active-facets-mobile medium-hide large-up-hide"
+  >
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
-          <a style="padding-right:0;padding-left:0;" href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
+          <a
+            style="padding-right:0;padding-left:0;"
+            href="{{ value.url_to_remove }}"
+            class="active-facets__button active-facets__button--light"
+          >
             <span class="active-facets__button-inner button button--tertiary">
               {{ filter.label }}: {{ value.label | escape }}
               {% render 'icon-close-small' %}
@@ -1178,7 +1174,11 @@
       {%- if filter.type == 'price_range' -%}
         {%- if filter.min_value.value != null or filter.max_value.value != null -%}
           <facet-remove>
-            <a style="padding-right:0;padding-left:0;" href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
+            <a
+              style="padding-right:0;padding-left:0;"
+              href="{{ filter.url_to_remove }}"
+              class="active-facets__button active-facets__button--light"
+            >
               <span class="active-facets__button-inner button button--tertiary">
                 {%- if filter.min_value.value -%}
                   {{ filter.min_value.value | money }}
@@ -1200,7 +1200,11 @@
       {%- endif -%}
     {%- endfor -%}
     <facet-remove class="active-facets__button-wrapper">
-      <a style="padding-right:0;padding-left:0;" href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+      <a
+        style="padding-right:0;padding-left:0;"
+        href="{{ results_url }}"
+        class="active-facets__button-remove underlined-link"
+      >
         <span>{{ 'products.facets.clear_all' | t }}</span>
       </a>
     </facet-remove>

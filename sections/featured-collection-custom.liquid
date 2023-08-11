@@ -334,9 +334,9 @@
               {% endif %}
             {% else %}
               {% if section.settings.dummy_description.size > 55 %}
-                {{ section.settings.dummy_description | truncate: 55, '...' }}
+             <p>  {{ section.settings.dummy_description | truncate: 55, '...' }}</p> 
               {%- else -%}
-                {{ section.settings.dummy_description }}
+              <p>   {{ section.settings.dummy_description }}</p> 
               {% endif %}
             {%- endif -%}
           </div>

@@ -6,7 +6,7 @@
         "50e302b3-6ce8-427b-bf29-874036cfcaba": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>20,000+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "title": {
@@ -356,7 +356,7 @@
     "20ffb162-6d3a-4c44-a34c-747aa3b02a76": {
       "type": "amazon-raiting-row",
       "settings": {
-        "heading": "<p>our products are rated an average of 4.8 out of 5 on ----, on over 600+ sales<\/p>"
+        "heading": "<p>our products are rated an average of 4.8 out of 5 on, on over 20,000+ sales<\/p>"
       }
     },
     "7eb6b982-ec17-48a5-a4f4-4336114d70e9": {
@@ -490,7 +490,7 @@
           "type": "title",
           "settings": {
             "heading_size": "h1",
-            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>20,000+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "768015b2-63df-4d71-8ee1-cad3b832d68d": {

@@ -7,7 +7,7 @@
           "type": "title",
           "settings": {
             "heading_size": "h1",
-            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>600+<\/strong>Happy Customer Reviews<\/p>"
+            "text": "<p><strong>4.5\/5<\/strong>Based On<strong>20,000+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "template--15923985711300__c0a2e54a-82c2-4694-beb5-d32077f73e46-price-1": {
@@ -297,7 +297,7 @@
     "45171614-2356-49c0-853f-896a6d6d1624": {
       "type": "amazon-raiting-row",
       "settings": {
-        "heading": "<p>our products are rated an average of 4.8 out of 5 on ----, on over 600+ sales<\/p>"
+        "heading": "<p>our products are rated an average of 4.8 out of 5, on over 20,000+ sales<\/p>"
       }
     },
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f": {

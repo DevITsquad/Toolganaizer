@@ -308,7 +308,7 @@
           "settings": {
             "product": "",
             "name": "Review Box",
-            "vertical_alignment": "8",
+            "vertical_alignment": "2",
             "rating_color": "#1f1f1f",
             "section_color": "#ffffff",
             "primary_text_color": "#1f1f1f"

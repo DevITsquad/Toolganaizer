@@ -463,6 +463,62 @@
         "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
         "text_in_button": "SHOP NOW"
       }
+    },
+    "169174469253988c80": {
+      "type": "apps",
+      "blocks": {
+        "5c960519-cd80-4a25-acd3-f38bbd43a4c0": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "product": "",
+            "name": "Review Box",
+            "vertical_alignment": "2",
+            "rating_color": "#1F1F1F",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1F1F1F"
+          }
+        }
+      },
+      "block_order": [
+        "5c960519-cd80-4a25-acd3-f38bbd43a4c0"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1691744713a2f0be46": {
+      "type": "apps",
+      "blocks": {
+        "4f95e375-e937-4e5a-be15-c933551b05ee": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/review-carousel-basic\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "number_of_columns_desktop": 5,
+            "columns_spacing": 16,
+            "enable_autoplay": true,
+            "autoplay_speed": 5,
+            "border_radius": 16,
+            "primary_text_color": "#ffffff",
+            "font_size": 14,
+            "customer_name_format": "full_name",
+            "show_title": true,
+            "review_title": "Customer Reviews",
+            "on_click_review": "show_popup_detail",
+            "rating_icon_shape": "default",
+            "rating_icon_filled_color": "#FAAD14",
+            "rating_icon_empty_color": "#D9D9D9",
+            "rating_icon_size": 16,
+            "product_ids": [
+
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "4f95e375-e937-4e5a-be15-c933551b05ee"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -477,6 +533,8 @@
     "45171614-2356-49c0-853f-896a6d6d1624",
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f",
     "377fa1fa-20f5-431d-b170-f49ea44f9e24",
-    "dfae8e50-8358-4615-b19e-11239cb13df4"
+    "dfae8e50-8358-4615-b19e-11239cb13df4",
+    "169174469253988c80",
+    "1691744713a2f0be46"
   ]
 }

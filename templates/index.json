@@ -502,7 +502,7 @@
             "font_size": 14,
             "customer_name_format": "full_name",
             "show_title": true,
-            "review_title": "Customer Reviews",
+            "review_title": "real people, real voices",
             "on_click_review": "show_popup_detail",
             "rating_icon_shape": "thin",
             "rating_icon_filled_color": "#faad14",

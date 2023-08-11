@@ -330,6 +330,29 @@
       "block_order": [
         "4f95e375-e937-4e5a-be15-c933551b05ee"
       ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1691751571d4522f34": {
+      "type": "apps",
+      "blocks": {
+        "a66e7152-08f9-4196-b0ce-d1207b9a02be": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "product": "",
+            "name": "Review Box",
+            "vertical_alignment": "2",
+            "rating_color": "#1f1f1f",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1f1f1f"
+          }
+        }
+      },
+      "block_order": [
+        "a66e7152-08f9-4196-b0ce-d1207b9a02be"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -497,28 +520,6 @@
         "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
         "text_in_button": "SHOP NOW"
       }
-    },
-    "1691751571d4522f34": {
-      "type": "apps",
-      "blocks": {
-        "a66e7152-08f9-4196-b0ce-d1207b9a02be": {
-          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-          "settings": {
-            "product": "",
-            "name": "Review Box",
-            "vertical_alignment": "2",
-            "rating_color": "#1F1F1F",
-            "section_color": "#ffffff",
-            "primary_text_color": "#1F1F1F"
-          }
-        }
-      },
-      "block_order": [
-        "a66e7152-08f9-4196-b0ce-d1207b9a02be"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -532,9 +533,9 @@
     "60f31de0-0e2a-46ce-8a2b-913344f91554",
     "45171614-2356-49c0-853f-896a6d6d1624",
     "1691744713a2f0be46",
+    "1691751571d4522f34",
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f",
     "377fa1fa-20f5-431d-b170-f49ea44f9e24",
-    "dfae8e50-8358-4615-b19e-11239cb13df4",
-    "1691751571d4522f34"
+    "dfae8e50-8358-4615-b19e-11239cb13df4"
   ]
 }

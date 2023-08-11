@@ -145,7 +145,7 @@
     justify-content: space-between;
     align-items: start;
     width: 100%;
-    height:100%
+    height: 100%;
   }
   .featured-collection-custom_bottom_btn_border {
     display: block !important;
@@ -161,8 +161,8 @@
     display: none !important;
     margin-top: 40px;
   }
-  .featured-collection-custom_wrapper .alireviews-review-star-rating .alr-wh-star-rating-average-number{
-    display:none;
+  .featured-collection-custom_wrapper .alireviews-review-star-rating .alr-wh-star-rating-average-number {
+    display: none;
   }
   @media screen and (max-width: 1200px) {
     .featured-collection-custom_grid .featured-collection-custom_grid_element:last-child {
@@ -241,17 +241,16 @@
       height: 12px !important;
       width: 12px !important;
     }
-
-   
   }
 </style>
+
 
 <div class="featured-collection-custom_wrapper">
   <h2 class="markered_text">{{ section.settings.heading }}</h2>
   <p class="featured-collection-custom_under_header">{{ section.settings.text_1 }}</p>
 
   <div class="featured-collection-custom_grid desctop_collection">
-    {%- for item in section.settings.collection.products limit:4 -%}
+    {%- for item in section.settings.collection.products limit: 4 -%}
       <div class="featured-collection-custom_grid_element">
         <img loading="lazy" src="{{item.featured_image | image_url}}" alt="img">
         <div class="featured-collection-custom_grid_element_description">
@@ -263,13 +262,13 @@
             {% endif %}
           {% else %}
             {% if section.settings.dummy_description.size > 55 %}
-              <p> {{ section.settings.dummy_description | truncate: 55, '...' }}</p>
+              <p>{{ section.settings.dummy_description | truncate: 55, '...' }}</p>
             {%- else -%}
-            <p> {{ section.settings.dummy_description }}</p>
+              <p>{{ section.settings.dummy_description }}</p>
             {% endif %}
           {%- endif -%}
         </div>
-        
+
         <div product-id="{{ item.id }}" product-handle="{{ item.handle }}" class="alireviews-review-star-rating"></div>
         {% render 'price', product: item, price_class: '' %}
 
@@ -333,13 +332,17 @@
               {% endif %}
             {% else %}
               {% if section.settings.dummy_description.size > 55 %}
-             <p>  {{ section.settings.dummy_description | truncate: 55, '...' }}</p> 
+                <p>{{ section.settings.dummy_description | truncate: 55, '...' }}</p>
               {%- else -%}
-              <p>   {{ section.settings.dummy_description }}</p> 
+                <p>{{ section.settings.dummy_description }}</p>
               {% endif %}
             {%- endif -%}
           </div>
-          <div product-id="{{ item.id }}" product-handle="{{ item.handle }}" class="alireviews-review-star-rating"></div>
+          <div
+            product-id="{{ item.id }}"
+            product-handle="{{ item.handle }}"
+            class="alireviews-review-star-rating"
+          ></div>
 
           {% render 'price', product: item, price_class: '' %}
 

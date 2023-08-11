@@ -236,7 +236,11 @@
   .own_width h2.markered_text p{
     margin:30px 0 18px 0;
   }
-
+.grid__item.product__media-wrapper{
+  display:flex;
+  align-items:center;
+flex-direction:row-reverse;
+}
       @media screen and (max-width: 1350px) {
 
         .own_width .featured-product{
@@ -360,7 +364,22 @@
 
 
       /* for PDP only */
-{%- if section.settings.is_product_page-%}
+    
+{%- if section.settings.is_product_page == true -%}
+        .img-custom-size{
+          min-width: 336px;
+          min-height: 299px;
+        }
+          .markered_text p{
+            margin-top:0 !important;
+
+          }
+        .custom_reviews_text{
+          display:none !important;
+        }
+        .img-custom-size{
+
+        }
     .own_width {
          background:white;
       }
@@ -382,7 +401,7 @@
         display:block !important;
       }
 
-    @media screen and (max-width:750px){
+    @media screen and (max-width:752px){
     .custom_product_under_tittle.desc{
     text-align:center;
     }
@@ -451,6 +470,7 @@
           role="region"
           aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
           data-desktop-layout="stacked"
+          style="display:block;"
         >
           <div
             id="GalleryViewer-{{ section.id }}"
@@ -915,7 +935,7 @@
   <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></>
 {%- endif %}
 {%- if request.design_mode -%}
-  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></>
 {%- endif -%}
 
 {%- if first_3d_model -%}

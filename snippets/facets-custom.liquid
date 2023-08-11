@@ -236,6 +236,35 @@
     text-align: left;
     color: var(--custom-font-color-primary);
   }
+  .mobile-facets__summary_inner_wrapper {
+    border: 1px solid rgba(185, 178, 148, 1);
+    border-radius: 4px;
+    padding: 20px;
+
+    flex-direction: column;
+    align-items:flex-start !important;
+    max-width:90%;
+    margin:auto;
+
+  }
+  .mobile-facets__summary_inner_wrapper .facets__price{
+    align-self:center;
+  }
+  .custom_sort_form_inner .select_mobile {
+    flex-direction: column;
+  }
+  .custom_sort_form_inner .select_mobile input[type='radio'] {
+    display: none;
+  }
+
+  .mobile-facets__sort.custom_sort_form_inner{
+    border: 1px solid rgba(185, 178, 148, 1);
+    border-radius: 4px;
+    padding: 20px;
+    max-width:90%;
+    margin:auto;
+    margin-top:16px;
+  }
 </style>
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
@@ -984,37 +1013,7 @@
                         data-index="mobile-{{ forloop.index }}"
                       >
                        
-                        <style>
-                          .mobile-facets__summary_inner_wrapper {
-                            border: 1px solid rgba(185, 178, 148, 1);
-                            border-radius: 4px;
-                            padding: 20px;
-                        
-                            flex-direction: column;
-                            align-items:flex-start !important;
-                            max-width:90%;
-                            margin:auto;
-
-                          }
-                          .mobile-facets__summary_inner_wrapper .facets__price{
-                            align-self:center;
-                          }
-                          .custom_sort_form_inner .select_mobile {
-                            flex-direction: column;
-                          }
-                          .custom_sort_form_inner .select_mobile input[type='radio'] {
-                            display: none;
-                          }
-      
-                          .mobile-facets__sort.custom_sort_form_inner{
-                            border: 1px solid rgba(185, 178, 148, 1);
-                            border-radius: 4px;
-                            padding: 20px;
-                            max-width:90%;
-                            margin:auto;
-                            margin-top:16px;
-                          }
-                        </style>
+                     
                         <div class="focus-inset">
                           <div class='mobile-facets__summary_inner_wrapper'>
                             <span>{{ filter.label | escape }}</span>

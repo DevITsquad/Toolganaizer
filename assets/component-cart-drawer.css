@@ -17,12 +17,12 @@
 
 .drawer__inner {
   height: 100%;
-  width: 40rem;
+  width: 45rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
-  background-color: rgb(var(--color-background));
+  background: rgba(245, 239, 214, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 .drawer__inner-empty {
   height: 100%;
   padding: 0 1.5rem;
-  background-color: rgb(var(--color-background));
+  background: rgba(245, 239, 214, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__header {
   position: relative;
-  background-color: rgb(var(--color-background));
+  background-color: inherit;
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -80,7 +80,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__heading {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 .drawer__close {
@@ -89,13 +89,13 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   min-width: 4.4rem;
   min-height: 4.4rem;
   box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
-  position: absolute;
-  top: 10px;
+  top: 15px;
   right: -10px;
   color: rgb(var(--color-foreground));
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: absolute;
 }
 
 .cart-drawer__warnings .drawer__close {
@@ -114,7 +114,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__footer {
-  background-color: rgb(var(--color-background));
+  background-color: inherit;
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
   padding: 1.5rem 0;
 }
@@ -209,7 +209,7 @@ cart-drawer-items {
 
 .cart-drawer .cart-item {
   display: grid;
-  grid-template: repeat(2, auto) / repeat(4, 1fr);
+  grid-template: repeat(2, auto) / repeat(5, 1fr);
   gap: 1.5rem;
   margin-bottom: 0;
 }
@@ -260,7 +260,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-items td {
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .cart-drawer .cart-item > td + td {
@@ -269,7 +269,7 @@ cart-drawer-items {
 
 .cart-drawer .cart-item__details {
   width: auto;
-  grid-column: 2 / 4;
+  grid-column: 2 /6;
 }
 
 .cart-drawer .cart-item__totals {
@@ -295,7 +295,7 @@ cart-drawer-items {
 
 .cart-drawer .cart-items .cart-item__quantity {
   padding-top: 0;
-  grid-column: 2 / 5;
+  grid-column: 2 / 6;
 }
 
 @media screen and (max-width: 749px) {

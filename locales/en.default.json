@@ -268,13 +268,13 @@
       }
     },
     "cart": {
-      "title": "Your cart",
+      "title": "Cart",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "subtotal": "Subtotal",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
-      "checkout": "Check out",
+      "checkout": "PROCEED TO CHECKOUT",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",

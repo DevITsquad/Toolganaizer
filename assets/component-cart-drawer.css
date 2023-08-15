@@ -22,7 +22,8 @@
   padding: 0 1.5rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
-  background: rgba(245, 239, 214, 1);
+  background: linear-gradient(0deg, #F5EFD6, #F5EFD6),
+  linear-gradient(179.97deg, rgba(245, 239, 214, 0.3) 0.03%, rgba(245, 240, 215, 0) 47.34%);  
   overflow: hidden;
   display: flex;
   flex-direction: column;

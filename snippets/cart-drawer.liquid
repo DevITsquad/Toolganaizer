@@ -34,12 +34,18 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
   }
+  .custom-drawer-price-drow{
+   flex-direction:column;   
+  }
 
-  .cart-item__quantity-wrapper .quantity.cart-quantity {
+.cart-item__quantity-wrapper .quantity.cart-quantity {
     min-width: 93px;
     max-height: 36px;
     height: 36px;
     justify-content: space-between;
+  }
+  .cart-item__quantity-wrapper-drawer{
+    justify-content: space-between !important;
   }
   .cart-item__quantity-wrapper .quantity::after {
     border-radius: 4px;
@@ -80,6 +86,8 @@
     letter-spacing: 0em;
     text-align: left;
     color: var(--custom-font-color-primary);
+    border: none;
+    background: inherit;
   }
   .cart-item__quantity-wrapper {
     gap: 71px;
@@ -93,6 +101,7 @@
   }
   .price_remove_wrapper .custom-drawer-price {
     text-align: right;
+    margin-bottom:0 !important;
   }
   .drawer__footer.drawer__footer_custom {
     border: none;
@@ -117,6 +126,7 @@
     letter-spacing: 0em;
     text-align: center;
     color: white;
+    border-radius:4px;
   }
   .cart__ctas {
     display: flex;
@@ -148,6 +158,7 @@
     color:var(--custom-font-color-primary);
     margin-bottom:10px !important;
     margin-top:30px !important;
+    opacity:.6;
   }
   @media screen and (max-width: 767px) {
     .cart-item__image,
@@ -162,7 +173,9 @@
     .custom-drawer-price {
       font-size: 14px;
       line-height: 21px;
+    
     }
+   
     .cart-item__name {
       font-size: 14px;
       line-height: 15px;
@@ -334,7 +347,7 @@
                         {% endcomment %}
 
                         <td class="cart-item__quantity" role="cell" headers="CartDrawer-ColumnQuantity">
-                          <div class="cart-item__quantity-wrapper">
+                          <div class="cart-item__quantity-wrapper cart-item__quantity-wrapper-drawer">
                             <quantity-input class="quantity cart-quantity">
                               <button class="quantity__button no-js-hidden" name="minus" type="button">
                                 <span class="visually-hidden">
@@ -369,7 +382,7 @@
                             </quantity-input>
 
                             <div class="price_remove_wrapper">
-                              <span class="price price--end custom-drawer-price">
+                              <span class="price price--end custom-drawer-price custom-drawer-price-drow">
                                 {{ item.original_line_price | money }}
                                 <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
                               </span>
@@ -381,7 +394,7 @@
                               >
                                 <button
                                   type="button"
-                                  class="button button--tertiary cart-remove-button"
+                                  class="cart-remove-button"
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                                 >
                                   Remove
@@ -390,7 +403,7 @@
                             </div>
                           </div>
 
-                          <div
+                          {% comment %} <div
                             id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
                             class="cart-item__error"
                             role="alert"
@@ -407,7 +420,7 @@
                               <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
                               <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
                             </svg>
-                          </div>
+                          </div> {% endcomment %}
                         </td>
                       </tr>
                     {%- endfor -%}

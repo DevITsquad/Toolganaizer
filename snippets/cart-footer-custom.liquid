@@ -1,0 +1,210 @@
+<style>
+  .order__summary {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .order__summary_label {
+    font-family: var(--custom-font-style-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .order__summary_label span {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .order__summary {
+    font-family: var(--custom-font-style-primary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .order__summary_splitter {
+    margin: 19px auto 30px auto;
+  }
+  .order__summary_splitter + input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 90px;
+    padding: 0 22px;
+    margin-bottom: 22px;
+  }
+  @media screen and (max-width: 767px) {
+  }
+</style>
+<div id="main-cart-footer" data-id="{{ section.id | split: '__' | first}}__cart-footer">
+  <div>
+    <h5 class="order__summary">order summary</h5>
+    <p class="order__summary_label">You save <span>unknoun</span></p>
+    <p class="order__summary_label">Product total <span>unknoun</span></p>
+    <hr class="order__summary_splitter">
+    <input type="text" placeholder="Enter Your Promo Code" id="codeValue">
+
+    <script>
+      function formatText(e) {
+        e.preventDefault()
+        var inputValue = this.value;
+        var formattedValue = inputValue.replace(/ /g, '').toUpperCase();
+        this.value = formattedValue;
+        saveDiscountCode(this.value);
+      }
+      function saveDiscountCode(discountCode) {
+        localStorage.setItem('discountCode', discountCode);
+      }
+      function getDiscountCode() {
+        return localStorage.getItem('discountCode');
+      }
+      function putDiscountCode() {
+        const code = getDiscountCode();
+        if (code) {
+          document.getElementById('codeValue').value = code;
+        }
+      }
+
+      function onload() {
+        putDiscountCode();
+        const inputElement = document.getElementById('codeValue');
+        inputElement.addEventListener('input', formatText);
+      }
+
+      document.addEventListener('DOMContentLoaded', onload);
+    </script>
+    <div class="cart__footer">
+      {%- if settings.show_cart_note -%}
+        <cart-note class="cart__note field">
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea
+            class="text-area field__input"
+            name="note"
+            form="cart"
+            id="Cart-note"
+            placeholder="{{ 'sections.cart.note' | t }}"
+          >{{ cart.note }}</textarea>
+        </cart-note>
+      {%- endif -%}
+
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+              <script>
+                console.log({{block.type |json}})
+              </script>
+            {%- when '@app' -%}
+              {% render block %}
+            {%- when 'subtotal' -%}
+              <div class="js-contents" {{ block.shopify_attributes }}>
+                <div class="totals">
+                  <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+                  <p class="totals__subtotal-value">{{ cart.total_price | money }}</p>
+                </div>
+
+                <div>
+                  {%- if cart.cart_level_discount_applications.size > 0 -%}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li class="discounts__discount discounts__discount--position">
+                          {%- render 'icon-discount' -%}
+                          {{ discount.title }}
+                          (-{{ discount.total_allocated_amount | money }})
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </div>
+
+                <small class="custom_taxe_note">
+                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- elsif cart.taxes_included -%}
+                    {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                  {%- elsif shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                  {%- else -%}
+                    {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                  {%- endif -%}
+                </small>
+              </div>
+            {%- else -%}
+              <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <noscript>
+                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                    {{ 'sections.cart.update' | t }}
+                  </button>
+                </noscript>
+
+                <button
+                  type="submit"
+                  id="checkout"
+                  class="cart__checkout-button_custom CTA_botton"
+                  name="checkout"
+                  form="CartDrawer-Form"
+                  {% if cart == empty %}
+                    disabled
+                  {% endif %}
+                >
+                  {{ 'sections.cart.checkout' | t }}
+                  <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.0165 2.01546L21.9998 7L17.0165 11.9845" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 6.99998H20.514" stroke="white" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <div class="payment_wrapper_custom">
+                  <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                      <li class="list-payment__item">
+                        {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
+          {%- endcase -%}
+        {% endfor %}
+
+        {% comment %} <div id="cart-errors"></div> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return msie > 0 || trident > 0;
+    }
+
+    if (!isIE()) return;
+    const cartSubmitInput = document.createElement('input');
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+    document.querySelector('#checkout').addEventListener('click', function (event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+</script>

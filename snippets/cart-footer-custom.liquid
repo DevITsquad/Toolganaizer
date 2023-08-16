@@ -50,46 +50,22 @@
     padding: 0 22px;
     margin-bottom: 22px;
   }
+  .is-empty .custom-code-form,
+  .is-empty .cart-page_content_custom {
+    display: none;
+  }
   @media screen and (max-width: 767px) {
   }
 </style>
 <div id="main-cart-footer" data-id="{{ section.id | split: '__' | first}}__cart-footer">
-  <div>
+  <div class="custom-code-form">
     <h5 class="order__summary">order summary</h5>
     <p class="order__summary_label">You save <span>unknoun</span></p>
     <p class="order__summary_label">Product total <span>unknoun</span></p>
     <hr class="order__summary_splitter">
     <input type="text" placeholder="Enter Your Promo Code" id="codeValue">
 
-    <script>
-      function formatText(e) {
-        e.preventDefault()
-        var inputValue = this.value;
-        var formattedValue = inputValue.replace(/ /g, '').toUpperCase();
-        this.value = formattedValue;
-        saveDiscountCode(this.value);
-      }
-      function saveDiscountCode(discountCode) {
-        localStorage.setItem('discountCode', discountCode);
-      }
-      function getDiscountCode() {
-        return localStorage.getItem('discountCode');
-      }
-      function putDiscountCode() {
-        const code = getDiscountCode();
-        if (code) {
-          document.getElementById('codeValue').value = code;
-        }
-      }
-
-      function onload() {
-        putDiscountCode();
-        const inputElement = document.getElementById('codeValue');
-        inputElement.addEventListener('input', formatText);
-      }
-
-      document.addEventListener('DOMContentLoaded', onload);
-    </script>
+    
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
@@ -152,10 +128,8 @@
 
                 <button
                   type="submit"
-                  id="checkout"
+                  id="checkout-custom"
                   class="cart__checkout-button_custom CTA_botton"
-                  name="checkout"
-                  form="CartDrawer-Form"
                   {% if cart == empty %}
                     disabled
                   {% endif %}

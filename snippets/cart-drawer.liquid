@@ -7,6 +7,7 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
+
 <style>
   .drawer {
     visibility: hidden;
@@ -472,6 +473,8 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+            <input type="text" placeholder="Enter Your Promo Code" id="codeValue-drawer">
+
             <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
@@ -513,10 +516,8 @@
 
           <button
             type="submit"
-            id="CartDrawer-Checkout"
+            id="CartDrawer-checkout-custom"
             class="cart__checkout-button_custom CTA_botton"
-            name="checkout"
-            form="CartDrawer-Form"
             {% if cart == empty %}
               disabled
             {% endif %}

@@ -90,7 +90,6 @@ class FacetFiltersForm extends HTMLElement {
       }),
 
       (async () => {
-        console.log('callback after rendering')
         renderMobile(), updateView.call(rangeOne);
         updateView.call(rangeTwo);
         var rangeInputs = document.querySelectorAll('.range-input-custom input[type="range"]');

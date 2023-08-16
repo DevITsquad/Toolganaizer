@@ -207,7 +207,6 @@ class QuantityInput extends HTMLElement {
 customElements.define('quantity-input', QuantityInput);
 
 function debounce(fn, wait) {
-console.log(11111)
   let t;
   return (...args) => {
     clearTimeout(t);

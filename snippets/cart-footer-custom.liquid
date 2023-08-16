@@ -107,9 +107,6 @@
       <div class="cart__blocks">
         {% for block in section.blocks %}
           {%- case block.type -%}
-              <script>
-                console.log({{block.type |json}})
-              </script>
             {%- when '@app' -%}
               {% render block %}
             {%- when 'subtotal' -%}

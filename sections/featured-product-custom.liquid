@@ -175,6 +175,7 @@
       .img-custom-size img{
         width:100%;
         height:100%;
+        min-height:510px;
       }
       .img-custom-size .possible_colors{
         margin:auto;
@@ -252,14 +253,14 @@ flex-direction:row-reverse;
 
 
       @media screen and (max-width: 1050px) {
-           
+    
+        .product__info-wrapper_custom{
+          margin:auto;
+        }
   .own_width .custom_reviews_text p strong{
     padding:0 2px;
   }
-  .own_width .custom_reviews_text{
-    gap:4px;
-    justify-content:center;
-  }
+ 
   .own_width .custom_reviews_text span{
     gap:0;
   }
@@ -278,8 +279,14 @@ flex-direction:row-reverse;
 
       }
       @media screen and (max-width: 751px) {
-
-       
+        .own_width .custom_reviews_text{
+          gap:4px;
+          justify-content:center;
+         }
+         .img-custom-size img{
+      
+        min-height:auto;
+      }
         .featured-product.product.product--{{ section.settings.media_size }}{
           flex-direction: column-reverse;
           padding-top:35px;
@@ -358,7 +365,9 @@ flex-direction:row-reverse;
         float:right;
       }
 
-
+      .product__info-container.custom_product{
+        margin:auto;
+      }
 
       }
 
@@ -538,7 +547,7 @@ flex-direction:row-reverse;
           {%- endif -%}
         </media-gallery>
       </div>
-      <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <div class="product__info-wrapper product__info-wrapper_custom grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <product-info
           id="ProductInfo-{{ section.id }}"
           class="product__info-container custom_product"

@@ -7,7 +7,6 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
-
 <style>
   .drawer {
     visibility: hidden;
@@ -35,17 +34,17 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
   }
-  .custom-drawer-price-drow{
-   flex-direction:column;   
+  .custom-drawer-price-drow {
+    flex-direction: column;
   }
 
-.cart-item__quantity-wrapper .quantity.cart-quantity {
+  .cart-item__quantity-wrapper .quantity.cart-quantity {
     min-width: 93px;
     max-height: 36px;
     height: 36px;
     justify-content: space-between;
   }
-  .cart-item__quantity-wrapper-drawer{
+  .cart-item__quantity-wrapper-drawer {
     justify-content: space-between !important;
   }
   .cart-item__quantity-wrapper .quantity::after {
@@ -102,7 +101,7 @@
   }
   .price_remove_wrapper .custom-drawer-price {
     text-align: right;
-    margin-bottom:0 !important;
+    margin-bottom: 0 !important;
   }
   .drawer__footer.drawer__footer_custom {
     border: none;
@@ -127,7 +126,7 @@
     letter-spacing: 0em;
     text-align: center;
     color: white;
-    border-radius:4px;
+    border-radius: 4px;
   }
   .cart__ctas {
     display: flex;
@@ -149,28 +148,27 @@
     color: rgba(25, 191, 111, 1);
   }
   .custom_taxe_note {
-    display:block;
+    display: block;
     font-family: var(--custom-font-style-secondary);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     text-align: center;
-    color:var(--custom-font-color-primary);
-    margin-bottom:10px !important;
-    margin-top:30px !important;
-    opacity:.6;
+    color: var(--custom-font-color-primary);
+    margin-bottom: 10px !important;
+    margin-top: 30px !important;
+    opacity: 0.6;
   }
-  .cart-drawer .cart-item{
-    margin-bottom:15px;
+  .cart-drawer .cart-item {
+    margin-bottom: 15px;
   }
   @media screen and (max-width: 989px) {
-    .cart-drawer .cart-item{
-      margin-bottom:0;
+    .cart-drawer .cart-item {
+      margin-bottom: 0;
     }
   }
   @media screen and (max-width: 767px) {
-   
     .cart-item__image,
     .cart-item__link,
     .cart-item__media {
@@ -183,9 +181,8 @@
     .custom-drawer-price {
       font-size: 14px;
       line-height: 21px;
-    
     }
-   
+
     .cart-item__name {
       font-size: 14px;
       line-height: 15px;
@@ -197,7 +194,6 @@
     .cart-item__quantity-wrapper {
       flex-wrap: nowrap !important;
       gap: 15px;
-
     }
 
     .drawer__cart-items-wrapper .cart-item {
@@ -413,24 +409,26 @@
                             </div>
                           </div>
 
-                          {% comment %} <div
-                            id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
-                            class="cart-item__error"
-                            role="alert"
-                          >
-                            <small class="cart-item__error-text"></small>
-                            <svg
-                              aria-hidden="true"
-                              focusable="false"
-                              class="icon icon-error"
-                              viewBox="0 0 13 13"
+                          {% comment %}
+                            <div
+                              id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
+                              class="cart-item__error"
+                              role="alert"
                             >
-                              <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                              <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                              <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                              <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-                            </svg>
-                          </div> {% endcomment %}
+                              <small class="cart-item__error-text"></small>
+                              <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                class="icon icon-error"
+                                viewBox="0 0 13 13"
+                              >
+                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                              </svg>
+                            </div>
+                          {% endcomment %}
                         </td>
                       </tr>
                     {%- endfor -%}
@@ -470,12 +468,34 @@
         <!-- Start blocks -->
         <!-- Subtotals -->
 
+        {% style %}
+          label[for='codeValue-drawer'] {
+            display: block;
+          }
+          #codeValue-drawer {
+            height: 50px;
+            width: 95%;
+            margin:auto;
+            border: 1px solid rgba(217, 217, 217, 1);
+            border-radius: 90px;
+            padding: 0 22px;
+            margin-bottom: 22px;
+            margin-top: 11px;
+            box-sizing:border-box;
+         
+          }
+          .totals__subtotal-value{
+            color:black;
+          }
+        {% endstyle %}
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
+          <label for="codeValue-drawer">Discount Code?</label>
+          <input type="text" placeholder="Enter Your Promo Code" id="codeValue-drawer">
+
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <input type="text" placeholder="Enter Your Promo Code" id="codeValue-drawer">
 
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+            <p  class="totals__subtotal-value">{{ cart.total_price | money }}</p>
           </div>
 
           <div>

@@ -623,40 +623,30 @@
           
                   <div class="variants_tittle">{{ section.settings.variant_name }}</div>
                   <div class="variants">
-                    {%- if item.variants.size > 1 -%}
-                      {%- for variant in item.variants -%}
-                        {%- if variant.available -%}
-                          {%- case variant.title -%}
-                            {%- when 'skyblue' -%}
+
                               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="11.0328" cy="11.6321" r="11" fill="#6ABCC8"/>
                               </svg>
           
-                            {%- when 'yellow' -%}
+                           
                               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
                               </svg>
           
-                            {%- when 'sunshine' -%}
-                              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
-                              </svg>
+                              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12.5" cy="12.5" r="12.5" fill="#E9B82D"/>
+                                </svg>
+                                
           
-                            {%- when 'red' -%}
                               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="11.8551" cy="11.6322" r="11" fill="#BC2D33"/>
                               </svg>
           
-                            {%- when 'orange' -%}
+                         
                               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="11.1289" cy="11.6322" r="11" fill="#F37328"/>
                               </svg>
-          
-                            {%- else -%}
-                          {%- endcase -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                    {%- endif -%}
+      
                   </div>
           
                   <a class="prouct-link" href="{{item.url}}">{{ section.settings.button_text }}</a>

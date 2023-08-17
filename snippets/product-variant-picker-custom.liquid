@@ -22,15 +22,59 @@ fieldset.js.custom-variants-block{
     gap:10px;
   }
 
-  @media screen and (max-width:750px){
+
+  .custom-hidden-input {
+    display: none;
+  }
+  .product-variant-custom_color_wrapper svg:not(.checked_mark),
+  .product-variant-custom_color_wrapper {
+    display: block;
+    position: relative;
+    height: 61px;
+    width: 61px;
+  }
+
+  .checked_mark {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .variants__title {
+    font-family: var(--custom-font-style-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: var(--custom-font-color-primary);
+    margin-right:30px
+  }
+  @media screen and (max-width: 1100px) {
+    .product-variant-custom_color_wrapper svg:not(.checked_mark),
+  .product-variant-custom_color_wrapper {
+    height: 31px;
+    width: 31px;
+  }
+  }
+  @media screen and (max-width: 750px) {
+    .variants__title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-right:15px
+    }
     .custom-variants-block {
       gap:5
     }
   }
+
 {% endstyle %}
 
 
-{%- unless product.has_only_default_variant -%}
+{% comment %} {%- unless product.has_only_default_variant -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
@@ -50,7 +94,86 @@ fieldset.js.custom-variants-block{
         {{ product.variants | json }}
       </script>
     </variant-radios>
-{%- endunless -%}
+{%- endunless -%} {% endcomment %}
+
+
+
+  <variant-radios
+    id="variant-radios-{{ section.id }}"
+    class="no-js-hidden"
+    data-section="{{ section.id }}"
+    data-url="{{ product.url }}"
+  >
+
+      <fieldset class="js custom-variants-block">
+<span class="variants__title">{{ block.settings.items_variant }}</span>
+{% for item in product.collections[0].products %}
+  {%- assign variable = item.title | split: '-' | last | strip -%}
+ {%- case variable -%}
+  {%- when "Orange" -%}
+    <a href="{{item.url}}"class="product-variant-custom_color_wrapper orange" >
+      <svg style="{%- if product.title contains variable -%}
+        display:block;{%- endif -%}"
+       class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+      </svg>
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11.1289" cy="11.6322" r="11" fill="#F37328"/>
+      </svg>
+    </a>
+  {%- when "Blue" -%}
+    <a href="{{item.url}}"class="product-variant-custom_color_wrapper blue" >
+      <svg style="{%- if product.title contains variable -%}
+        display:block;{%- endif -%}" class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+      </svg>
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11.0328" cy="11.6321" r="11" fill="#6ABCC8"/>
+          </svg>  
+    </a>
+  {%- when "Green" -%}
+    <a href="{{item.url}}"class="product-variant-custom_color_wrapper green" >
+      <svg style="{%- if product.title contains variable -%}
+        display:block;{%- endif -%}" class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+      </svg>
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11.3069" cy="11.6322" r="11" fill="#D9DB32"/>
+      </svg> 
+    </a>
+  {%- when "Yellow" -%}
+
+    <a href="{{item.url}}" class="product-variant-custom_color_wrapper yellow" >
+      <svg style="{%- if product.title contains variable -%}
+        display:block;{%- endif -%}" class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+      </svg>
+      <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30.616" cy="30.5233" r="30.5233" fill="#E9B82D"/>
+        </svg>
+    </a>
+  {%- when "Red" -%}
+    <a href="{{item.url}}"class="product-variant-custom_color_wrapper red" >
+      <svg style="{%- if product.title contains variable -%}
+        display:block;{%- endif -%}" class="checked_mark" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+      </svg>
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11.8551" cy="11.6322" r="11" fill="#BC2D33"/>
+      </svg>
+    </a>
+  {%- else -%}
+ {%- endcase -%}
+{% endfor %}
+
+ 
+      </fieldset>
+
+    <script type="application/json">
+      {{ product.variants | json }}
+    </script>
+  </variant-radios>
+
 
 <noscript class="product-form__noscript-wrapper-{{ section.id }}">
   <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">

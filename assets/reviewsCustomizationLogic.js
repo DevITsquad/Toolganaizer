@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const mainReviewsWrapper = addedNode.parentNode.parentNode.parentNode.parentNode
                         mainReviewsWrapper.style.background = 'rgba(255, 253, 241, 1)';
                         mainReviewsWrapper.style.minHeight = '610px';
-                        mainReviewsWrapper.style.maxHeight = '670px';
                         mainReviewsWrapper.style.border = '1px solid rgb(255, 253, 241, 1)';
                         const intervalId = setInterval(() => innerCustomObserver(intervalId), 1500)
 

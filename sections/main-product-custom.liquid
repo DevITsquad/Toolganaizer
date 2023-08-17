@@ -117,7 +117,7 @@
   .product__accordion.accordion.quick-add-hidden details[open] svg{
     transform: rotate(90deg);
   }
-  .custom_product_under_tittle {
+  .custom_product_under_tittle-main {
     font-family: var(--custom-font-style-primary);
     font-size: 20px;
     font-weight: 700;
@@ -181,21 +181,21 @@
     color: var(--custom-font-color-primary);
     margin-bottom:15px;
   }
-  .custom_reviews_text{
+  .custom_reviews_text-main{
     display:flex;
     align-items:center;
     gap:10px;
   }
-  .custom_reviews_text span{
+  .custom_reviews_text-main span{
     display:flex;
     align-items:center;
     gap:4px;
   }
-  .custom_reviews_text span svg{
+  .custom_reviews_text-main span svg{
    min-width:18px;
    min-height:18px;
   }
-  .custom_reviews_text p{
+  .custom_reviews_text-main p{
     font-family: var(--custom-font-style-secondary);
     font-size: 16px;
     font-weight: 300;
@@ -204,7 +204,7 @@
     text-align: left;
     margin:0;
   }
-  .custom_reviews_text p strong{
+  .custom_reviews_text-main p strong{
     font-weight: 700;
     padding:0 4px;
   }
@@ -258,17 +258,17 @@ display:none !important;
     }
 
    
-    .custom_reviews_text p strong{
+    .custom_reviews_text-main p strong{
     padding:0 2px;
   }
-    .custom_reviews_text{
+    .custom_reviews_text-main{
     gap:4px;
     justify-content:center;
   }
-    .custom_reviews_text span{
+    .custom_reviews_text-main span{
     gap:0;
   }
-  .custom_reviews_text span svg{
+  .custom_reviews_text-main span svg{
    min-width:12px;
    min-height:12px;
   }
@@ -284,7 +284,7 @@ display:none !important;
     font-size: 12px;
     line-height: 14px;
   }
-  .custom_reviews_text p{
+  .custom_reviews_text-main p{
     font-size: 11px;
     line-height: 16px;
   }
@@ -329,7 +329,7 @@ display:none !important;
       font-size: 14px;
       line-height: 16px;
     }
-    .custom_product_under_tittle {
+    .custom_product_under_tittle-main {
       font-size: 14px;
       line-height: 20px;
       margin:20px auto;
@@ -568,7 +568,7 @@ display:none !important;
             {%- when '@app' -%}
               {% render block %}
             {%- when 'text' -%}
-              <div class="custom_reviews_text">
+              <div class="custom_reviews_text-main">
                <span>
                 {% for item in (1..5) %}
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -663,7 +663,7 @@ display:none !important;
                 </div>
                 {%- else -%}
                 {% if block.settings.text_1 != blank %}
-                  <p class="custom_product_under_tittle">{{ block.settings.text_1 }}</p>
+                  <p class="custom_product_under_tittle-main">{{ block.settings.text_1 }}</p>
                 {% endif %}
                 <ul class="product_section_description">
                   <li>

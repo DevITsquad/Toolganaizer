@@ -67,11 +67,34 @@
       "settings": {
         "heading": "<p>our products are rated an average of 4.8 out of 5, on over 20,000+ sales<\/p>"
       }
+    },
+    "1692266535fa95594e": {
+      "type": "apps",
+      "blocks": {
+        "04ef3c72-685e-49ec-85e0-26568ad34b47": {
+          "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/widget-box\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+            "product": "",
+            "name": "Review Box",
+            "vertical_alignment": "8",
+            "rating_color": "#1F1F1F",
+            "section_color": "#ffffff",
+            "primary_text_color": "#1F1F1F"
+          }
+        }
+      },
+      "block_order": [
+        "04ef3c72-685e-49ec-85e0-26568ad34b47"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "71c2d1f8-000c-444d-bbcd-9526e6881359"
+    "71c2d1f8-000c-444d-bbcd-9526e6881359",
+    "1692266535fa95594e"
   ]
 }

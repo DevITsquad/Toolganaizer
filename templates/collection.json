@@ -89,12 +89,22 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "749d26b9-657e-4ff1-acd9-7e39b67ceefc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"{{ 'reviewsCustomizationLogic.js' | asset_url }}\" defer=\"defer\"><\/script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
     "71c2d1f8-000c-444d-bbcd-9526e6881359",
-    "1692266535fa95594e"
+    "1692266535fa95594e",
+    "749d26b9-657e-4ff1-acd9-7e39b67ceefc"
   ]
 }

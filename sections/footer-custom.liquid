@@ -6,6 +6,10 @@
     background: var(--custom-background-secondary);
     padding: 105px 12px 61px 12px;
   }
+  .left_bottom_text{
+    text-decoration:none;
+    color:white;
+  }
   .footer-custom-wrapper-inner {
     max-width: 1317px;
     margin: auto;
@@ -274,7 +278,7 @@
   </div>
   <hr class="custom_delimiter">
   <div class="bottom_foter_part">
-    <div class="left_bottom_text">{{ section.settings.left_bottom_text }}</div>
+    <a href="{{section.settings.left_bottom_link}}" class="left_bottom_text">{{ section.settings.left_bottom_text }}</a>
     <div  class="footer_logo_img_wrapper"><img loading="lazy" src="{{ section.settings.logo | image_url }}" alt="logo"></div>
     <div class="right_bottom_text">{{ section.settings.right_bottom_text }}</div>
   </div>
@@ -313,6 +317,11 @@
       "id": "left_bottom_text",
       "label": "left botom text",
       "default": "terms & condition - privacy policy"
+    },
+    {
+      "type": "url",
+      "id": "left_bottom_link",
+      "label": "left botom link"
     },
     {
       "type": "image_picker",

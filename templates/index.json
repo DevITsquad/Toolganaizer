@@ -485,6 +485,15 @@
         "image_mob": "shopify:\/\/shop_images\/Rectangle_Copy_4.png",
         "text_in_button": "SHOP NOW"
       }
+    },
+    "1aa358d8-37ac-4b1f-9878-0fd95b0d735b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"{{ 'reviewsCustomizationLogic.js' | asset_url }}\" defer=\"defer\"><\/script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -500,6 +509,7 @@
     "1691751571d4522f34",
     "16a713e8-0dd5-48b3-8696-08d51bf4c53f",
     "377fa1fa-20f5-431d-b170-f49ea44f9e24",
-    "dfae8e50-8358-4615-b19e-11239cb13df4"
+    "dfae8e50-8358-4615-b19e-11239cb13df4",
+    "1aa358d8-37ac-4b1f-9878-0fd95b0d735b"
   ]
 }

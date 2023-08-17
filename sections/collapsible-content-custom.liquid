@@ -58,7 +58,7 @@
   }
   .collapsible-content-custom-wrapper .accordion summary {
     align-items: center;
-    display:flex;
+    display: flex;
   }
   .collapsible-content-custom-wrapper .accordion__content {
     padding-left: 80px;
@@ -74,7 +74,7 @@
     text-align: left;
     max-width: 647px;
     box-sizing: border-box;
-    color:var(--custom-font-color-primary)
+    color: var(--custom-font-color-primary);
   }
   .collapsible-content-custom-wrapper summary {
     gap: 20px;
@@ -109,11 +109,10 @@
     .collapsible-content-custom-wrapper-text .under_tittle {
       text-align: center;
     }
-    .collapsible-content-custom-image{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
+    .collapsible-content-custom-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -172,34 +171,12 @@
   }
 </style>
 
-<script>
-  
-  document.addEventListener('DOMContentLoaded', () => {
 
-function handleMutation(mutationsList) {
-  for (const mutation of mutationsList) {
-  
-    if (mutation.type === 'childList') {
-    
-      for (const addedNode of mutation.addedNodes) {
-        if (addedNode.classList)
-        if (addedNode.classList && addedNode.classList.contains('alr-wh-slider')) {
-          console.log(addedNode)
-        }
-      }
-    }
-  }
-}
-const observer = new MutationObserver(handleMutation);
-  observer.observe(document, { childList: true, subtree: true });
-  });
-  
-</script>
 
 <div class="collapsible-content-custom-wrapper">
   <div class="collapsible-content-custom-wrapper-text">
     <div class="collapsible-content-custom-image">
-      <img src="{{ section.settings.image | image_url }}" alt="icon" loading='lazy'>
+      <img src="{{ section.settings.image | image_url }}" alt="icon" loading="lazy">
     </div>
 
     <h2 class="markered_text">{{ section.settings.heading }}</h2>

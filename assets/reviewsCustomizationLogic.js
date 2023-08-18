@@ -1,7 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    let wasCalledCounter = 0
+    const maxCalls = 5
 
     function handleWhSliderMutation(mutationsList) {
         for (const mutation of mutationsList) {
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         mainReviewsWrapper.style.background = 'rgba(255, 253, 241, 1)';
                         mainReviewsWrapper.style.minHeight = '610px';
                         mainReviewsWrapper.style.border = '1px solid rgb(255, 253, 241, 1)';
+
                         const intervalId = setInterval(() => innerCustomObserver(intervalId), 1500)
 
 
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function innerCustomObserver(intervalId) {
-        console.log('tik')
+        wasCalledCounter++
         const allData = document.querySelectorAll('.alr-wh-review-com-is-isLineClamp')
         const verifiedSocket = document.querySelectorAll('.alr-wh-account-info-row')
 
@@ -46,7 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             clearInterval(intervalId);
             whSliderObserver.disconnect();
+        } else if (wasCalledCounter === maxCalls) {
+            clearInterval(intervalId);
+            whSliderObserver.disconnect();
         }
+
     }
 
 

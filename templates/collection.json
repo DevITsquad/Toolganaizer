@@ -43,7 +43,7 @@
         "heading": "<p>toolganize <strong>collection<\/strong><\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales.",
         "dummy_description": "toolganize power tool organizer & storage wall mount bla bla bla",
-        "button_text": "GET MINE NOW",
+        "button_text": "SHOP NOW",
         "variant_name": "Available colours",
         "dummy_review": "<p><strong>4.8\/5<\/strong>Based On<strong>20,000+<\/strong>Happy Customer Reviews<\/p>",
         "products_per_page": 16,
@@ -77,9 +77,9 @@
             "product": "",
             "name": "Review Box",
             "vertical_alignment": "8",
-            "rating_color": "#1F1F1F",
+            "rating_color": "#1f1f1f",
             "section_color": "#ffffff",
-            "primary_text_color": "#1F1F1F"
+            "primary_text_color": "#1f1f1f"
           }
         }
       },

@@ -485,6 +485,16 @@ flex-direction:row-reverse;
             id="GalleryViewer-{{ section.id }}"
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
+
+{%- if condition -%}
+  
+{%- else -%}
+
+
+    
+
+{%- endif -%}
+
             {%- if section.settings.product != blank -%}
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
@@ -527,6 +537,8 @@ flex-direction:row-reverse;
                   </div>
                 {%- endif -%}
               {%- endfor -%}
+              {%- elsif product != blank -%}
+              {% render 'product-thumbnail-custom', media: product.featured_image,is_show_collors:section.settings.is_show_collors %}
             {%- else -%}
               {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
             {%- endif -%}
@@ -950,7 +962,7 @@ flex-direction:row-reverse;
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
     {{ product.media | where: 'media_type', 'model' | json }}
-  </script>
+  </>
   <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 {%- endif -%}
 

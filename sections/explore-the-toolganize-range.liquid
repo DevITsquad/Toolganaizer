@@ -287,7 +287,7 @@ background: rgba(255, 253, 241, 1);
 
 </p>
 
-{% if block.settings.text_in_button != blank %}
+{% if block.settings.product.url != blank %}
     <a class="shop_now_btn" href="{{ block.settings.product.url }}"><span class='text_in_button_custom'> {{block.settings.text_in_button}} </span> <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.0165 1.5L21.9998 6.48454L17.0165 11.4691" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M2 6.48462H20.514" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -295,7 +295,7 @@ background: rgba(255, 253, 241, 1);
         </a>
 {% else %}
     
-<a class="shop_now_btn" href="#leaveEmail"><span class='text_in_button_custom'>LEAVE EMAIL</span> <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<a class="shop_now_btn" href="#leaveEmail" ><span class='text_in_button_custom'>LEAVE EMAIL</span> <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.0165 1.5L21.9998 6.48454L17.0165 11.4691" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M2 6.48462H20.514" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>

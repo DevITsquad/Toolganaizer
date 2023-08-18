@@ -41,6 +41,9 @@ p {
     background-image: linear-gradient(90deg, #3D8790, #3D8790);
 }
 
+.CTA_botton svg {
+   display: none;
+}
 .CTA_botton a {
     width: 100%;
     height: 100%;

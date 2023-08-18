@@ -155,15 +155,12 @@
     <img loading='lazy' src="{{"Tool-Organiser-Promo.png" | asset_url}}" alt="dummy_photo">
   </div>
   {% comment %} <video></video> {% endcomment %}
-
-  <div></div>
-  
   <div class="why-do-we-love-we-do_text_block">
     {{ section.settings.text_p_1 }}
     {{ section.settings.text_p_2 }}
   </div>
   <div class="CTA_botton">
-    <a href="{{ section.settings.link }}"
+    <a href="{{ section.settings.link_shop_now }}"
       ><span>{{section.settings.text_in_button}}</span>
       <span style="margin-bottom:6px;">👉</span>
     </a>
@@ -207,7 +204,7 @@
       "label": "link",
       "type": "text",
       "id": "link_shop_now",
-      "default": "https://toolganize.myshopify.com/collections/all"
+      "default": "https://toolganize.com/collections/all"
     },
     {
       "label":"button_label",

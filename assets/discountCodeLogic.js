@@ -28,11 +28,8 @@ function addDiscountCode(e) {
     const storedDiscount = localStorage.getItem('storedDiscount')
     saveDiscountCode('')
     if (storedDiscount) {
-        console.log('first', window.location = window.location.origin + '/checkout?discount=' + storedDiscount)
         window.location = window.location.origin + '/checkout?discount=' + storedDiscount;
-        
     } else {
-        console.log('first', window.location = window.location.origin + '/checkout')
         window.location = window.location.origin + '/checkout';
     }
 
@@ -42,14 +39,11 @@ function notTriggerCart(e) {
 }
 
 function onload() {
-    console.log("i am loaded")
     putDiscountCode();
     const inputElement = document.getElementById('codeValue');
     const checkoutButton = document.getElementById('checkout-custom');
     const inputElementDrawer = document.getElementById('codeValue-drawer');
-    const checkoutButtonDrawer = document.getElementById('CartDrawer-checkout-custom');
 
-    console.log(checkoutButtonDrawer,inputElementDrawer,checkoutButton,inputElement)
     if (checkoutButton) {
         checkoutButton.addEventListener('click', addDiscountCode);
     }

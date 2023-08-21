@@ -57,9 +57,6 @@ function onload() {
         inputElement.addEventListener('input', formatText);
         inputElement.addEventListener('change', notTriggerCart);
     }
-    if (checkoutButtonDrawer) {
-        checkoutButtonDrawer.addEventListener('click', addDiscountCode);
-    }
     if (inputElementDrawer) {
         inputElementDrawer.addEventListener('input', formatText);
         // inputElementDrawer.addEventListener('change', notTriggerCart);

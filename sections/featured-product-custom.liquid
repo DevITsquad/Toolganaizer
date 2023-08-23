@@ -6,6 +6,7 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}  {% endcomment %}
 
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -175,7 +176,7 @@
       .img-custom-size img{
         width:100%;
         height:100%;
-        min-height:510px;
+        min-height:630px;
       }
       .img-custom-size .possible_colors{
         margin:auto;
@@ -436,7 +437,7 @@ flex-direction:row-reverse;
 
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-
+<script src="{{ 'togleColorsLogic.js' | asset_url }}" defer="defer"></script>
 {%- liquid
  
 
@@ -486,61 +487,15 @@ flex-direction:row-reverse;
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
 
-{%- if condition -%}
-  
-{%- else -%}
-
-
-    
-
-{%- endif -%}
-
-            {%- if section.settings.product != blank -%}
-              {%- if product.selected_or_first_available_variant.featured_media != null -%}
-                {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {% render 'product-thumbnail-custom',
-                    media: media,
-                    position: 'featured',
-                    loop: section.settings.enable_video_looping,
-                    modal_id: section.id,
-                    xr_button: false,
-                    media_width: media_width,
-                    media_fit: section.settings.media_fit,
-                    constrain_to_viewport: section.settings.constrain_to_viewport,
-                    is_show_collors:section.settings.is_show_collors
-                  %}
-                </div>
-              {%- endif -%}
-              {%- liquid
-                assign media_to_render = product.featured_media.id
-                for variant in product.variants
-                  assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
-                endfor
-              -%}
-              {%- for media in product.media -%}
-                {%- if media_to_render contains media.id
-                  and media.id != product.selected_or_first_available_variant.featured_media.id
-                -%}
-                  <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail-custom',
-                      media: media,
-                      position: forloop.index,
-                      loop: section.settings.enable_video_looping,
-                      modal_id: section.id,
-                      xr_button: false,
-                      media_width: media_width,
-                      media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport,
-                      is_show_collors:section.settings.is_show_collors
-                    %}
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
+            {%- if section.settings.image != blank -%}
+      {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
+             
               {%- elsif product != blank -%}
+ 
               {% render 'product-thumbnail-custom', media: product.featured_image,is_show_collors:section.settings.is_show_collors %}
             {%- else -%}
-              {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
+
+              {% render 'product-thumbnail-custom', media: section.settings.product_custom.images.first ,is_show_collors:section.settings.is_show_collors ,product:section.settings.product_custom%}
             {%- endif -%}
           </div>
           {%- if first_3d_model -%}
@@ -1046,6 +1001,8 @@ flex-direction:row-reverse;
 {% if product.media.size > 0 %}
   <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+
+
 {% endif %}
 
 {% schema %}
@@ -1901,6 +1858,11 @@ flex-direction:row-reverse;
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "product",
+      "id": "product_custom",
+      "label": "t:sections.featured-product.settings.product.label"
     },
     {"type":"checkbox",
       "id": "is_show_collors",

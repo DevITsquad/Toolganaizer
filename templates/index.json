@@ -357,7 +357,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When will I receive my product?",
-            "row_content": "<p>We offer various shipping options to suit your needs:<br\/>• Free Shipping: Delivery within 3-5 days.<br\/>• Expedited Shipping: Your product will arrive in 2 days.<br\/>• Priority Shipping: Expect your product within 1 day.<\/p>"
+            "row_content": "<p>We offer various shipping options to suit your needs:<br\/><br\/>• Free Shipping: Delivery within 3-5 days.<br\/>• Expedited Shipping: Your product will arrive in 2 days.<br\/>• Priority Shipping: Expect your product within 1 day.<\/p>"
           }
         }
       },

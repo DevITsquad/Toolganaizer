@@ -370,7 +370,8 @@
   @media screen and (max-width: 750px) {
     .about-us-small-imamges_wrapper {
       margin-top: 29px;
-      max-width: 262px;
+      max-width: 285px;
+      gap:10px;
     }
     .about-us-small-imamges-text {
       flex-direction: column;
@@ -386,10 +387,7 @@
       width: 45px;
       height: 45px;
     }
-    .about-us-small-imamges_wrapper {
-      margin-top: 29px;
-      max-width: 262px;
-    }
+  
     .swiper-button-prev:after,
     .swiper-button-next:after {
       display: none !important;
@@ -492,6 +490,7 @@
 
   
   {%- paginate collection.products by section.settings.products_per_page -%}
+
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     {%- endif -%}
@@ -750,7 +749,7 @@
           "type": "richtext",
           "id": "dummy_review",
           "label": "t:sections.main-product.blocks.text.settings.text.label",
-          "default": "<p><strong>4.8/5</strong>Based On<strong>20,000+</strong>Happy Customer Reviews</p>"
+          "default": "<p><strong>4.8/5</strong>Based On<strong>600+</strong>Happy Customers</p>"
         },
     {
       "type": "range",

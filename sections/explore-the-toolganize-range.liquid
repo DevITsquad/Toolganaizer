@@ -52,6 +52,11 @@ background: rgba(255, 253, 241, 1);
     }
     .element-2,.element-3{
         height:281px;
+      
+       
+    }
+    .element-2 .element-img-part,.element-3 .element-img-part{
+        max-width:360px;
        
     }
    .element-2 .element-text-part,.element-3 .element-text-part{
@@ -159,7 +164,14 @@ background: rgba(255, 253, 241, 1);
     
     
     }
-    @media screen and (max-width:1100px){
+    @media screen and (max-width:1220px){
+
+        .element-1 .element-img-part{
+            max-width:360px;
+        }
+        .element-1{
+            justify-content:space-between;
+        }
         .explore-the-toolganize_grid{
             grid-template-columns:1fr;
         }
@@ -199,9 +211,12 @@ background: rgba(255, 253, 241, 1);
     @media screen and (max-width:767px){
        
      
+        .element-3 .element-text-part{
+        width:100%;
+        }
         .explore-the-toolganize_item img{ 
-            max-width:118px;
-            max-height:106px;
+            max-width:176px;
+            max-height:176px;
          }
 
 
@@ -223,8 +238,8 @@ background: rgba(255, 253, 241, 1);
             min-height: 6.835940361022949px;
         }
         .explore-the-toolganize_item{
-            padding: 0 20px;
-            max-height:194px;
+            padding: 0  0  0 10px;
+            {% comment %} max-height:194px; {% endcomment %}
         }
 
 
@@ -255,7 +270,12 @@ background: rgba(255, 253, 241, 1);
             min-height:848px;
                 }
 
-
+                @media screen and (max-width:480px){
+                
+                    .explore-the-toolganize_item {
+                        max-height:245px;
+                    }
+                }
     }
 </style>
 
@@ -288,19 +308,41 @@ background: rgba(255, 253, 241, 1);
 </p>
 
 {% if block.settings.product.url != blank %}
-    <a class="shop_now_btn" href="{{ block.settings.product.url }}"><span class='text_in_button_custom'> {{block.settings.text_in_button}} </span> <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.0165 1.5L21.9998 6.48454L17.0165 11.4691" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2 6.48462H20.514" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+
+    <div style="width: 100%;" class="CTA_botton">
+        <a href="{{ block.settings.product.url }}"
+          ><span>{{block.settings.text_in_button}}</span>
+          <span style="margin-bottom:6px;">👉</span>
         </a>
+      </div>
+
 {% else %}
     
-<a class="shop_now_btn" href="#leaveEmail" ><span class='text_in_button_custom'>LEAVE EMAIL</span> <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.0165 1.5L21.9998 6.48454L17.0165 11.4691" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M2 6.48462H20.514" stroke="#19BF6F" stroke-width="2.33147" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+<div  style="width: 100%;" class="CTA_botton">
+    <a id="emailAsk" href=""
+      ><span> {{block.settings.text_in_button}} </span>
+      <span style="margin-bottom:6px;">👉</span>
     </a>
+  </div>
 
+    <script async>
+          function scrollToElement(e) {
+            e.preventDefault()
+            console.log(e.currentTarget)
+            const element = document.getElementById('leaveEmail');
+            if (element) {
+              element.scrollIntoView({
+                behavior: 'smooth', // You can also use 'auto' or 'instant'
+                block: 'end',     // Scroll to the top of the element
+                inline: 'nearest'   // Scroll to the nearest edge of the element horizontally
+              });
+            }
+          }
+          document.addEventListener("DOMContentLoaded", () => {
+            const emailBtn = document.getElementById('emailAsk');
+            emailBtn.addEventListener('click', scrollToElement)
+          })
+        </script>
 {% endif %}
 
                 

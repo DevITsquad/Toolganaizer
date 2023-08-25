@@ -352,13 +352,21 @@
             "heading": "How can I optimize my workshop's layout for maximum efficiency using your products?",
             "row_content": "<p>Optimizing your workshop layout with our organization products is easy. Start by assessing your most frequently used tools and arranging them in easily accessible areas. Utilize our power tool organizers to free up floor space and keep your workbench clutter-free. By customizing your setup with our products, you'll achieve a well-organized workshop that enhances productivity and creativity.<\/p>"
           }
+        },
+        "01d3e085-e949-41b5-bbf5-17f2eaaee23d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will I receive my product?",
+            "row_content": "<p>We offer various shipping options to suit your needs:<\/p><p>• Free Shipping: Delivery within 3-5 days.<\/p><p>• Expedited Shipping: Your product will arrive in 2 days.<\/p><p>• Priority Shipping: Expect your product within 1 day.<\/p>"
+          }
         }
       },
       "block_order": [
         "04a29669-5798-4ba5-84c4-2fea8147667f",
         "5e85f111-aaed-45ed-a8d3-4a5fabce8471",
         "f2d11a43-f7c5-496f-b883-92586705401b",
-        "82e1b93f-532e-4d2f-be28-82c2ff5a2564"
+        "82e1b93f-532e-4d2f-be28-82c2ff5a2564",
+        "01d3e085-e949-41b5-bbf5-17f2eaaee23d"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Logo_Final_Yellow-01_1.png",

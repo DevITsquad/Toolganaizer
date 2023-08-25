@@ -164,6 +164,9 @@
   .featured-collection-custom_wrapper .alireviews-review-star-rating .alr-wh-star-rating-average-number {
     display: none;
   }
+  .newSwiper .swiper-slide {
+    width: 60%;
+  }
   @media screen and (max-width: 1200px) {
     .featured-collection-custom_grid .featured-collection-custom_grid_element:last-child {
       display: none !important;
@@ -208,7 +211,8 @@
       max-width: 241px;
     }
     .featured-collection-custom_grid_element img {
-      max-width: 151px;
+      max-width: 185px;
+      height:auto;
     }
     .featured-collection-custom_grid_element_description p {
       font-size: 16px;
@@ -407,31 +411,28 @@
 
 <!-- Swiper -->
 
-<style>
-  .newSwiper .swiper-slide {
-    width: 60%;
-  }
-</style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    let swiper = new Swiper('.product_swiper', {
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+<script async>
+  if (window.innerWidth <= 767) {
+    document.addEventListener('DOMContentLoaded', () => {
+      let swiper = new Swiper('.product_swiper', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     });
-  });
+}
 </script>
 
 {% schema %}

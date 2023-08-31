@@ -46,7 +46,8 @@
           class:'variable_image'
       }}
     {% else %}
-      {{
+    <img src="{{settings.image_red | image_url}}" alt="img">
+      {% comment %} {{
         media
         | image_url: width: 1946
         | image_tag:
@@ -54,7 +55,7 @@
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
           class:'variable_image'
-      }}
+      }} {% endcomment %}
     {% endif %}
   
     <div

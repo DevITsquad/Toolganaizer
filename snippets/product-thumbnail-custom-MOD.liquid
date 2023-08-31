@@ -35,7 +35,7 @@
     }
   </style>
   <div class="img-custom-size">
-    {% if media.preview_image %}
+    {% comment %} {% if media.preview_image %}
      {{
         media.preview_image
         | image_url: width: 1946
@@ -45,8 +45,8 @@
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
           class:'variable_image'
       }}
-    {% else %}
-    <img src="{{settings.image_red | image_url}}" alt="img">
+    {% else %} {% endcomment %}
+    <img loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
       {% comment %} {{
         media
         | image_url: width: 1946
@@ -56,7 +56,7 @@
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
           class:'variable_image'
       }} {% endcomment %}
-    {% endif %}
+    {% comment %} {% endif %} {% endcomment %}
   
     <div
       class="collors_wrapper"

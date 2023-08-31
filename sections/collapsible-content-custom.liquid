@@ -181,11 +181,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const allColapsable = document.querySelectorAll('.slow_toggle');
-    console.log(allColapsable);
     allColapsable.forEach((el) => el.addEventListener('click', slowToggle));
   });
   function slowToggle(e) {
-    console.log(e.currentTarget);
     e.currentTarget.classList.toggle('active');
     const content = e.currentTarget.nextElementSibling;
     if (content.style.maxHeight) {

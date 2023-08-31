@@ -26,28 +26,21 @@
 {% endcomment %}
 
 <style>
-    .checked_mark {
-      display: none;
-      filter: brightness(0.1);
-    }
+    .checked_mark-custom{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+}
       .clickable_color{
     cursor:pointer;
+    position:relative;
     }
   </style>
   <div class="img-custom-size">
   
     <img class='variable_image' loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
-      {% comment %} {{
-        media
-        | image_url: width: 1946
-        | image_tag:
-          loading: 'lazy',
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
-          class:'variable_image'
-      }} {% endcomment %}
-    {% comment %} {% endif %} {% endcomment %}
-   
+    
     <div
       class="collors_wrapper"
       {%- if is_show_collors != true -%}
@@ -56,15 +49,11 @@
     >
       <p class="collors__header">Available colors</p>
       <div class="possible_colors">
-        <script>
-            console.log({{product | json}})
-        </script>
+       
         {% for item in product.collections[0].products %}
           {%- assign variable = item.title | split: '-' | last | strip -%}
   
-          <script>
-            console.log({{item.featured_image  | image_url | json }})
-          </script>
+    
           {%- case variable -%}
             {%- when 'Orange' -%}
               <div data-img_url="{{settings.image_orange  | image_url}}" data-product_url="{{item.url}}" class="clickable_color orange">
@@ -73,7 +62,7 @@
                     {%- if product.title contains variable -%}
                     display:block;{%- endif -%}
                   "
-                  class="checked_mark"
+                  class="checked_mark-custom"
                   width="15"
                   height="11"
                   viewBox="0 0 15 11"
@@ -94,7 +83,7 @@
                     {%- if product.title contains variable -%}
                     display:block;{%- endif -%}
                   "
-                  class="checked_mark"
+                  class="checked_mark-custom"
                   width="15"
                   height="11"
                   viewBox="0 0 15 11"
@@ -114,7 +103,7 @@
                     {%- if product.title contains variable -%}
                     display:block;{%- endif -%}
                   "
-                  class="checked_mark"
+                  class="checked_mark-custom"
                   width="15"
                   height="11"
                   viewBox="0 0 15 11"
@@ -134,7 +123,7 @@
                     {%- if product.title contains variable -%}
                     display:block;{%- endif -%}
                   "
-                  class="checked_mark"
+                  class="checked_mark-custom"
                   width="15"
                   height="11"
                   viewBox="0 0 15 11"
@@ -154,7 +143,7 @@
                     {%- if product.title contains variable -%}
                     display:block;{%- endif -%}
                   "
-                  class="checked_mark"
+                  class="checked_mark-custom"
                   width="15"
                   height="11"
                   viewBox="0 0 15 11"

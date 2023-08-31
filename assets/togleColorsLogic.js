@@ -1,7 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("hi world")
-    console.log(document.querySelector(".variable_image").getAttribute("src"))
+
+    document.querySelectorAll(".variable_image").forEach(el => {
+console.log('1', 1)
+console.log(el.getAttribute("src"))
+        
+    })
     console.log(document.querySelectorAll(".clickable_color"))
 
     const allVariants = document.querySelectorAll(".clickable_color")
@@ -9,13 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function changeImgUrl(e) {
-        console.log(e.currentTarget)
-        console.log(e.currentTarget.dataset)
+        // console.log(e.currentTarget)
+        // console.log(e.currentTarget.dataset)
         const link_to = e.currentTarget.dataset.product_url
         const img_url = e.currentTarget.dataset.img_url
-        document.querySelector(".variable_image").setAttribute("src", img_url)
-        document.querySelector(".variable_image").setAttribute("srcset",  img_url)
-        document.querySelector(".CTA_botton.featured-product-CTA a").setAttribute("href",  link_to)
+        document.querySelectorAll(".variable_image").forEach(el => {
+            el.setAttribute("src", img_url)
+            el.setAttribute("srcset", img_url)
+        })
+        document.querySelector(".CTA_botton.featured-product-CTA a").setAttribute("href", link_to)
     }
 
     allVariants.forEach(el => {

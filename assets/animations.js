@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 function scrollToElement(e) {
   e.preventDefault()
-  console.log(e.currentTarget)
   const element = document.getElementById('leaveEmail');
   if (element) {
     element.scrollIntoView({

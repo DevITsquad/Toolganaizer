@@ -321,7 +321,7 @@ flex-direction:row-reverse;
         line-height: 20px;
       }
       .product_section_description{
-        margin-top: 45px;
+        margin-top: 110px;
       }
       .product_section_description li p{
         font-size: 14px;
@@ -346,14 +346,15 @@ flex-direction:row-reverse;
       }
       .img-custom-size .possible_colors{
         gap:10px;
-        max-width:190px;
       }
       .collors_wrapper{
         display:flex;
-        bottom:-36px;
+        bottom:-50px;
         width:305px;
-        transform: translate(-10%)
+        transform: translate(-10%);
+        flex-direction:column;
       }
+      
     }
 
       @media screen and (max-width: 1000px) {
@@ -375,6 +376,7 @@ flex-direction:row-reverse;
       /* for PDP only */
     
 {%- if section.settings.is_product_page == true -%}
+
         .img-custom-size{
           min-width: 336px;
           min-height: 299px;
@@ -416,7 +418,7 @@ flex-direction:row-reverse;
     }
 
     .product_section_description{
-      margin-top:25px;
+      margin-top:25px !important;
     }
     .own_width.inventory_quantity_bage.desc{
     order:1;
@@ -486,60 +488,10 @@ flex-direction:row-reverse;
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
 
-            {%- if section.settings.product != blank -%}
-              {%- if product.selected_or_first_available_variant.featured_media != null -%}
-                {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {% render 'product-thumbnail-custom',
-                    media: media,
-                    position: 'featured',
-                    loop: section.settings.enable_video_looping,
-                    modal_id: section.id,
-                    xr_button: false,
-                    media_width: media_width,
-                    media_fit: section.settings.media_fit,
-                    constrain_to_viewport: section.settings.constrain_to_viewport,
-                    is_show_collors:section.settings.is_show_collors
-                  %}
-                </div>
-              {%- endif -%}
-              {%- liquid
-                assign media_to_render = product.featured_media.id
-                for variant in product.variants
-                  assign media_to_render = media_to_render | append: variant.featured_media.id | append: ' '
-                endfor
-              -%}
-              {%- for media in product.media -%}
-                {%- if media_to_render contains media.id
-                  and media.id != product.selected_or_first_available_variant.featured_media.id
-                -%}
-                  <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
-                    {% render 'product-thumbnail-custom',
-                      media: media,
-                      position: forloop.index,
-                      loop: section.settings.enable_video_looping,
-                      modal_id: section.id,
-                      xr_button: false,
-                      media_width: media_width,
-                      media_fit: section.settings.media_fit,
-                      constrain_to_viewport: section.settings.constrain_to_viewport,
-                      is_show_collors:section.settings.is_show_collors
-                    %}
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-              {%- elsif section.settings.product_custom != blank -%}
-              1   <script>
-            
-                console.log({{section.settings.image_red|json}})
-                </script>
-              {% render 'product-thumbnail-custom-MOD', media: section.settings.image_red 
-                ,is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
-            {%- else -%}
-         
-              {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
-              2
-            {%- endif -%}
+          
+              {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
+          
+        
           </div>
           {%- if first_3d_model -%}
             <button
@@ -606,23 +558,11 @@ flex-direction:row-reverse;
           
               
                 <div class="hidden-image">
-                  {%- if section.settings.image -%}
-                 {% render 'product-thumbnail-custom', media: section.settings.image,is_show_collors:section.settings.is_show_collors %}
+                  mobile
+                 
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
                     
-                  {% else %}
-                  {% render 'product-thumbnail-custom',
-                    media: product.images.first,
-                    position: 'featured',
-                    loop: section.settings.enable_video_looping,
-                    modal_id: section.id,
-                    xr_button: false,
-                    media_width: media_width,
-                    media_fit: section.settings.media_fit,
-                    constrain_to_viewport: section.settings.constrain_to_viewport,
-                    is_show_collors:section.settings.is_show_collors
-                  %}
-                  
-                  {%- endif -%}
+                
                 </div>
 
                 {%- for block in section.blocks -%}

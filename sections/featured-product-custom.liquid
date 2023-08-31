@@ -436,7 +436,7 @@ flex-direction:row-reverse;
 
 
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-
+<script src="{{ 'togleColorsLogic.js' | asset_url }}" defer="defer"></script>
 {%- liquid
  
 
@@ -486,15 +486,6 @@ flex-direction:row-reverse;
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
 
-{%- if condition -%}
-  
-{%- else -%}
-
-
-    
-
-{%- endif -%}
-
             {%- if section.settings.product != blank -%}
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
@@ -537,10 +528,17 @@ flex-direction:row-reverse;
                   </div>
                 {%- endif -%}
               {%- endfor -%}
-              {%- elsif product != blank -%}
-              {% render 'product-thumbnail-custom', media: product.featured_image,is_show_collors:section.settings.is_show_collors %}
+              {%- elsif section.settings.product_custom != blank -%}
+              1   <script>
+            
+                console.log({{section.settings.image_red|json}})
+                </script>
+              {% render 'product-thumbnail-custom-MOD', media: section.settings.image_red 
+                ,is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
             {%- else -%}
+         
               {% render 'product-thumbnail-custom', media: section.settings.image ,is_show_collors:section.settings.is_show_collors %}
+              2
             {%- endif -%}
           </div>
           {%- if first_3d_model -%}
@@ -960,7 +958,7 @@ flex-direction:row-reverse;
   <script type="application/json" id="ProductJSON-{{ product.id }}">
     {{ product.media | where: 'media_type', 'model' | json }}
   </>
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+  <script src="{{ 'product-model.js' | asset_url }}" defer></>
 {%- endif -%}
 
 {%- liquid
@@ -1886,6 +1884,11 @@ flex-direction:row-reverse;
   ],
   "settings": [
     {
+      "type": "product",
+      "id": "product_custom",
+      "label": "t:sections.featured-product.settings.product.label"
+    },
+    {
       "type": "richtext",
       "id": "heading",
       "label": "heading",
@@ -1899,8 +1902,28 @@ flex-direction:row-reverse;
     },
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "id": "image_red",
+      "label": "Image red"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_orange",
+      "label": "Image orange"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_blue",
+      "label": "Image blue"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_green",
+      "label": "Image green"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_yellow",
+      "label": "Image yellow"
     },
     {"type":"checkbox",
       "id": "is_show_collors",

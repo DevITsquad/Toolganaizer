@@ -28,17 +28,27 @@
 <style>
   .checked_mark-custom {
     position: absolute;
-    top: 50%;
+    top: 22px;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
   }
   .clickable_color {
     cursor: pointer;
     position: relative;
   }
 </style>
-<div class="img-custom-size">
-  <img class="variable_image" loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
+<div class="img-custom-size {{view_class}}">
+  <script>
+    {{view_class | json}}
+  </script>
+  {%- if product -%}
+    <img class="variable_image" loading="lazy" src="{{product.featured_image | image_url}}" alt="img">
+    {%- else -%}
+    <img class="variable_image" loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
+  {%- endif -%}
+  
+ 
 
   <div
     class="collors_wrapper"
@@ -48,7 +58,7 @@
   >
     <p class="collors__header">Available colors</p>
     <div class="possible_colors">
-      {% for item in product.collections[0].products %}
+      {% for item in section_product.collections[0].products %}
         {%- assign variable = item.title | split: '-' | last | strip -%}
 
         {%- case variable -%}
@@ -140,6 +150,7 @@
               class="clickable_color red"
             >
               <svg
+                style="display:block;"
                 class="checked_mark-custom"
                 width="15"
                 height="11"

@@ -242,6 +242,7 @@
   align-items:center;
 flex-direction:row-reverse;
 }
+
       @media screen and (max-width: 1350px) {
 
         .own_width .featured-product{
@@ -279,6 +280,7 @@ flex-direction:row-reverse;
 
       }
       @media screen and (max-width: 751px) {
+
         .own_width .custom_reviews_text{
           gap:4px;
           justify-content:center;
@@ -412,7 +414,9 @@ flex-direction:row-reverse;
         display:block !important;
       }
 
+  
     @media screen and (max-width:752px){
+
     .custom_product_under_tittle.desc{
     text-align:center;
     }
@@ -435,8 +439,6 @@ flex-direction:row-reverse;
 
 
 {%- endstyle -%}
-
-
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'togleColorsLogic.js' | asset_url }}" defer="defer"></script>
 {%- liquid
@@ -488,8 +490,12 @@ flex-direction:row-reverse;
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
 
-          
-              {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
+          desc
+            {% if product %}
+              {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product  %}
+             {% else %}
+              {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"desctop_view" %}
+            {% endif %}
           
         
           </div>
@@ -553,14 +559,16 @@ flex-direction:row-reverse;
                     {{ section.settings.heading }}
                   {%- endif -%}
                 </h2>
-
-
-          
-              
+                  
                 <div class="hidden-image">
-                  mobile
-                 
-                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:section.settings.product_custom, settings:section.settings  %}
+                
+                 mobile
+                {%  if product %}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product %}
+                 {% else %}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"mobile_view"  %}
+                {% endif %}
+               
                     
                 
                 </div>

@@ -26,142 +26,136 @@
 {% endcomment %}
 
 <style>
-    .checked_mark-custom{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-}
-      .clickable_color{
-    cursor:pointer;
-    position:relative;
-    }
-  </style>
-  <div class="img-custom-size">
-  
-    <img class='variable_image' loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
-    
-    <div
-      class="collors_wrapper"
-      {%- if is_show_collors != true -%}
-        style="display:none;"
-      {%- endif -%}
-    >
-      <p class="collors__header">Available colors</p>
-      <div class="possible_colors">
-       
-        {% for item in product.collections[0].products %}
-          {%- assign variable = item.title | split: '-' | last | strip -%}
-  
-    
-          {%- case variable -%}
-            {%- when 'Orange' -%}
-              <div data-img_url="{{settings.image_orange  | image_url}}" data-product_url="{{item.url}}" class="clickable_color orange">
-                <svg
-                  style="
-                    {%- if product.title contains variable -%}
-                    display:block;{%- endif -%}
-                  "
-                  class="checked_mark-custom"
-                  width="15"
-                  height="11"
-                  viewBox="0 0 15 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
-                </svg>
-  
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#F37328"/>
-                </svg>
-              </div>
-            {%- when 'Blue' -%}
-              <div data-img_url="{{settings.image_blue   | image_url}}" data-product_url="{{item.url}}" class="clickable_color blue">
-                <svg
-                  style="
-                    {%- if product.title contains variable -%}
-                    display:block;{%- endif -%}
-                  "
-                  class="checked_mark-custom"
-                  width="15"
-                  height="11"
-                  viewBox="0 0 15 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
-                </svg>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#6ABCC8"/>
-                </svg>
-              </div>
-            {%- when 'Green' -%}
-              <div data-img_url="{{settings.image_green   | image_url}}" data-product_url="{{item.url}}" class="clickable_color green">
-                <svg
-                  style="
-                    {%- if product.title contains variable -%}
-                    display:block;{%- endif -%}
-                  "
-                  class="checked_mark-custom"
-                  width="15"
-                  height="11"
-                  viewBox="0 0 15 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
-                </svg>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#D9DB32"/>
-                </svg>
-              </div>
-            {%-  when 'Yellow' -%}
-              <div data-img_url="{{settings.image_yellow   | image_url}}" data-product_url="{{item.url}}" class="clickable_color yellow">
-                <svg
-                  style="
-                    {%- if product.title contains variable -%}
-                    display:block;{%- endif -%}
-                  "
-                  class="checked_mark-custom"
-                  width="15"
-                  height="11"
-                  viewBox="0 0 15 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
-                </svg>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#E9B82D"/>
-                </svg>
-              </div>
-            {%- when 'Red' -%}
-              <div data-img_url="{{settings.image_red | image_url}}" data-product_url="{{item.url}}" class="clickable_color red">
-                <svg
-                  style="
-                    {%- if product.title contains variable -%}
-                    display:block;{%- endif -%}
-                  "
-                  class="checked_mark-custom"
-                  width="15"
-                  height="11"
-                  viewBox="0 0 15 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
-                </svg>
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#BC2D33"/>
-                </svg>
-              </div>
-            {%- else -%}
-          {%- endcase -%}
-        {% endfor %}
-      </div>
+  .checked_mark-custom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .clickable_color {
+    cursor: pointer;
+    position: relative;
+  }
+</style>
+<div class="img-custom-size">
+  <img class="variable_image" loading="lazy" src="{{settings.image_red | image_url}}" alt="img">
+
+  <div
+    class="collors_wrapper"
+    {%- if is_show_collors != true -%}
+      style="display:none;"
+    {%- endif -%}
+  >
+    <p class="collors__header">Available colors</p>
+    <div class="possible_colors">
+      {% for item in product.collections[0].products %}
+        {%- assign variable = item.title | split: '-' | last | strip -%}
+
+        {%- case variable -%}
+          {%- when 'Orange' -%}
+            <div
+              data-img_url="{{settings.image_orange  | image_url}}"
+              data-product_url="{{item.url}}"
+              class="clickable_color orange"
+            >
+              <svg
+                class="checked_mark-custom"
+                width="15"
+                height="11"
+                viewBox="0 0 15 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+              </svg>
+
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#F37328"/>
+              </svg>
+            </div>
+          {%- when 'Blue' -%}
+            <div
+              data-img_url="{{settings.image_blue  | image_url}}"
+              data-product_url="{{item.url}}"
+              class="clickable_color blue"
+            >
+              <svg
+                class="checked_mark-custom"
+                width="15"
+                height="11"
+                viewBox="0 0 15 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+              </svg>
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#6ABCC8"/>
+              </svg>
+            </div>
+          {%- when 'Green' -%}
+            <div
+              data-img_url="{{settings.image_green   | image_url}}"
+              data-product_url="{{item.url}}"
+              class="clickable_color green"
+            >
+              <svg
+                class="checked_mark-custom"
+                width="15"
+                height="11"
+                viewBox="0 0 15 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+              </svg>
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#D9DB32"/>
+              </svg>
+            </div>
+          {%- when 'Yellow' -%}
+            <div
+              data-img_url="{{settings.image_yellow   | image_url}}"
+              data-product_url="{{item.url}}"
+              class="clickable_color yellow"
+            >
+              <svg
+                class="checked_mark-custom"
+                width="15"
+                height="11"
+                viewBox="0 0 15 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+              </svg>
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#E9B82D"/>
+              </svg>
+            </div>
+          {%- when 'Red' -%}
+            <div
+              data-img_url="{{settings.image_red | image_url}}"
+              data-product_url="{{item.url}}"
+              class="clickable_color red"
+            >
+              <svg
+                class="checked_mark-custom"
+                width="15"
+                height="11"
+                viewBox="0 0 15 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M14.1294 0.521973C14.5356 0.896973 14.5356 1.55322 14.1294 1.92822L6.12939 9.92822C5.75439 10.3345 5.09814 10.3345 4.72314 9.92822L0.723145 5.92822C0.316895 5.55322 0.316895 4.89697 0.723145 4.52197C1.09814 4.11572 1.75439 4.11572 2.12939 4.52197L5.41064 7.80322L12.7231 0.521973C13.0981 0.115723 13.7544 0.115723 14.1294 0.521973Z" fill="white"/>
+              </svg>
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#BC2D33"/>
+              </svg>
+            </div>
+          {%- else -%}
+        {%- endcase -%}
+      {% endfor %}
     </div>
   </div>
-  
-  
-  
+</div>

@@ -11,6 +11,37 @@
     padding: 0 12px;
   }
 
+  .sticky_button_custom_wrapper{
+    width: 100%;
+    position: fixed;
+    bottom: -130px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: wheat;
+    z-index: 50;
+    padding: 7px 20px;
+    transition:.5s;
+  }
+  .sticky_button_custom_wrapper .custom-price{
+    margin:0;
+  }
+  .sticky_button_custom_wrapper .inventory_quantity_bage{
+    display:none !important;
+  }
+  .sticky_button_custom_tittle-price{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+   .sticky_button_custom_tittle-price h3{
+    margin:0;
+    padding-right:7px;
+    text-align:center;
+    font-size:20px;
+   }
+
   /* Main Product Custom Slider Wrapper */
   .main-product-custom_slider_wrapper {
     max-width: 608px !important;
@@ -295,6 +326,17 @@ display:none !important;
   }
   @media screen and (max-width: 750px) {
 
+    .sticky_button_custom_tittle-price .custom_bage{
+      display:none;
+
+    }
+    .sticky_button_custom_tittle-price h3{
+    font-size:15px;
+   }
+   .sticky_button_custom_wrapper{
+      padding:5px 10px;
+   }
+
     .custom-images_under_slider.mobile{
       display:flex;
     }
@@ -378,6 +420,7 @@ display:none !important;
     }
   }
 
+ 
   @media screen and (max-width: 500px) {
     .main-product-custom_slider_wrapper .mySwiper_product2 {
       max-width: 296px;
@@ -413,6 +456,11 @@ display:none !important;
     }
   }
 
+  @media screen and (max-width: 470px) {
+    .sticky_button_custom_tittle-price h3{
+    font-size:11px;
+   }
+  }
   /* poduct info logic  */
 
   .main-product-custom_product_info_wrapper {
@@ -812,7 +860,40 @@ display:none !important;
               </div>
     
                 {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
-          
+            <div class='sticky_button_custom_wrapper'> 
+
+            <div class="sticky_button_custom_tittle-price"><h3>{{product.title}}</h3>    
+            {%- render 'price',
+              product: product,
+              use_variant: true,
+              show_badges: true,
+              price_class: 'price--large',
+              is_product_page:true
+            -%} </div>
+           {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}    </div>
+
+           <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const element = document.querySelector('#shopify-section-{{section.id}}');
+              const sticky_button = document.querySelector('.sticky_button_custom_wrapper');
+            
+              let isAtBottom = false;
+              function isElementAtBottom() {
+                return element.getBoundingClientRect().bottom <= window.innerHeight;
+              }
+              function toggleAction() {
+                if (isElementAtBottom() !== isAtBottom) {
+                   if (isElementAtBottom())
+                   sticky_button.style.bottom = "0px"
+                   else
+                   sticky_button.style.bottom = "-130px"
+                
+                  isAtBottom = !isAtBottom;
+                }
+              }    
+              window.addEventListener('scroll', toggleAction);
+            });            
+            </script>
           </div>
 
               <div class="payment_wrapper_custom feachered-product-custom custom-payment">
@@ -1045,7 +1126,7 @@ display:none !important;
       </div>
     </modal-dialog>
   {%- endfor -%}
-
+  
   {% comment %} {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>

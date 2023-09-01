@@ -489,8 +489,6 @@ flex-direction:row-reverse;
             id="GalleryViewer-{{ section.id }}"
             class="product__media-list{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           >
-
-          desc
             {% if product %}
               {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product  %}
              {% else %}
@@ -561,8 +559,6 @@ flex-direction:row-reverse;
                 </h2>
                   
                 <div class="hidden-image">
-                
-                 mobile
                 {%  if product %}
                   {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product %}
                  {% else %}

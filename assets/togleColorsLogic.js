@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         class_view = ".mobile_view"
     }
     const allVariants = document.querySelectorAll(`${class_view} .clickable_color`);
-    console.log('first', allVariants)
     let currentIndex = 1;
     let intervalId; // Store the interval ID
 

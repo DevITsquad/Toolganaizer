@@ -7,11 +7,16 @@
   .bottom_images_slider_wrapper .swiper-slide {
     width: 265px;
     height: 265px;
+  
+  }
+  .bottom_images_slider_wrapper .swiper-slide img {
+    cursor:zoom-in;
   }
 
   .bottom_images_slider_wrapper .swiper-wrapper {
     justify-content: space-between;
   }
+ 
 
   @media screen and (max-width: 1100px) {
     .bottom_images_slider_wrapper .swiper-slide {
@@ -22,6 +27,7 @@
       display: block;
       height: 100%;
       object-fit: cover;
+    
     }
   }
   @media screen and (max-width: 920px) {
@@ -43,7 +49,10 @@
     .bottom_images_slider_wrapper .swiper-wrapper {
       margin-bottom: 10px;
     }
+
   }
+
+
 </style>
 
 <div class="bottom_images_slider_wrapper">
@@ -53,8 +62,7 @@
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
         <div class="swiper-slide">
-          {{ block.settings.image | image_url: width: 265 | image_tag: height: 265 , loading: 'lazy'}}
-          {% comment %} <img src="{{ block.settings.image | img_url }}" alt="img"> {% endcomment %}
+          <img loading="lazy" src="{{ block.settings.image | image_url }}">
         </div>
       {% endfor %}
     </div>
@@ -93,6 +101,7 @@
         },
       },
     });
+
   });
 </script>
 {% schema %}

@@ -440,7 +440,9 @@ flex-direction:row-reverse;
 
 {%- endstyle -%}
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'togleColorsLogic.js' | asset_url }}" defer="defer"></script>
+{%- unless product -%}
+  <script src="{{ 'togleColorsLogic.js' | asset_url }}" defer="defer"></script>
+{%- endunless -%}
 {%- liquid
  
 

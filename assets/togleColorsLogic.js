@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     allVariants.forEach(el => {
         el.addEventListener("click", (e) => {
-            changeImgUrl(e);
+            changeImgUrl(e, intervalId);
             clearInterval(intervalId); // Stop the automatic change
         });
     });

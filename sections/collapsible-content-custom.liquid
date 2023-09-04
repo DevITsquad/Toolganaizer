@@ -181,6 +181,12 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const allColapsable = document.querySelectorAll('.slow_toggle');
+    const allColapsableActive = document.querySelectorAll('.slow_toggle.active');
+
+    allColapsableActive.forEach((el) => {
+      console.log(el.nextElementSibling.scrollHeight)
+      el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
+    });
     allColapsable.forEach((el) => el.addEventListener('click', slowToggle));
   });
   function slowToggle(e) {
@@ -213,11 +219,11 @@
       >
         <div
           id="Details-{{ block.id }}-{{ section.id }}"
-          {% if section.settings.open_first_collapsible_row and forloop.first %}
-            open
-          {% endif %}
+        
         >
-          <div class="slow_toggle" id="Summary-{{ block.id }}-{{ section.id }}">
+          <div class="slow_toggle {% if section.settings.open_first_collapsible_row and forloop.first %}
+            active
+          {% endif %}" id="Summary-{{ block.id }}-{{ section.id }}">
             <svg
               class="opened_content"
               width="60"

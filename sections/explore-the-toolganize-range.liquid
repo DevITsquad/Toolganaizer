@@ -333,7 +333,8 @@
       height:30px;
       border:2px solid silver;
   }
-  #SubscribeLeaveEmail{
+  #ContactFooter-success{
+    margin:0;
   }
 </style>
 
@@ -342,7 +343,7 @@
   <h4 class="workflow-custom-tittle_1">{{ section.settings.text_1 }}</h4>
   <div class="explore-the-toolganize_grid">
     {% for block in section.blocks %}
-      <div class="explore-the-toolganize_item element-{{ forloop.index }}">
+      <div style='padding-bottom:10px;' class="explore-the-toolganize_item element-{{ forloop.index }}">
         {%- if block.settings.isPopular -%}
           <div class="popular_bage">
             <span>{{ block.settings.small_bage_frase }}</span>

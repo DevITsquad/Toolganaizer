@@ -61,7 +61,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Description",
-            "content": "<p>bla bla bla<\/p>",
+            "content": "<p>Do you find your workshop or garage in a perpetual state of chaos? Discover the definitive solution to declutter your space and supercharge your efficiency. Presenting the Toolganize 4 Slot Power Tool Storage Organizer - a robust wall-mounted system meticulously crafted to transform your workspace.<\/p><p>Constructed from top-tier, powder-coated cast iron steel, this organizer epitomizes resilience and longevity. Say goodbye to the hours lost in quest of tools! By centralizing your equipment, you unlock the true potential of productivity.<\/p><p>More than just a storage fix, this is a sanctuary for power tools. Featuring 2 sturdy shelves, 4 dedicated slots for cordless power tools,  along with specialized compartments for screwdrivers and hand tools, every tool discovers its rightful abode. Locate your necessities instantly and accomplish tasks at an unprecedented pace.<\/p>",
             "is_opened": false
           }
         },
@@ -547,6 +547,7 @@
         "d6d95cea-dc94-4019-a629-3078fee75006"
       ],
       "settings": {
+        "product_custom": "",
         "heading": "<p>get projects completed quickly with <strong>toolganize power tool organizer<\/strong><\/p>",
         "text_1": "Don't waste money running to the store again to replace lost tools, get your tools and workspace organized !",
         "is_show_collors": false,

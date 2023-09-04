@@ -437,7 +437,7 @@
         "image": "shopify:\/\/shop_images\/Logo_Final_Yellow-01_1.png",
         "heading": "<p>frequently asked <strong>questions<\/strong><\/p>",
         "text_1": "Quick Responses to common questions",
-        "open_first_collapsible_row": true
+        "open_first_collapsible_row": false
       }
     },
     "82530cd6-f19c-4e7a-ae15-d33cfb68a9d5": {

@@ -77,7 +77,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping Information",
-            "content": "<p>some info<\/p>",
+            "content": "<p>✔️ Most orders will ship within 24 hours from the date of payment<br\/>✔️ Free Shipping : 3-5 Days <\/p><p>✔️ Expedited Shipping : 2 Days<\/p><p>✔️ Priority Shipping : 1 Day<\/p>",
             "is_opened": false
           }
         },

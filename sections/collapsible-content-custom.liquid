@@ -184,7 +184,6 @@
     const allColapsableActive = document.querySelectorAll('.slow_toggle.active');
 
     allColapsableActive.forEach((el) => {
-      console.log(el.nextElementSibling.scrollHeight)
       el.nextElementSibling.style.maxHeight = el.nextElementSibling.scrollHeight + 'px';
     });
     allColapsable.forEach((el) => el.addEventListener('click', slowToggle));

@@ -847,14 +847,20 @@ display:none !important;
                 {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
             <div class='sticky_button_custom_wrapper'> 
 
-            <div class="sticky_button_custom_tittle-price"><h3>{{product.title}}</h3>    
-            {%- render 'price',
+            <div class="sticky_button_custom_tittle-price">
+                             
+              <h3>{{product.title}}</h3>    
+              {%- render 'price',
               product: product,
               use_variant: true,
               show_badges: true,
               price_class: 'price--large',
               is_product_page:true
-            -%} </div>
+            -%}  
+            {% comment %} <script> console.log({{product.featured_image | json}})</script>
+            <div style="padding:10px;"> <img src="{{product.featured_image | img_url}}" alt="img"></div> {% endcomment %}
+         
+          </div>
            {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}    </div>
 
            <script>

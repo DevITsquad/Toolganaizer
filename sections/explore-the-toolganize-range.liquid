@@ -1,405 +1,437 @@
-
 <style>
-    .explore-the-toolganize_wrapper{
-min-height:940px;
-margin-top:33px;
-background: rgba(255, 253, 241, 1);
+        .explore-the-toolganize_wrapper{
+    min-height:940px;
+    margin-top:33px;
+    background: rgba(255, 253, 241, 1);
 
-    }
-
-
-
-    .explore-the-toolganize_grid{
-        
-        display:grid;
-        max-width:1270px;
-        margin:auto;
-        column-gap:20px;
-        row-gap:23px;
-        grid-template-columns:490px 760px;
-    }
-
-    .explore-the-toolganize_item{
-        position:relative;
-        background:white;
-        box-shadow: 0px 0px 30px 0px rgba(239, 233, 203, 1);
-        display:flex;
-        border-radius:4px;
-        justify-content: space-between;
-        align-items: center;
-        padding:0 50px;
-        box-sizing:border-box;
-        transition: transform 0.3s; /* Изменили значение на 0.3s */
-        overflow:hidden;
-    }
-    
-    .explore-the-toolganize_item:hover {
-        transform: scale(1.02);
-      }
+        }
 
 
- 
-    .element-1 .element-img-part{
-        height:auto;
-     margin-top:40px;
-    }
 
-
-  
-    .element-1{
-        height:585px;
-        grid-row: 1 / span 2; 
-        flex-direction:column-reverse;
-        justify-content:start;
-
-    }
-    .element-2,.element-3{
-        height:281px;
-      
-       
-    }
-    .element-2 .element-img-part,.element-3 .element-img-part{
-        max-width:360px;
-       
-    }
-   .element-2 .element-text-part,.element-3 .element-text-part{
-        align-items: start;
-    } 
-   .element-2 .element-text-part h4,
-    .element-2 .element-text-part p,
-    .element-2 .element-text-part a,
-    .element-3 .element-text-part h4,
-    .element-3 .element-text-part p,
-    .element-3 .element-text-part a {
-        align-items: left;
-        text-align:left
-       
-    } 
-
-    .text_in_button_custom{
-     
-        font-size: 20px;
-        font-weight: 900;
-        line-height: 20px;
-        letter-spacing: 0em;
-        text-align: left;
-
-
-    }
-    .shop_now_btn{
-        display:flex;
-        gap:13px;
-        align-items:center;
-        justify-content:space-between;
-        max-width:142px;
-        text-decoration:none;
-        color:rgba(25, 191, 111, 1);
-        white-space:nowrap;
-    }
-
-
-   
-    .element-img-part{
-        width: 100%;
-        height: 100%;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-    .element-text-part{
-        max-width:382px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        text-align: center;
-    }
-    .element-text-part h4{
-        font-family: var(--custom-font-style-primary);
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 31px;
-        letter-spacing: 0px;
-        text-align: center;
-        color:var(--custom-font-color-primary);
-        margin-bottom:8px;
-    }
-    .element-text-part p{
-        font-family: var(--custom-font-style-secondary);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0px;
-        text-align: center;
-        color:var(--custom-font-color-primary);
-        margin:0;
-        margin-bottom:35px;
-        
-    }
-
-    .explore-the-toolganize_wrapper .workflow-custom-tittle {
-        padding-top:83px;
-        width:100%;
-        max-width:100%;
-        background: linear-gradient(180deg, #EFE9CC 0%, #FFFDF1 100%),
-        linear-gradient(0deg, #FFFFFF, #FFFFFF);
-
-    }
-    
-    .explore-the-toolganize_wrapper .workflow-custom-tittle_1{
-        font-family: var(--custom-font-style-primary);
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: center;
-        margin-top: -10px;
-        margin-bottom: 53px;
-        min-width:100px;
-    }
-    .popular_bage span{
-        max-width: 50px;
-        display: inline-block;
-        text-align: center;
-        line-height: 15px;
-        font-family: var(--custom-font-style-primary);
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0px;
-
-    }
-        .popular_bage{
-        padding:10px 75px;
-        position:absolute;
-        background:var(--custom-background-secondary);
-        color:white;
-        top:-60px; 
-        right:10px;
-        transform:rotate(45deg) translate(50%);
-    }
-    .workflow-custom-tittle p{
-        margin:0;
-    }
-
-    @media screen and (max-width:1300px){
         .explore-the-toolganize_grid{
-        padding:0 12px;
-            grid-template-columns:1fr 2fr;}
-    
-    
-    }
-    @media screen and (max-width:1220px){
+
+            display:grid;
+            max-width:1270px;
+            margin:auto;
+            column-gap:20px;
+            row-gap:23px;
+            grid-template-columns:490px 760px;
+        }
+
+        .explore-the-toolganize_item{
+            position:relative;
+            background:white;
+            box-shadow: 0px 0px 30px 0px rgba(239, 233, 203, 1);
+            display:flex;
+            border-radius:4px;
+            justify-content: space-between;
+            align-items: center;
+            padding:0 50px;
+            box-sizing:border-box;
+            transition: transform 0.3s; /* Изменили значение на 0.3s */
+            overflow:hidden;
+        }
+
+        .explore-the-toolganize_item:hover {
+            transform: scale(1.02);
+          }
+
+
 
         .element-1 .element-img-part{
-            max-width:360px;
+            height:auto;
+         margin-top:40px;
         }
+
+
+
         .element-1{
-            justify-content:space-between;
-        }
-        .explore-the-toolganize_grid{
-            grid-template-columns:1fr;
-        }
-        .element-1, .element-2, .element-3{
-            height:280px;
-            flex-direction:row;
-        }
-        .text_in_button_custom{
-            font-size: 14px;
-            line-height: 14px;
-        
-        }
-        .explore-the-toolganize_item img{ 
-            max-height:100%;
-         }
-         .shop_now_btn{
-         max-width:97px;
-        }
-        .element-1 .element-img-part{
-            height:100%;
-         margin-top:0;
-        }
-        .element-text-part{
-            align-items: start;
-        } 
+            height:585px;
+            grid-row: 1 / span 2;
+            flex-direction:column-reverse;
+            justify-content:start;
 
-        .element-1 .element-text-part h4,
-        .element-1 .element-text-part p,
-        .element-1 .element-text-part a{
+        }
+        .element-2,.element-3{
+            height:281px;
+
+
+        }
+        .element-2 .element-img-part,.element-3 .element-img-part{
+            max-width:360px;
+
+        }
+       .element-2 .element-text-part,.element-3 .element-text-part{
+            align-items: start;
+        }
+       .element-2 .element-text-part h4,
+        .element-2 .element-text-part p,
+        .element-2 .element-text-part a,
+        .element-3 .element-text-part h4,
+        .element-3 .element-text-part p,
+        .element-3 .element-text-part a {
             align-items: left;
             text-align:left
-           
-        } 
 
-    }
-    @media screen and (max-width:767px){
-       
-     
-        .element-3 .element-text-part{
-        width:100%;
         }
-        .explore-the-toolganize_item img{ 
-            max-width:176px;
-            max-height:176px;
-         }
+
+        .text_in_button_custom{
+
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
 
 
-         .element-text-part h4{
-            font-size: 18px;
-            line-height: 22px; 
         }
-        .element-text-part p{
-            font-size: 12px;
-            line-height: 17px;
+        .shop_now_btn{
+            display:flex;
+            gap:13px;
+            align-items:center;
+            justify-content:space-between;
+            max-width:142px;
+            text-decoration:none;
+            color:rgba(25, 191, 111, 1);
+            white-space:nowrap;
+        }
+
+
+
+        .element-img-part{
+            width: 100%;
+            height: 100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .element-text-part{
+            max-width:382px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            text-align: center;
+        }
+        .element-text-part h4{
+            font-family: var(--custom-font-style-primary);
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 31px;
+            letter-spacing: 0px;
+            text-align: center;
+            color:var(--custom-font-color-primary);
             margin-bottom:8px;
         }
-        .element-text-part a{
-            font-size: 14px;
-            line-height: 14px;
-        }
-        .element-text-part a svg{
-            min-width: 13.714285850524902px;
-            min-height: 6.835940361022949px;
-        }
-        .explore-the-toolganize_item{
-            padding: 0  0  0 10px;
-            {% comment %} max-height:194px; {% endcomment %}
-        }
+        .element-text-part p{
+            font-family: var(--custom-font-style-secondary);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+            text-align: center;
+            color:var(--custom-font-color-primary);
+            margin:0;
+            margin-bottom:35px;
 
-
+        }
 
         .explore-the-toolganize_wrapper .workflow-custom-tittle {
-            font-size: 26px;
-            line-height: 29px;
-            letter-spacing: 0px;
-            padding-top:40px;
+            padding-top:83px;
+            width:100%;
+            max-width:100%;
+            background: linear-gradient(180deg, #EFE9CC 0%, #FFFDF1 100%),
+            linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
         }
-        
+
         .explore-the-toolganize_wrapper .workflow-custom-tittle_1{
-            font-size: 14px;
-            line-height: 20px;
-            margin-top:22px;
+            font-family: var(--custom-font-style-primary);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 53px;
+            min-width:100px;
+        }
+        .popular_bage span{
+            max-width: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 15px;
+            font-family: var(--custom-font-style-primary);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+
+        }
+            .popular_bage{
+            padding:10px 75px;
+            position:absolute;
+            background:var(--custom-background-secondary);
+            color:white;
+            top:-60px;
+            right:10px;
+            transform:rotate(45deg) translate(50%);
+        }
+        .workflow-custom-tittle p{
+            margin:0;
+        }
+
+        @media screen and (max-width:1300px){
+            .explore-the-toolganize_grid{
             padding:0 12px;
-            margin-bottom: 34px;
+                grid-template-columns:1fr 2fr;}
+
+
         }
-        .explore-the-toolganize_wrapper .workflow-custom-tittle p{
-           margin:0;
-            padding:0 10px;
-            font-size:26px;
+        @media screen and (max-width:1220px){
 
-        
+            .element-1 .element-img-part{
+                max-width:360px;
+            }
+            .element-1{
+                justify-content:space-between;
+            }
+            .explore-the-toolganize_grid{
+                grid-template-columns:1fr;
+            }
+            .element-1, .element-2, .element-3{
+                height:280px;
+                flex-direction:row;
+            }
+            .text_in_button_custom{
+                font-size: 14px;
+                line-height: 14px;
+
+            }
+            .explore-the-toolganize_item img{
+                max-height:100%;
+             }
+             .shop_now_btn{
+             max-width:97px;
+            }
+            .element-1 .element-img-part{
+                height:100%;
+             margin-top:0;
+            }
+            .element-text-part{
+                align-items: start;
+            }
+
+            .element-1 .element-text-part h4,
+            .element-1 .element-text-part p,
+            .element-1 .element-text-part a{
+                align-items: left;
+                text-align:left
+
+            }
+
         }
-        
-        .explore-the-toolganize_wrapper{
-            min-height:848px;
-                }
+        @media screen and (max-width:767px){
 
-                @media screen and (max-width:480px){
-                
-                    .explore-the-toolganize_item {
-                        max-height:245px;
+
+            .element-3 .element-text-part{
+            width:100%;
+            }
+            .explore-the-toolganize_item img{
+                max-width:176px;
+                max-height:176px;
+             }
+
+
+             .element-text-part h4{
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .element-text-part p{
+                font-size: 12px;
+                line-height: 17px;
+                margin-bottom:8px;
+            }
+            .element-text-part a{
+                font-size: 14px;
+                line-height: 14px;
+            }
+            .element-text-part a svg{
+                min-width: 13.714285850524902px;
+                min-height: 6.835940361022949px;
+            }
+            .explore-the-toolganize_item{
+                padding: 0  0  0 10px;
+                {% comment %} max-height:194px; {% endcomment %}
+            }
+
+
+
+            .explore-the-toolganize_wrapper .workflow-custom-tittle {
+                font-size: 26px;
+                line-height: 29px;
+                letter-spacing: 0px;
+                padding-top:40px;
+            }
+
+            .explore-the-toolganize_wrapper .workflow-custom-tittle_1{
+                font-size: 14px;
+                line-height: 20px;
+                margin-top:22px;
+                padding:0 12px;
+                margin-bottom: 34px;
+            }
+            .explore-the-toolganize_wrapper .workflow-custom-tittle p{
+               margin:0;
+                padding:0 10px;
+                font-size:26px;
+
+
+            }
+
+            .explore-the-toolganize_wrapper{
+                min-height:848px;
                     }
 
-                    .popular_bage{
-                       padding:5px 75px;
-                       top: -65px;
-                        right: 0px;
-                    }
+                    @media screen and (max-width:480px){
 
-                    .popular_bage span{
-                        font-size: 12px;
-                        line-height: 14px;
+                        .explore-the-toolganize_item {
+                            max-height:245px;
+                        }
+
+                        .popular_bage{
+                           padding:5px 75px;
+                           top: -65px;
+                            right: 0px;
+                        }
+
+                        .popular_bage span{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
                     }
-                }
-    }
+        }
+        #SubscribeLeaveEmail{
+            background:inherit;
+            margin:0;
+            width:100%;
+            border:none;
+            height:100%;
+      }
 </style>
 
-
-
-<div class='explore-the-toolganize_wrapper'>
-<h2 class="markered_text workflow-custom-tittle">{{section.settings.heading}}<h2>
-<h4 class='workflow-custom-tittle_1'>{{section.settings.text_1}}<h4>
-    <div class="explore-the-toolganize_grid">
+<div class="explore-the-toolganize_wrapper">
+  <h2 class="markered_text workflow-custom-tittle">{{ section.settings.heading }}</h2>
+  <h4 class="workflow-custom-tittle_1">{{ section.settings.text_1 }}</h4>
+  <div class="explore-the-toolganize_grid">
     {% for block in section.blocks %}
-        <div class='explore-the-toolganize_item element-{{forloop.index}}'>
-            {%- if block.settings.isPopular -%}
-                <div class='popular_bage'>
-                    <span>{{block.settings.small_bage_frase}}</span>
+      <div class="explore-the-toolganize_item element-{{ forloop.index }}">
+        {%- if block.settings.isPopular -%}
+          <div class="popular_bage">
+            <span>{{ block.settings.small_bage_frase }}</span>
+          </div>
+        {%- endif -%}
+
+        <div class="element-text-part">
+          <h4>
+            {% if block.settings.heading != blank %}
+              {{ block.settings.heading }}
+            {% else %}
+              {{ block.settings.product.title }}
+            {% endif %}
+          </h4>
+
+          <p>
+            {% if block.settings.desc != blank %}
+              {{ block.settings.desc }}
+            {% else %}
+              {{ block.settings.product.description }}
+            {% endif %}
+          </p>
+
+          {% if block.settings.product.url != blank %}
+            <div style="width: 100%;" class="CTA_botton">
+              <a href="{{ block.settings.product.url }}">
+                <span>{{ block.settings.text_in_button }}</span>
+                <span style="margin-bottom:6px;">👉</span>
+              </a>
+            </div>
+          {% else %}
+            {%- form 'customer', id: 'LeaveEmail' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ContactFooter-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ContactFooter-success"
+                    {% endif %}
+                    placeholder="{{ section.settings.place_holder }}"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ section.settings.place_holder }}
+                  </label>
                 </div>
-            {%- endif -%}
-    
-            <div class='element-text-part'>
-
-<h4>
-{% if block.settings.heading != blank %}
-    {{block.settings.heading}}  
-    {% else %}
-    {{block.settings.product.title}}  
-{% endif %}
-</h4>
-
-<p>
-{% if block.settings.desc != blank%}
-    {{block.settings.desc}}
-    {% else %}
-    {{block.settings.product.description}}
-{% endif %}
-
-</p>
-
-{% if block.settings.product.url != blank %}
-
-    <div style="width: 100%;" class="CTA_botton">
-        <a href="{{ block.settings.product.url }}"
-          ><span>{{block.settings.text_in_button}}</span>
-          <span style="margin-bottom:6px;">👉</span>
-        </a>
-      </div>
-
-{% else %}
-    
-<div  style="width: 100%;" class="CTA_botton">
-    <a id="emailAsk" href=""
-      ><span> {{block.settings.text_in_button}} </span>
-      <span style="margin-bottom:6px;">👉</span>
-    </a>
-  </div>
-
-
-{% endif %}
-
-                
-               
-               
-            </div>
-            <div class='element-img-part'>
-
-                {% if block.settings.image != blank %}
-                    {{ block.settings.image | image_url: width: 250 | image_tag: height: 260,loading:"lazy" }}
-                    {% else %}
-                    {{ block.settings.product.featured_image | image_url: width: 250 | image_tag: height: 260,loading:"lazy" }}
-                {% endif %}
-              
-            </div>
-        
-          
-
-
-           
-           
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="ContactFooter-error">
+                    {%- render 'icon-error' -%}
+                    {{- form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email -}}
+                  </small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3
+                  class="newsletter-form__message newsletter-form__message--success form__message"
+                  id="ContactFooter-success"
+                  tabindex="-1"
+                  autofocus
+                >
+                  {% render 'icon-success' -%}
+                  {{- 'newsletter.success' | t }}
+                </h3>
+              {%- endif -%}
+              <div style="width: 100%;" class="CTA_botton">
+                <button
+                  type="submit"
+                  name="commit"
+                  id="SubscribeLeaveEmail"
+                  aria-label="{{ 'newsletter.button_label' | t }}"
+                >
+                  <span>{{ block.settings.text_in_button }}</span>
+                  <span style="margin-bottom:6px;">👉</span>
+                </button>
+              </div>
+            {%- endform -%}
+          {% endif %}
         </div>
+
+        <div class="element-img-part">
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 250 | image_tag: height: 260, loading: 'lazy' }}
+          {% else %}
+            {{
+              block.settings.product.featured_image
+              | image_url: width: 250
+              | image_tag: height: 260, loading: 'lazy'
+            }}
+          {% endif %}
+        </div>
+      </div>
     {% endfor %}
-
-
-
+  </div>
 </div>
-
-
-
-
-</div>
-
-
-
 
 {% schema %}
 {
@@ -407,63 +439,63 @@ background: rgba(255, 253, 241, 1);
   "max_blocks": 3,
   "settings": [
     {
-        "type": "richtext",
-        "id": "heading",
-        "label": "heading",
-        "default": "<p>explore the <strong>toolganize range</strong></p>"
-      },
+      "type": "richtext",
+      "id": "heading",
+      "label": "heading",
+      "default": "<p>explore the <strong>toolganize range</strong></p>"
+    },
     {
-        "type": "text",
-        "id": "text_1",
-        "label": "heading 1",
-        "default": "Elevate Your Organization with the Complete Toolganize Collection."
-      }
+      "type": "text",
+      "id": "text_1",
+      "label": "heading 1",
+      "default": "Elevate Your Organization with the Complete Toolganize Collection."
+    }
   ],
-  "blocks": [ 
+  "blocks": [
     {
-    "type": "product",
-    "name": "Product",
-    "settings": [
-      {
-        "label":"heading",
-        "type": "text",
-        "id": "heading" 
-      },
-      {
-        "label":"desc",
-        "type": "text",
-        "id": "desc" 
-      },
-      {
-        "label":"button_label",
-        "type": "text",
-        "id": "text_in_button" ,
-        "default":"SHOP NOW"
-
-      },
-      {
-        "label":"product",
-        "type": "product",
-        "id": "product" 
-      },
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-      {
-      "type": "checkbox",
-      "id": "isPopular",
-      "label": "isPopular",
-      "default": false
-    }, {
-        "label":"frese in badge",
-        "type": "text",
-        "id": "small_bage_frase" ,
-        "default": "most popular"
-      }
-    ]
-  }
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "label": "heading",
+          "type": "text",
+          "id": "heading"
+        },
+        {
+          "label": "desc",
+          "type": "text",
+          "id": "desc"
+        },
+        {
+          "label": "button_label",
+          "type": "text",
+          "id": "text_in_button",
+          "default": "SHOP NOW"
+        },
+        {
+          "label": "product",
+          "type": "product",
+          "id": "product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "isPopular",
+          "label": "isPopular",
+          "default": false
+        },
+        {
+          "label": "frese in badge",
+          "type": "text",
+          "id": "small_bage_frase",
+          "default": "most popular"
+        }
+      ]
+    }
   ],
   "presets": [
     {

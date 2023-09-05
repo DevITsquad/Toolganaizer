@@ -32,14 +32,14 @@
   }
   .sticky_button_custom_tittle-price{
     display:flex;
-    flex-direction:column;
     align-items:center;
+    gap:7px;
   }
    .sticky_button_custom_tittle-price h3{
     margin:0;
     padding-right:7px;
     text-align:center;
-    font-size:20px;
+    font-size:18px;
    }
 
   /* Main Product Custom Slider Wrapper */
@@ -270,6 +270,14 @@
 
 
   }
+
+  .sticky_button_div {
+    width: 100%;
+    max-width: 450px;
+  }
+  .sticky_button_div .price{
+    display:none;
+}
   .custom-images_under_slider .custom-image img{ 
    max-width:60px;
    max-height:60px;
@@ -322,6 +330,16 @@ display:none !important;
     font-size: 11px;
     line-height: 16px;
   }
+ 
+
+  }
+  @media screen and (max-width: 870px) {
+    .sticky_button_custom_tittle-price h3{
+    font-size:14px;
+   }
+   .sticky_button_custom_wrapper{
+      padding:5px 10px;
+   }
   }
   @media screen and (max-width: 750px) {
 
@@ -329,13 +347,7 @@ display:none !important;
       display:none;
 
     }
-    .sticky_button_custom_tittle-price h3{
-    font-size:15px;
-   }
-   .sticky_button_custom_wrapper{
-      padding:5px 10px;
-   }
-
+  
     .custom-images_under_slider.mobile{
       display:flex;
     }
@@ -438,13 +450,23 @@ display:none !important;
     .main-product-custom_slider_wrapper {
       padding: 0;
     }
-  }
-
-  @media screen and (max-width: 470px) {
     .sticky_button_custom_tittle-price h3{
-    font-size:11px;
+   display:none;
    }
+   .sticky_button_custom_tittle-price .price {
+    display:none;
+   }
+   .sticky_button_div .price{
+    display:flex;
+    margin-bottom: 5px;
+    }
   }
+  @media screen and (max-width: 400px) {
+    .sticky_button_div .custom_bage{
+      display:none;
+    }
+  }
+  
   /* poduct info logic  */
 
   .main-product-custom_product_info_wrapper {
@@ -847,20 +869,33 @@ display:none !important;
             <div class='sticky_button_custom_wrapper'> 
 
             <div class="sticky_button_custom_tittle-price">
-                             
+              <script> console.log({{product.featured_image | json}})</script>
+              <img src="{{product.featured_image | img_url}}" alt="img">      
+              <div>
               <h3>{{product.title}}</h3>    
               {%- render 'price',
               product: product,
               use_variant: true,
               show_badges: true,
-              price_class: 'price--large',
+              price_class: 'price--small',
               is_product_page:true
             -%}  
-            {% comment %} <script> console.log({{product.featured_image | json}})</script>
-            <div style="padding:10px;"> <img src="{{product.featured_image | img_url}}" alt="img"></div> {% endcomment %}
+          </div>
+          
          
           </div>
-           {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}    </div>
+          <div class="sticky_button_div">
+            {%- render 'price',
+              product: product,
+              use_variant: true,
+              show_badges: true,
+              price_class: 'price--small',
+              is_product_page:true
+            -%} 
+            {%- render 'buy-buttons-custom', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%} 
+         
+          </div>
+            </div>
 
            <script>
             document.addEventListener("DOMContentLoaded", () => {

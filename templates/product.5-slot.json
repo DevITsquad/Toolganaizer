@@ -277,7 +277,7 @@
           "type": "text-img",
           "settings": {
             "heading": "wall mount",
-            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "paragraph": "Mountable to all surfaces such as Steel, Drywall, Timber & Concrete.",
             "image": "shopify:\/\/shop_images\/Outline.svg"
           }
         },
@@ -285,15 +285,15 @@
           "type": "text-img",
           "settings": {
             "heading": "larger in size",
-            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "paragraph": "Perfect to organize large tool collections",
             "image": "shopify:\/\/shop_images\/Clip_path_group.svg"
           }
         },
         "6f966a85-a4cd-4de0-bc95-ca26b3f56c4a": {
           "type": "text-img",
           "settings": {
-            "heading": "efficient system",
-            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "heading": "powder coated to last",
+            "paragraph": "For ultimate durability",
             "image": "shopify:\/\/shop_images\/Vector_4.svg"
           }
         },
@@ -301,7 +301,7 @@
           "type": "text-img",
           "settings": {
             "heading": "strongly built",
-            "paragraph": "Lorem ipsum is a simply dummy text printing industry",
+            "paragraph": "Made with cold rolled steel to handle the load of your tools",
             "image": "shopify:\/\/shop_images\/weight_1.svg"
           }
         }
@@ -313,7 +313,7 @@
         "acd5d766-8912-4125-a2ba-111f3b53a00c"
       ],
       "settings": {
-        "heading": "<p>emotive headline for <strong>features here<\/strong><\/p>",
+        "heading": "<p>Ignite Your Passion: Crafting emotive headline for Dream Workshops Through features here <strong>Ultimate Tool Organization!<\/strong><\/p>",
         "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis mi vitae quam sodales. facilisis mi vitae"
       }
     },

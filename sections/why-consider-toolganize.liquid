@@ -170,9 +170,20 @@
   <div class="blocks_flex_section">
     {% for block in section.blocks %}
       {% if block.settings.image %}
-        <div class="why-consider-toolganize_img_wrapper">
-          <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="Before Image">
-        </div>
+        {%- if product -%}
+          {% for img in product.media %}
+            {%- if img.alt == "img_5" -%}
+              <div class="why-consider-toolganize_img_wrapper">
+                <img loading="lazy" src="{{ img.src | image_url }}" alt="Before Image">
+              </div>
+            {%- endif -%}
+          {% endfor %}
+           {% else %}
+           <div class="why-consider-toolganize_img_wrapper">
+            <img loading="lazy" src="{{ block.settings.image | image_url }}" alt="Before Image">
+          </div>
+        {%- endif -%}
+      
       {% else %}
         {% if block.type == 'text_1' %}
           <div class="reasons_block toolnize">

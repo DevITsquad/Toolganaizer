@@ -15,7 +15,6 @@
     align-items: center;
   }
 
-
   .emotive-headline-grid_under_header {
     text-align: center;
     font-family: var(--custom-font-style-primary);
@@ -26,7 +25,7 @@
     text-align: center;
     max-width: 699px;
     margin: auto;
-    margin-top:25px;
+    margin-top: 25px;
   }
   .emotive-headline-grid_wrapper-inner {
     max-width: 1246px;
@@ -35,10 +34,13 @@
 
   .emotive-headline-grid_element img {
     height: 407px;
+    width:630px;
+    border-radius:15px;
+    object-fit:cover;
   }
 
-  .element__2,
-  .element__4 {
+  .element__1,
+  .element__3 {
     flex-direction: row-reverse;
   }
   .emotive-headline-grid_element_text {
@@ -115,13 +117,13 @@
     .emotive-headline-grid_element_text p {
       font-size: 14px;
       line-height: 20px;
-      text-align:center;
+      text-align: center;
     }
 
     .emotive-headline-grid_element_text h4 {
       font-size: 20px;
       line-height: 22px;
-      text-align:center;
+      text-align: center;
     }
 
     .emotive-headline-grid_element {
@@ -148,7 +150,42 @@
   <div class="emotive-headline-grid_wrapper-inner">
     {% for block in section.blocks %}
       <div class="emotive-headline-grid_element element__{{forloop.index}}">
-        <img src="{{ block.settings.image | image_url}}" alt="img" loading='lazy'>
+        {%- case forloop.index -%}
+          {%- when 1 -%}
+            {% for img in product.media %}
+              <script>
+                console.log({{forloop.index | json}},{{img.alt | json}})
+              </script>
+              {%- if img.alt == 'img_1' -%}
+                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                {% break %}
+              {%- endif -%}
+            {% endfor %}
+          {%- when 2 -%}
+            {% for img in product.media %}
+              {%- if img.alt == 'img_2' -%}
+                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                {% break %}
+              {%- endif -%}
+            {% endfor %}
+          {%- when 3 -%}
+            {% for img in product.media %}
+              {%- if img.alt == 'img_3' -%}
+                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                {% break %}
+              {%- endif -%}
+            {% endfor %}
+          {%- when 4 -%}
+            {% for img in product.media %}
+              {%- if img.alt == 'img_4' or img.alt == 'img_1' -%}
+                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                {% break %}
+              {%- endif -%}
+            {% endfor %}
+
+          {%- else -%}
+        {%- endcase -%}
+
         <div class="emotive-headline-grid_element_text">
           <h4>{{ block.settings.heading }}</h4>
           <p>{{ block.settings.paragraph }}</p>
@@ -156,13 +193,33 @@
       </div>
     {% endfor %}
   </div>
+  {% comment %}
+    {%- elsif img.alt == 'img_2' -%}
+    <script>
+      console.log("elsif img.alt == 'img_2'",{{img.alt|json}})
+    </script>
+      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
+      {% break %}
+    {%- elsif img.alt == 'img_3' -%}
+    <script>
+      console.log("img.alt == 'img_3'",{{img.alt|json}})
+    </script>
+      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
 
+    {%- elsif img.alt == 'img_4' or img.alt == 'img_4_5' -%}
+    <script>
+      console.log("elsif img.alt == 'img_4' or img.alt == 'img_4_5'",{{img.alt|json}})
+    </script>
+      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
+      {% break %}
+    {%- else -%}
+    {% break %}
+    {%- endif -%}
+  {% endcomment %}
   <div class="CTA_botton">
-    <a href="#"
-      >
-        <span>{{ section.settings.text_in_button | upcase }}</span>
-        <span style="margin-bottom:6px;">👉</span>
-
+    <a href="#">
+      <span>{{ section.settings.text_in_button | upcase }}</span>
+      <span style="margin-bottom:6px;">👉</span>
     </a>
   </div>
   <div class="payment_wrapper_custom">

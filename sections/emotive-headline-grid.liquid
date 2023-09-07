@@ -157,28 +157,28 @@
                 console.log({{forloop.index | json}},{{img.alt | json}})
               </script>
               {%- if img.alt == 'img_1' -%}
-                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
                 {% break %}
               {%- endif -%}
             {% endfor %}
           {%- when 2 -%}
             {% for img in product.media %}
               {%- if img.alt == 'img_2' -%}
-                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
                 {% break %}
               {%- endif -%}
             {% endfor %}
           {%- when 3 -%}
             {% for img in product.media %}
               {%- if img.alt == 'img_3' -%}
-                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
                 {% break %}
               {%- endif -%}
             {% endfor %}
           {%- when 4 -%}
             {% for img in product.media %}
               {%- if img.alt == 'img_4' or img.alt == 'img_1' -%}
-                <img src="{{img.src | image_url}}" alt="img" loading="lazy">
+                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
                 {% break %}
               {%- endif -%}
             {% endfor %}
@@ -193,29 +193,6 @@
       </div>
     {% endfor %}
   </div>
-  {% comment %}
-    {%- elsif img.alt == 'img_2' -%}
-    <script>
-      console.log("elsif img.alt == 'img_2'",{{img.alt|json}})
-    </script>
-      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
-      {% break %}
-    {%- elsif img.alt == 'img_3' -%}
-    <script>
-      console.log("img.alt == 'img_3'",{{img.alt|json}})
-    </script>
-      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
-
-    {%- elsif img.alt == 'img_4' or img.alt == 'img_4_5' -%}
-    <script>
-      console.log("elsif img.alt == 'img_4' or img.alt == 'img_4_5'",{{img.alt|json}})
-    </script>
-      <img src="{{ img.src | image_url}}" alt="img" loading="lazy">
-      {% break %}
-    {%- else -%}
-    {% break %}
-    {%- endif -%}
-  {% endcomment %}
   <div class="CTA_botton">
     <a href="#">
       <span>{{ section.settings.text_in_button | upcase }}</span>

@@ -2,9 +2,97 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "3dc53edd-3c99-46ae-8b98-ee6d1049fe0a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact us",
+            "heading_size": "h1"
+          }
+        },
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li>Toolganize is here to support you. If you have any questions or comments that haven't been addressed on our website, please don't hesitate to reach out to us using the Customer Service Form below. If your inquiry pertains to an online order, kindly include the Order Number in your message. This will enable us to assist you promptly and efficiently.<\/li><\/ol>"
+          }
+        },
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-heading-1",
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-text-1",
+        "template--15923986038980__3dc53edd-3c99-46ae-8b98-ee6d1049fe0a-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "fdd18dee-c360-4669-bf35-04111960f719": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom service form",
+            "heading_size": "h1"
+          }
+        },
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-heading-1",
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-text-1",
+        "template--15923986038980__fdd18dee-c360-4669-bf35-04111960f719-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "form": {
@@ -20,6 +108,8 @@
   },
   "order": [
     "main",
+    "3dc53edd-3c99-46ae-8b98-ee6d1049fe0a",
+    "fdd18dee-c360-4669-bf35-04111960f719",
     "form"
   ]
 }

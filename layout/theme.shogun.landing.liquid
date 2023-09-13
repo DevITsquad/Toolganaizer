@@ -12,6 +12,7 @@ This file can be re-written at any time.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+    <meta name="facebook-domain-verification" content="r33vqvbyto6j3qvsgi31mckmtvompo" />
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
@@ -75,7 +76,7 @@ This file can be re-written at any time.
         --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
         --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
         --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
-        --color-link:30, 75, 81;
+        --color-link: 30, 75, 81;
         --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
         --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
@@ -256,7 +257,7 @@ This file can be re-written at any time.
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    {% comment %} <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> {% endcomment %}
     <style>
 
         @font-face {
@@ -313,8 +314,9 @@ This file can be re-written at any time.
     
 
    
-      body{
-        color:var(--custom-font-color-primary)}
+      html, * ,body, h1 , {
+        color:var(--custom-font-color-primary)
+      }
     </style>
 
     {%- unless settings.type_body_font.system? -%}
@@ -382,6 +384,7 @@ This file can be re-written at any time.
     </script>
 <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="{{ 'discountCodeLogic.js' | asset_url }}" defer="defer"></script>
   <style type="text/css">
     body, html {
       width: 100% !important;

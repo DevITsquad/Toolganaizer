@@ -310,6 +310,16 @@
                       }
                   }
       }
+      @media screen and (max-width:620px){
+        .element-1 .element-img-part,
+        .element-2 .element-img-part{
+        max-width:180px;
+       margin:auto;
+        }
+      
+      }
+
+      
       #SubscribeLeaveEmail{
           background:inherit;
           margin:0;
@@ -423,7 +433,7 @@
                 </h3>
               {%- endif -%}
               <div style="width: 100%;" class="CTA_botton">
-                <button
+                <button style="border-radius:10px;"
                   type="submit"
                   name="commit"
                   id="SubscribeLeaveEmail"

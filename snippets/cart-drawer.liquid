@@ -392,8 +392,8 @@
                             <div class="price_remove_wrapper">
                               <span class="price price--end custom-drawer-price custom-drawer-price-drow">
                                 <script>
-                                console.log({{ item | json }})
-                                </script>
+                                  console.log({{ item | json }})
+                                  </script>
                                 {{ item.original_line_price | money }}
                                 <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
                               </span>
@@ -591,4 +591,4 @@
       document.querySelector('#cart').submit();
     });
   });
-</>
+</script>

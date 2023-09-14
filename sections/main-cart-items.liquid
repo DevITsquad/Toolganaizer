@@ -493,11 +493,16 @@
 
                       <div class="cart-item__price-wrapper">
                         <span class="price price--end custom-drawer-price">
-                          <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+                          {%- if item.variant.compare_at_price > 0 -%}
+                            <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+                          {%- endif -%}
+                         
                           {{ item.original_line_price | money }}
                         </span>
-                        <span class="custom_bage">Saved {{ item.variant.compare_at_price | times: item.quantity | minus:  item.original_line_price | money }} </span>
-
+                        {%- if item.variant.compare_at_price > 0 -%}
+                          <span class="custom_bage">Saved {{ item.variant.compare_at_price | times: item.quantity | minus:  item.original_line_price | money }} </span>
+                        {%- endif -%}
+                       
                         {%- if item.variant.available and item.unit_price_measurement -%}
                           <div class="unit-price caption">
                             <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>

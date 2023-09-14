@@ -153,9 +153,6 @@
         {%- case forloop.index -%}
           {%- when 1 -%}
             {% for img in product.media %}
-              <script>
-                console.log({{forloop.index | json}},{{img.alt | json}})
-              </script>
               {%- if img.alt == 'img_1' -%}
                 <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
                 {% break %}

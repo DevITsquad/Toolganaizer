@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList') {
                 for (const addedNode of mutation.addedNodes) {
+                    // console.log(addedNode)
                     if (addedNode.classList && addedNode.classList.contains('alr-wh-slider')) {
                         const mainReviewsWrapper = addedNode.parentNode.parentNode.parentNode.parentNode
                         mainReviewsWrapper.style.background = 'rgba(255, 253, 241, 1)';

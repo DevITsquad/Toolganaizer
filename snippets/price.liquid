@@ -105,9 +105,6 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-<script>
-  console.log({{product.price | json}})
-</script>
 
 <div
   class="

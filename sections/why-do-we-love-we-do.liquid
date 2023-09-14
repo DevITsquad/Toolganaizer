@@ -105,7 +105,7 @@
     margin:auto;
 
   }
-  .video-container iframe {
+  .video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,8 +160,9 @@
 <div class='why-do-we-love-we-do_video_block '>
   <div class="video-container">
 
-    <iframe src="{{section.settings.video.sources[1].url}}"  allow="encrypted-media"></iframe>
-    {% comment %} <video src="{{section.settings.video.sources[1].url}}"  allow="encrypted-media"></video> {% endcomment %}
+    <video muted  style='object-fit:fill;' playsinline controls loop="loop">
+      <source src="{{section.settings.video.sources[1].url}}" type="video/mp4">
+  </video>
   </div>
 </div>
   <div class="why-do-we-love-we-do_text_block">

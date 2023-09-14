@@ -388,14 +388,14 @@
                                 {% render 'icon-plus' %}
                               </button>
                             </quantity-input>
-
+                            <script>
+                              console.log({{ item.product | json }})
+                              </script>
                             <div class="price_remove_wrapper">
                               <span class="price price--end custom-drawer-price custom-drawer-price-drow">
-                                <script>
-                                  console.log({{ item | json }})
-                                  </script>
-                                {{ item.original_line_price | money }}
-                                <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+                               
+                                {{ item.product.price | times: item.quantity | money }}
+                                <s>{{ item.product.compare_at_price | times: item.quantity | money }}</s>
                               </span>
 
                               <cart-remove-button

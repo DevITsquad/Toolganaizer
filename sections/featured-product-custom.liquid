@@ -608,11 +608,18 @@ flex-direction:row-reverse;
 
                     {{ section.settings.li_3 }}
                   </li>
+                  <li>
+                    <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.1094 0.640625C18.6172 1.10938 18.6172 1.92969 18.1094 2.39844L8.10938 12.3984C7.64062 12.9062 6.82031 12.9062 6.35156 12.3984L1.35156 7.39844C0.84375 6.92969 0.84375 6.10938 1.35156 5.64062C1.82031 5.13281 2.64062 5.13281 3.10938 5.64062L7.21094 9.74219L16.3516 0.640625C16.8203 0.132812 17.6406 0.132812 18.1094 0.640625Z" fill="#2ADC87"></path>
+                    </svg>
+
+                    {{ section.settings.li_4 }}
+                  </li>
                 </ul>
 
            
                 
-                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                {% comment %} {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
                     {%- if cart.taxes_included -%}
                       {{ 'products.product.include_taxes' | t }}
@@ -621,7 +628,7 @@ flex-direction:row-reverse;
                       {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                     {%- endif -%}
                   </div>
-                {%- endif -%}
+                {%- endif -%} {% endcomment %}
                 {%- if product != blank -%}
                   <div {{ block.shopify_attributes }}>
                     {%- form 'product', product -%}
@@ -1912,6 +1919,12 @@ flex-direction:row-reverse;
       "id": "li_3",
       "label": "3",
       "default": "<p><strong>5 Color</strong> variations available</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "li_4",
+      "label": "4",
+      "default": "<p><strong>Free</strong> Shipping</p>"
     },
     {
       "type": "color_scheme",

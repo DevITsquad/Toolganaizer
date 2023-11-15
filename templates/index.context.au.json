@@ -4,5 +4,16 @@
     "market": "au"
   },
   "sections": {
+    "edda56f1-f6de-4672-b655-e689a88db0dd": {
+      "settings": {
+      },
+      "blocks": {
+        "55a09eaa-e774-426a-85b4-966ef51a6dcb": {
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Image-055_1.jpg"
+          }
+        }
+      }
+    }
   }
 }

@@ -4,5 +4,28 @@
     "market": "au"
   },
   "sections": {
+    "7f7fb73f-7ad3-49f2-9cfc-8769d4156d4e": {
+      "settings": {
+      },
+      "blocks": {
+        "e3313f16-168c-4584-b7af-54d3e331d45b": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/711Oce8ICpL._AC_SL1500.jpg"
+          }
+        }
+      }
+    },
+    "main": {
+      "settings": {
+      },
+      "blocks": {
+        "5a48c655-7bd8-4430-be1b-0d90f8efea96": {
+          "disabled": false,
+          "settings": {
+          }
+        }
+      }
+    }
   }
 }

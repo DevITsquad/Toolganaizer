@@ -10,7 +10,10 @@
       "blocks": {
         "55a09eaa-e774-426a-85b4-966ef51a6dcb": {
           "settings": {
-            "image": "shopify:\/\/shop_images\/Copy_of_Image-055_1.jpg"
+            "image": "shopify:\/\/shop_images\/Copy_of_Image-055_1.jpg",
+            "text_in_button": "Stay Updated",
+            "heading": "4 slot power tool organizer (out of stock)",
+            "desc": "Get notified when new stock arrives !"
           }
         }
       }

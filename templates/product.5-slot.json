@@ -6,7 +6,7 @@
         "50e302b3-6ce8-427b-bf29-874036cfcaba": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>4.8\/5<\/strong>Based On<strong>700+<\/strong>Happy Customers Reviews<\/p>"
+            "text": "<p><strong>4.8\/5<\/strong>Based On <strong>700+<\/strong>Happy Customer Reviews<\/p>"
           }
         },
         "title": {
@@ -117,6 +117,9 @@
         "5a48c655-7bd8-4430-be1b-0d90f8efea96",
         "a958a2d2-28bb-4abe-91fb-0b22f60c8d87",
         "efecd75a-0179-4c6d-a002-b98623807d14"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "enable_sticky_info": true,

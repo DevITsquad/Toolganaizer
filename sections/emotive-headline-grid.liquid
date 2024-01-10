@@ -178,7 +178,7 @@
           {%- when 3 -%}
             {% assign alt_found = false %}
               {% for img in product.media %}
-                {%- if img.alt == 'img_' -%}
+                {%- if img.alt == 'img_3' -%}
                   <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
                     {% assign alt_found = true %}
                   {% break %}
@@ -190,7 +190,7 @@
           {%- when 4 -%}
             {% assign alt_found = false %}
               {% for img in product.media %}
-                {%- if img.alt == 'img_4'  -%}
+                {%- if img.alt == 'img_4' or  img.alt == 'img_1' -%}
                   <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
                     {% assign alt_found = true %}
                   {% break %}

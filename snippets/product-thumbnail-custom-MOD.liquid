@@ -57,10 +57,23 @@
     <p class="collors__header">Available colors</p>
     <div class="possible_colors">
       {% for item in section_product.collections[0].products %}
-        {%- assign variable = item.title | split: '-' | last | strip -%}
+        {%- assign color = ''  -%}
+        {%- assign item_title = item.title | downcase  -%}
+    
+        {% if item_title contains 'orange' %}
+          {%- assign color = 'orange' -%}
+        {% elsif item_title contains 'blue' %}
+          {%- assign color = 'blue' -%}
+        {% elsif item_title contains 'green' %}
+          {%- assign color = 'green' -%}  
+        {% elsif item_title contains 'yellow' %}
+          {%- assign color = 'yellow' -%}
+        {% elsif item_title contains 'red' %}
+          {%- assign color = 'red' -%}         
+        {% endif %}
 
-        {%- case variable -%}
-          {%- when 'Orange' -%}
+        {%- case color -%}
+          {%- when 'orange' -%}
             <div
               data-img_url="{{settings.image_orange  | image_url}}"
               data-product_url="{{item.url}}"
@@ -81,7 +94,7 @@
                 <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#F37328"/>
               </svg>
             </div>
-          {%- when 'Blue' -%}
+          {%- when 'blue' -%}
             <div
               data-img_url="{{settings.image_blue  | image_url}}"
               data-product_url="{{item.url}}"
@@ -101,7 +114,7 @@
                 <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#6ABCC8"/>
               </svg>
             </div>
-          {%- when 'Green' -%}
+          {%- when 'green' -%}
             <div
               data-img_url="{{settings.image_green   | image_url}}"
               data-product_url="{{item.url}}"
@@ -121,7 +134,7 @@
                 <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#D9DB32"/>
               </svg>
             </div>
-          {%- when 'Yellow' -%}
+          {%- when 'yellow' -%}
             <div
               data-img_url="{{settings.image_yellow   | image_url}}"
               data-product_url="{{item.url}}"
@@ -141,7 +154,7 @@
                 <circle cx="20.5882" cy="20.5882" r="20.5882" fill="#E9B82D"/>
               </svg>
             </div>
-          {%- when 'Red' -%}
+          {%- when 'red' -%}
             <div
               data-img_url="{{settings.image_red | image_url}}"
               data-product_url="{{item.url}}"
@@ -164,7 +177,7 @@
             </div>
           {%- else -%}
         {%- endcase -%}
-      {% endfor %}
+      {% endfor %} 
     </div>
   </div>
 </div>

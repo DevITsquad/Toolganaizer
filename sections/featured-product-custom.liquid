@@ -494,7 +494,11 @@ flex-direction:row-reverse;
             {% if product %}
               {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product  %}
              {% else %}
+            {% if localization.market.handle == 'united-states' %}
+              {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:all_products['toolganize-power-tool-organizer-5-slot-red-aus'], settings:section.settings,view_class:"desctop_view" %}
+               {%- else -%}
               {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"desctop_view" %}
+          {% endif %}
             {% endif %}
           
         
@@ -564,7 +568,11 @@ flex-direction:row-reverse;
                 {%  if product %}
                   {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product %}
                  {% else %}
-                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"mobile_view"  %}
+                 {% if localization.market.handle == 'united-states' %}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:all_products['toolganize-power-tool-organizer-5-slot-red-aus'], settings:section.settings,view_class:"desctop_view" %}
+                   {%- else -%}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"desctop_view" %}
+              {% endif %}
                 {% endif %}
                
                     
@@ -751,10 +759,17 @@ flex-direction:row-reverse;
                 %}
               {%- when 'buy_buttons' -%}
                 <div class="CTA_botton featured-product-CTA">
-                  <a href="{{section.settings.link_shop_now}}"
+                  {%- if localization.market.handle == 'united-states' -%}
+                    <a href="{{all_products['toolganize-power-tool-organizer-5-slot-red-aus'].url}}"
                     ><span>{{ section.settings.text_in_button }}</span>
                     <span style="margin-bottom:6px;">👉</span>
                   </a>
+                    {%- else -%}
+                    <a href="{{section.settings.link_shop_now}}"
+                    ><span>{{ section.settings.text_in_button }}</span>
+                    <span style="margin-bottom:6px;">👉</span>
+                  </a>
+                  {%- endif -%}
                 </div>
                 <div class="payment_wrapper_custom feachered-product-custom">
                   <ul class="list list-payment" role="list">

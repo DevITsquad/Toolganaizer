@@ -451,11 +451,23 @@
           {% if block.settings.image != blank %}
             {{ block.settings.image | image_url: width: 250 | image_tag: height: 260, loading: 'lazy' }}
           {% else %}
-            {{
-              block.settings.product.featured_image
-              | image_url: width: 250
-              | image_tag: height: 260, loading: 'lazy'
-            }}
+    {%- if block.settings.product.featured_image != blank -%}
+  
+  {{
+    block.settings.product.featured_image
+    | image_url: width: 250
+    | image_tag: height: 260, loading: 'lazy'
+  }}
+    {%- else -%}
+    {%- if  localization.market.handle == 'united-states' -%}
+      {{
+        all_products['toolganize-power-tool-organizer-5-slot-red-aus'].featured_image
+        | image_url: width: 250
+        | image_tag: height: 260, loading: 'lazy'
+      }}
+    
+    {%- endif -%}
+      {%- endif -%}
           {% endif %}
         </div>
       </div>

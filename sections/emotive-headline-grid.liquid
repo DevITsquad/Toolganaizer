@@ -152,37 +152,56 @@
       <div class="emotive-headline-grid_element element__{{forloop.index}}">
         {%- case forloop.index -%}
           {%- when 1 -%}
-            {% for img in product.media %}
-              {%- if img.alt == 'img_1' -%}
-                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
-                {% break %}
-              {%- endif -%}
-            {% endfor %}
+            {% assign alt_found = false %}
+              {% for img in product.media %}
+                {%- if img.alt == 'img_1' -%}
+                  <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
+                    {% assign alt_found = true %}
+                  {% break %}
+                {%- endif -%}
+              {% endfor %}
+              {%- if alt_found == false -%}
+                <img src="{{block.settings.image | image_url}}" alt="img"  loading="lazy">
+               {%- endif -%}
           {%- when 2 -%}
-            {% for img in product.media %}
-              {%- if img.alt == 'img_2' -%}
-                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
-                {% break %}
-              {%- endif -%}
-            {% endfor %}
+            {% assign alt_found = false %}
+              {% for img in product.media %}
+                {%- if img.alt == 'img_2' -%}
+                  <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
+                    {% assign alt_found = true %}
+                  {% break %}
+                {%- endif -%}
+              {% endfor %}
+              {%- if alt_found == false -%}
+                <img src="{{block.settings.image | image_url}}" alt="img"  loading="lazy">
+               {%- endif -%}
           {%- when 3 -%}
-            {% for img in product.media %}
-              {%- if img.alt == 'img_3' -%}
-                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
-                {% break %}
-              {%- endif -%}
-            {% endfor %}
+            {% assign alt_found = false %}
+              {% for img in product.media %}
+                {%- if img.alt == 'img_' -%}
+                  <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
+                    {% assign alt_found = true %}
+                  {% break %}
+                {%- endif -%}
+              {% endfor %}
+              {%- if alt_found == false -%}
+                <img src="{{block.settings.image | image_url}}" alt="img"  loading="lazy">
+               {%- endif -%}
           {%- when 4 -%}
-            {% for img in product.media %}
-              {%- if img.alt == 'img_4' or img.alt == 'img_1' -%}
-                <img src="{{img.src | image_url}}" alt="img" fetchpriority="high" loading="lazy">
-                {% break %}
-              {%- endif -%}
-            {% endfor %}
-
+            {% assign alt_found = false %}
+              {% for img in product.media %}
+                {%- if img.alt == 'img_4'  -%}
+                  <img src="{{img.src | image_url}}" alt="img"  loading="lazy">
+                    {% assign alt_found = true %}
+                  {% break %}
+                {%- endif -%}
+              {% endfor %}
+             {%- if alt_found == false -%}
+              <img src="{{block.settings.image | image_url}}" alt="img"  loading="lazy">
+             {%- endif -%}
           {%- else -%}
         {%- endcase -%}
-
+        
         <div class="emotive-headline-grid_element_text">
           <h4>{{ block.settings.heading }}</h4>
           <p>{{ block.settings.paragraph }}</p>

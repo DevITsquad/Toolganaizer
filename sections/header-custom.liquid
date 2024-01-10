@@ -704,7 +704,7 @@ color:var(--custom-font-color-primary) !important;
             <div class="swiper-wrapper">
               {% for link in product.images %}
                 <div class="swiper-slide">
-                  <div class="swiper-main-img_wrapper">
+                  <div>
                     <img class="swiper-main-img popup_img swiper-img" src="{{ link | image_url }}" alt="product_image"
                       {%- if forloop.index == 1 -%}  
                         loading="eager" 

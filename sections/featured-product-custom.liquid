@@ -569,9 +569,9 @@ flex-direction:row-reverse;
                   {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,product:product %}
                  {% else %}
                  {% if localization.market.handle == 'united-states' %}
-                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:all_products['toolganize-power-tool-organizer-5-slot-red-aus'], settings:section.settings,view_class:"desctop_view" %}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:all_products['toolganize-power-tool-organizer-5-slot-red-aus'], settings:section.settings,view_class:"mobile_view" %}
                    {%- else -%}
-                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"desctop_view" %}
+                  {% render 'product-thumbnail-custom-MOD',is_show_collors:section.settings.is_show_collors,section_product:section.settings.product_custom, settings:section.settings,view_class:"mobile_view" %}
               {% endif %}
                 {% endif %}
                
